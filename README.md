@@ -10,6 +10,7 @@ Site de référence **non officiel** en français pour le jeu de rôle **Cyberpu
 | Univers | `lore.html` | Chronologie, Night City, corporations, gangs, districts |
 | Univers | `glossaire.html` | Argot de la rue, correspondances VO / VF |
 | Personnage | `roles.html` | Les dix rôles et leurs capacités |
+| Personnage | `createur.html` | Créateur de personnage interactif (assistant, fiche, impression, export JSON) |
 | Personnage | `creation.html` | Méthodes de création, caractéristiques, 66 compétences, Lifepath |
 | Règles | `regles.html` | Test au d10, SD, critiques, Chance, lanceur de dés |
 | Règles | `combat.html` | Initiative, dégâts, armure, blessures, mort |
