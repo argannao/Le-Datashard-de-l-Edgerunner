@@ -651,3 +651,15 @@ nav .shards { padding-bottom: 44px; }
   .pager { grid-template-columns: 1fr 1fr; }
   .pager .p-menu { grid-column: 1 / -1; grid-row: 2; text-align: center; align-items: center; }
 }
+
+/* ---------------- Source DLC ---------------- */
+.dlc-src {
+  font-family: var(--f-mono);
+  font-size: .78rem;
+  color: var(--muted);
+  border-top: 1px dashed var(--line-2);
+  padding-top: 10px;
+  margin-top: 18px;
+}
+a.tag { text-decoration: none; }
+a.tag:hover { background: var(--cyan); color: #000; text-shadow: none; }

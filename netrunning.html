@@ -32,8 +32,9 @@
       <a href="#contexte">Le Net en 2045</a>
       <a href="#materiel">Matériel requis</a>
       <a href="#actions">Actions NET</a>
-      <a href="#architecture">Architectures</a>
+      <a href="#architecture">Architectures NET</a>
       <a href="#interface">Capacités d'Interface</a>
+      <a href="#furtif">Netrunning furtif</a>
       <a href="#programmes">Programmes</a>
       <a href="#ice">Black ICE</a>
     </aside>
@@ -124,8 +125,40 @@
         <p>À cela s'ajoutent les actions de base : se connecter, se déconnecter (<em>jack out</em>), activer ou désactiver un programme.</p>
       </section>
 
+      <section class="block" id="furtif">
+        <h2 data-idx="06">Netrunning furtif</h2>
+        <p>Traverser une architecture sans se faire repérer. On appelle <strong>Veilleurs</strong> tout ce qui a un rang d'Interface et surveille le système : démons et netrunners ennemis.</p>
+        <div class="grid g2">
+          <div class="panel magenta">
+            <span class="tag">Entrée</span>
+            <h3>Se connecter discrètement</h3>
+            <p>Coûte une action NET de plus à la connexion. Test opposé <span class="mono" style="color:var(--cyan)">Interface + 1d10</span> contre chaque Veilleur présent : il faut les battre tous pour entrer incognito.</p>
+          </div>
+          <div class="panel cyan">
+            <span class="tag cyan">Black ICE</span>
+            <h3>Croiser un Black ICE</h3>
+            <p>Au lieu du test de Vitesse : <span class="mono" style="color:var(--cyan)">Interface + bonus Cloak + 1d10</span> contre <span class="mono" style="color:var(--cyan)">Perception de l'ICE + 1d10</span>. Réussite : il ne vous voit pas. Échec : furtivité rompue, effet de l'ICE comme pour un test de Vitesse raté, et il passe en tête d'initiative.</p>
+          </div>
+          <div class="panel amber">
+            <span class="tag amber">Veilleur</span>
+            <h3>Croiser un Veilleur</h3>
+            <p>Duel silencieux, sans action NET : <span class="mono" style="color:var(--cyan)">Interface + Cloak + 1d10</span> contre <span class="mono" style="color:var(--cyan)">Interface + Pathfinder + 1d10</span>. De plus, à son tour, un Veilleur peut dépenser une action NET pour fouiller (une fois par tour) avec le même test opposé.</p>
+          </div>
+          <div class="panel">
+            <span class="tag red">Limites</span>
+            <h3>Ce qui rompt la furtivité</h3>
+            <p>Prendre un nœud de contrôle, ou interagir directement avec un Black ICE ou un Veilleur (l'attaquer, par exemple). Voler des fichiers et poser un virus restent possibles, mais un virus voyant attirera l'attention dès qu'il s'active.</p>
+          </div>
+        </div>
+        <div class="callout red">
+          <span class="label">// UNE FOIS REPÉRÉ</span>
+          Tous les Veilleurs sont alertés et les Black ICE réagissent normalement. Pour redevenir furtif, il faut se déconnecter puis se reconnecter discrètement… mais l'alarme, elle, a déjà sonné. Les netrunners aiment rester au dernier étage, les démons près des nœuds de contrôle.
+        </div>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2025/07/RTG-CPR-DLC-GoingQuietv1.1.pdf" target="_blank" rel="noopener"><em>Going Quiet</em></a> (R. Talsorian, VO). Résumé reformulé : les profils et règles complets sont dans le PDF.</p>
+      </section>
+
       <section class="block" id="programmes">
-        <h2 data-idx="06">Programmes</h2>
+        <h2 data-idx="07">Programmes</h2>
         <div class="grid g3">
           <div class="panel cyan"><span class="tag cyan">Boosters</span><h3>Améliorer</h3><p>Donnent des bonus aux capacités d'Interface : percer plus vite, voir plus loin, rester discret.</p></div>
           <div class="panel amber"><span class="tag amber">Defenders</span><h3>Protéger</h3><p>Réduisent les dégâts subis ou protègent le cyberdeck contre les attaques.</p></div>
@@ -135,7 +168,7 @@
       </section>
 
       <section class="block" id="ice">
-        <h2 data-idx="07">Black ICE</h2>
+        <h2 data-idx="08">Black ICE</h2>
         <p>Le Black ICE est une IA de sécurité agressive. Chaque modèle a ses propres valeurs de <strong>perception, vitesse, attaque, défense</strong> et de <strong>REZ</strong> (ses points de vie numériques).</p>
         <ul class="list">
           <li><strong>Anti-personnel</strong> : s'attaque directement au cerveau du Netrunner. Les dégâts touchent ses PV réels.</li>

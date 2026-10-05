@@ -33,8 +33,11 @@
       <a href="#armes">Armes</a>
       <a href="#armures">Armures</a>
       <a href="#qualite">Qualité</a>
+      <a href="#conversion">Armes de 2020</a>
       <a href="#marches">Night Markets</a>
       <a href="#black-chrome">Black Chrome</a>
+      <a href="#chimie">Chimie de rue</a>
+      <a href="#infiltration">Matériel d'infiltration</a>
       <a href="#vie">Train de vie</a>
     </aside>
 
@@ -131,8 +134,26 @@
         </div>
       </section>
 
+      <section class="block" id="conversion">
+        <h2 data-idx="05">Armes de Cyberpunk 2020</h2>
+        <p>Pour reprendre une arme d'un vieux supplément 2020 dans RED, on la « rabote » en six étapes :</p>
+        <ol class="list">
+          <li><strong>Arme atypique ?</strong> Si elle ne tire ni balles, ni cartouches, ni explosifs, ni flèches, ou a des règles spéciales, c'est une <em>arme exotique</em> : cherchez un équivalent dans la gamme RED, sinon voyez avec le MJ.</li>
+          <li><strong>Type d'arme.</strong> Prenez le type RED le plus proche : il impose dégâts, multiplicateur de tir automatique, chargeur, munitions, cadence, nombre de mains, dissimulation et prix de base.</li>
+          <li><strong>Précision.</strong> Une précision (WA) négative devient 0 ; une précision positive devient +1, ce qui en fait une arme de qualité excellente.</li>
+          <li><strong>Fiabilité.</strong> Une arme « peu fiable » en 2020 le reste : sur un échec critique en attaque, elle s'enraye et il faut une action pour la remettre en état.</li>
+          <li><strong>Qualité.</strong> Peu fiable avec précision 0 : <em>mauvaise</em>. Fiable avec précision 0 : <em>standard</em>. Précision +1 : <em>excellente</em>, même si elle est peu fiable. Le prix suit la meilleure qualité atteinte.</li>
+          <li><strong>Accessoires et prix.</strong> Remplacez les options par leurs équivalents RED (trois emplacements par arme ; chargeur étendu ou tambour si l'arme d'origine en contenait plus). Au-delà de trois accessoires, l'arme devient exotique. Le MJ fixe le prix final.</li>
+        </ol>
+        <div class="callout">
+          <span class="label">// EXEMPLE</span>
+          Un fusil d'assaut 2020 à précision −1 avec visée intelligente devient un fusil d'assaut RED standard (5d6), auquel on ajoute l'accessoire <em>Smartgun Link</em> et un chargeur étendu. Son prix passe d'environ 500 à 1 100 eb.
+        </div>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2020/11/RTG-CPR-OldGuns.pdf" target="_blank" rel="noopener"><em>Old Guns Never Die</em></a> (R. Talsorian, VO). Résumé reformulé : les profils et règles complets sont dans le PDF.</p>
+      </section>
+
       <section class="block" id="marches">
-        <h2 data-idx="05">Night Markets</h2>
+        <h2 data-idx="06">Night Markets</h2>
         <p>Des marchés éphémères, souvent organisés par un fixer, qui apparaissent pour une nuit dans un parking, un entrepôt ou sous un échangeur. On y trouve de tout : nourriture, armes, cyberware, médicaments, objets exotiques.</p>
         <ul class="list">
           <li>Chaque Night Market a ses <strong>spécialités</strong> (le MJ tire ou choisit les catégories disponibles).</li>
@@ -146,7 +167,7 @@
       </section>
 
       <section class="block" id="black-chrome">
-        <h2 data-idx="06">Ce qu'ajoute Black Chrome</h2>
+        <h2 data-idx="07">Ce qu'ajoute Black Chrome</h2>
         <p>Le catalogue d'équipement du Time of the Red ajoute plus de 170 objets, répartis en grandes familles :</p>
         <div class="grid g3">
           <div class="panel cyan"><h3>Apps</h3><p>Logiciels pour l'Agent, le smartphone de 2045 : outils pratiques, sécurité, réseaux sociaux.</p></div>
@@ -158,8 +179,89 @@
         </div>
       </section>
 
+      <section class="block" id="chimie">
+        <h2 data-idx="08">Chimie de rue</h2>
+        <p>Une drogue de rue a un <strong>effet principal</strong> pendant une durée donnée. L'usager doit réussir un test de <em>Résistance torture/drogues</em> contre le SD indiqué, sinon il subit l'<strong>effet secondaire</strong> : le plus souvent une dépendance, parfois une perte d'Humanité. Un dépendant subit un malus permanent tant qu'il n'est pas sous l'effet du produit.</p>
+
+        <h3>Drogues de combat</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Drogue</th><th>Durée</th><th>Effet principal</th><th>Si effet secondaire (SD 17)</th><th>Prix / dose</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Berserker</strong></td><td class="num">10 min</td><td>Plus de dégâts bonus sur les blessures critiques subies ; malus de blessure grave ou mortelle (et de face-à-face perdu) divisés par deux. Rend très agressif.</td><td>−2 Humanité, dépendance : malus de base à la sauvegarde contre la mort +1.</td><td class="num">100 eb</td></tr>
+              <tr><td><strong>Prime Time</strong></td><td class="num">4 h</td><td>+2 en COOL et WILL (sans changer les PV). Coupe les émotions : perte temporaire de 4d6 Humanité, rendue à la fin de l'effet.</td><td>−1 Humanité, dépendance : −2 en COOL hors effet.</td><td class="num">50 eb</td></tr>
+              <tr><td><strong>Sixgun</strong></td><td class="num">4 h</td><td>Pour netrunners : +2 en Vitesse une fois connecté, déconnexions forcées traitées comme sûres (hors effet de programme), et une fois par tour 1 point d'Humanité contre une action NET en plus. En échange, −2 en MOVE et REF.</td><td>Dépendance : −2 en Vitesse connecté hors effet.</td><td class="num">100 eb</td></tr>
+              <tr><td><strong>Timewarp</strong></td><td class="num">1 min</td><td>+3 aux jets d'initiative (ou +3 immédiat à l'initiative en cours).</td><td>Dépendance : −2 à l'initiative hors effet.</td><td class="num">100 eb</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid g2">
+          <div class="panel amber">
+            <h3>Composés additifs</h3>
+            <p>À mélanger à une fiole de poison ou de biotoxine (une action ; pas de cumul d'un même composé).</p>
+            <ul class="list">
+              <li><strong>Retardateur</strong> (50 eb) : l'effet se déclenche une minute ou une heure plus tard.</li>
+              <li><strong>Distillateur</strong> (100 eb) : +2 au SD pour résister au poison.</li>
+              <li><strong>Osmose</strong> (50 eb) : poison de contact, à étaler sur une petite surface (poignée, arme…). Actif une heure, repérable (Perception SD 17), part à l'eau.</li>
+            </ul>
+          </div>
+          <div class="panel cyan">
+            <h3>Pharmacie du Medtech</h3>
+            <p>Nouvelles préparations pour la spécialité Pharmacologie.</p>
+            <ul class="list">
+              <li><strong>Sédatif</strong> : un patient consentant dort 4 h et le Medtech gagne +2 à sa chirurgie. Sur une cible réticente : Résistance SD 15 ou inconscience pendant une minute (jusqu'à une blessure ou un réveil forcé).</li>
+              <li><strong>Veritas</strong> : Résistance SD 17 ou état second pendant 10 min, avec −5 en Jeu d'acteur, Concentration, Conversation, Déduction, Perception humaine et Persuasion.</li>
+            </ul>
+          </div>
+          <div class="panel magenta">
+            <h3>Drone assassin Suzumebachi</h3>
+            <p>Drone volant insectoïde de la taille d'un livre de poche, vendu 5 000 eb. Il attaque à la fléchette biotoxique dès qu'il reconnaît un visage enregistré, puis tente de s'enfuir. MOVE 6, PA 7, 10 PV. Sa portée dépend de l'architecture NET qui le pilote (le périmètre d'un bâtiment, ou 50 m pour une architecture portable). Le neutraliser demande 5 minutes et un test d'Électronique/Sécurité SD 17.</p>
+          </div>
+          <div class="panel">
+            <h3>Cyberware chimique</h3>
+            <ul class="list">
+              <li><strong>Auto-injecteur</strong> (interne, 100 eb, perte d'Humanité 3 (1d6), clinique) : stocke une dose de drogue, injectée par une action. Avec un biomoniteur, il peut se déclencher seul : au jet d'initiative, sur une blessure critique ou à un état de blessure choisi.</li>
+              <li><strong>Gas Jet</strong> (option de cyberbras, 2 emplacements, 500 eb, perte d'Humanité 7 (2d6), clinique) : diffuseur dissimulé chargé de 3 doses de drogue ou de poison, tirées d'un coup en cône comme une cartouche de fusil à pompe. Les filtres nasaux protègent.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2023/01/RTG-CPR-DLC-HornetsPhramacyv1.11.pdf" target="_blank" rel="noopener"><em>Hornet's Pharmacy</em></a> (R. Talsorian, VO). Résumé reformulé : les profils et règles complets sont dans le PDF.</p>
+      </section>
+
+      <section class="block" id="infiltration" data-filter-scope>
+        <h2 data-idx="09">Matériel d'infiltration</h2>
+        <p>Pour les casses, arnaques et missions discrètes. À combiner avec l'<a href="regles.html#eclair">Éclair de chance</a> et le <a href="netrunning.html#furtif">netrunning furtif</a>.</p>
+        <div class="filterbar">
+          <input class="search" type="search" placeholder="> chercher un objet…" data-filter-search aria-label="Rechercher">
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Objet</th><th>Effet</th><th>Prix</th></tr></thead>
+            <tbody>
+              <tr data-filter-item><td><strong>Composé binaire</strong></td><td>Tube à deux produits qui rongent une surface de couverture de 2 m × 2 m : 6d6 dégâts par round, couche après couche, pendant 6 rounds. Deux rounds pour l'appliquer.</td><td class="num">50 eb / tube</td></tr>
+              <tr data-filter-item><td><strong>Uniforme de l'organisation</strong></td><td>Combinaison et badges du personnel (ménage, chantier, livraison…) : le meilleur camouflage, c'est d'avoir l'air à sa place.</td><td class="num">50 à 1 000 eb selon la sécurité</td></tr>
+              <tr data-filter-item><td><strong>Manchon de dissimulation</strong></td><td>Gaine en peau synthétique : un cyberbras ou une cyberjambe passe pour biologique devant un détecteur. Sur mesure, pour un seul membre.</td><td class="num">500 eb</td></tr>
+              <tr data-filter-item><td><strong>Gant d'empreinte</strong></td><td>Reproduit la main de quelqu'un pour tromper un scanner palmaire, sans laisser de vraies empreintes. Sur commande, à partir d'un relevé.</td><td class="num">500 eb</td></tr>
+              <tr data-filter-item><td><strong>Scanner d'empreintes (app)</strong></td><td>Relève une main en 3 rounds au contact (Bagarre SD 13 par round, automatique si la cible est maîtrisée) ou à partir de traces (Criminologie SD 13 par trace, cinq traces partielles).</td><td class="num">20 eb</td></tr>
+              <tr data-filter-item><td><strong>Lentille rétinienne</strong></td><td>Superpose une fausse rétine pour tromper un scanner oculaire. Sur commande.</td><td class="num">500 eb</td></tr>
+              <tr data-filter-item><td><strong>Scanner rétinien (app)</strong></td><td>Relève une rétine en 5 rounds au contact (Bagarre SD 13 par round).</td><td class="num">50 eb</td></tr>
+              <tr data-filter-item><td><strong>Micro laser</strong></td><td>Écoute une pièce à travers une vitre jusqu'à 300 m. Le faisceau se voit dans la fumée ; inefficace sur le verre blindé épais.</td><td class="num">100 eb</td></tr>
+              <tr data-filter-item><td><strong>Micro parabolique</strong></td><td>Entendre une conversation jusqu'à 30 m comme si on y était.</td><td class="num">100 eb</td></tr>
+              <tr data-filter-item><td><strong>Kit de déguisement pro</strong></td><td>+2 en Look pour se faire passer pour quelqu'un d'autre, dans des limites raisonnables.</td><td class="num">100 eb</td></tr>
+              <tr data-filter-item><td><strong>Ghostsuit Militech M97</strong></td><td>Après une minute immobile, rend invisible à tous les sens visuels (y compris infrarouge) sauf Perception SD 17. Se coupe si l'on se déplace de plus de 2 m en un round.</td><td class="num">5 000 eb</td></tr>
+              <tr data-filter-item><td><strong>Parfum Nymph</strong></td><td>Euphorisant léger : quiconque reste 3 rounds à moins de 6 m et rate un test de Résistance SD 13 subit −2 en Perception humaine pendant une heure. 50 vaporisations.</td><td class="num">500 eb</td></tr>
+              <tr data-filter-item><td><strong>Puce de traduction</strong></td><td>Chipware (nécessite un Chyron, perte d'Humanité 7 (2d6)) : sous-titre en temps réel ce que l'on entend ou lit. Ne permet pas de parler la langue.</td><td class="num">1 000 eb</td></tr>
+              <tr data-filter-item><td><strong>Casque Zetatech « Tank Commander »</strong></td><td>Micro de gorge et oreillette à annulation de bruit : impossible de les entendre sans audition amplifiée.</td><td class="num">100 eb</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="empty-msg hidden" data-filter-empty>// aucun objet trouvé</p>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2025/07/RTG-CPR-DLC-GoingQuietv1.1.pdf" target="_blank" rel="noopener"><em>Going Quiet</em></a> (R. Talsorian, VO). Résumé reformulé : les profils et règles complets sont dans le PDF.</p>
+      </section>
+
       <section class="block" id="vie">
-        <h2 data-idx="07">Train de vie</h2>
+        <h2 data-idx="10">Train de vie</h2>
         <p>Chaque mois, un edgerunner doit payer son <strong>logement</strong> et son <strong>mode de vie</strong> (essentiellement la nourriture). Du conteneur réaménagé au bel appartement, en passant par l'hôtel-capsule, et de la bouillie protéinée aux produits frais hors de prix.</p>
         <div class="callout red">
           <span class="label">// RÉALITÉ DE LA RUE</span>
