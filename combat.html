@@ -36,6 +36,8 @@
       <a href="#critiques">Blessures critiques</a>
       <a href="#mort">Sauvegarde contre la mort</a>
       <a href="#tactique">Options tactiques</a>
+      <a href="#poursuites">Courses-poursuites</a>
+      <a href="#tarot">Tarot de Night City</a>
       <a href="#sbires">MJ : adversaires</a>
     </aside>
 
@@ -164,8 +166,60 @@
         </details>
       </section>
 
+      <section class="block" id="poursuites">
+        <h2 data-idx="08">Courses-poursuites</h2>
+        <p>Règles optionnelles pour des poursuites rapides, où le pilotage compte autant que la vitesse. On ne simule pas chaque virage : les véhicules avancent sur une <strong>grille de poursuite</strong> dont chaque case correspond à une tranche de portée.</p>
+        <div class="grid g2">
+          <div class="panel cyan">
+            <h3>Déroulement</h3>
+            <ul class="list">
+              <li>Le MJ place les véhicules (1 case = 0-6 m, 2 = 7-12 m… 8 = 401-800 m). Les conducteurs lancent l'initiative normalement.</li>
+              <li>Chacun a une action de mouvement (changer de place, grimper sur le toit, sauter d'un véhicule à l'autre) et une action.</li>
+              <li>En fin de round, chaque conducteur fait un <strong>test de position</strong> pour avancer d'une case, ou garde sa vitesse, ou ralentit.</li>
+              <li>Un conducteur dont REF + compétence de pilotage est inférieur à 9 ne peut rien faire d'autre que conduire.</li>
+              <li>Fin de la poursuite : un véhicule s'arrête, ou l'écart dépasse 8 cases.</li>
+            </ul>
+          </div>
+          <div class="panel amber">
+            <h3>Test de position</h3>
+            <div class="table-wrap"><table><thead><tr><th>Vitesse de combat</th><th>SD</th></tr></thead><tbody>
+<tr><td>60 MOVE</td><td>13</td></tr>
+<tr><td>40 MOVE</td><td>15</td></tr>
+<tr><td>20 MOVE</td><td>17</td></tr>
+<tr><td>15 MOVE</td><td>21</td></tr>
+<tr><td>10 MOVE</td><td>24</td></tr>
+<tr><td>8 MOVE</td><td>29</td></tr>
+</tbody></table></div>
+            <p style="margin:0">Sous la moitié de sa structure, un véhicule teste comme s'il était une catégorie plus lent. En dessous de 8 MOVE : il part en tête-à-queue.</p>
+          </div>
+        </div>
+        <div class="table-wrap"><table><thead><tr><th>Manœuvre</th><th>SD</th><th>Effet</th></tr></thead><tbody>
+<tr><td>NOS</td><td>13</td><td>Avance d'une case tout de suite</td></tr>
+<tr><td>Coller</td><td>13</td><td>Se rapproche au bord inférieur de la tranche : sauts et mêlée possibles</td></tr>
+<tr><td>Manœuvre PIT</td><td>15</td><td>Toucher le véhicule voisin : il teste sa position une catégorie plus lent</td></tr>
+<tr><td>Doubler</td><td>17</td><td>Passer devant le véhicule voisin (échec : tête-à-queue ou obstacle)</td></tr>
+<tr><td>Éperonner</td><td>17</td><td>Percuter volontairement, règles normales d'éperonnage</td></tr>
+</tbody></table></div>
+        <p>Les passagers peuvent tirer, ou aider le conducteur : guider avec Guide local, repérer les obstacles avec Perception, jeter un obstacle sur la route…</p>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2024/05/RTG-CPR-DLC-HotPursuit.pdf" target="_blank" rel="noopener"><em>Hot Pursuit</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
+      <section class="block" id="tarot">
+        <h2 data-idx="09">Tarot de Night City <small style="font-size:.6em;color:var(--muted)">(optionnel)</small></h2>
+        <p>Pour des moments de combat mémorables : quand <strong>trois dés de dégâts ou plus</strong> font 6 sur une attaque contre une seule cible (pas de zone, pas de drone), on tire une carte parmi les 22 arcanes majeurs au lieu d'une blessure critique classique. <strong>Une seule carte par séance</strong>, et on ne remélange pas tant que toutes n'ont pas été tirées.</p>
+        <div class="grid g3">
+          <div class="panel"><h3>Le Mat</h3><p>Tout le cyberware de la victime cesse de fonctionner pendant une heure.</p></div>
+          <div class="panel amber"><h3>La Force</h3><p>+25 dégâts, ajoutés avant l'armure.</p></div>
+          <div class="panel magenta"><h3>La Mort</h3><p>Une sauvegarde immédiate. Échec : 0 PV et inconscience… puis 3d6 d'Humanité regagnée par l'expérience.</p></div>
+          <div class="panel cyan"><h3>Le Chariot</h3><p>L'armure de la zone touchée perd 5 PA de plus.</p></div>
+          <div class="panel"><h3>La Roue de fortune</h3><p>L'attaque part au hasard et l'arme s'enraye.</p></div>
+          <div class="panel amber"><h3>L'Empereur</h3><p>Un joueur choisit une blessure critique à la tête et une au corps.</p></div>
+        </div>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2021/11/RTG-CPR-DLC-NightCityTarot-v1.2.pdf" target="_blank" rel="noopener"><em>Night City Tarot</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
       <section class="block" id="sbires">
-        <h2 data-idx="08">MJ : adversaires</h2>
+        <h2 data-idx="10">MJ : adversaires</h2>
         <p>Sbires, lieutenants et mini-boss renforcés, tables de complications et de tactiques, PNJ ordinaires et cyberpets : tout est regroupé dans le module <a href="pnj.html">PNJ &amp; Adversaires</a>.</p>
         <div class="callout">
           <span class="label">// ASTUCE</span>
@@ -181,6 +235,7 @@
   <a class="p-menu" href="index.html">MENU</a>
   <a class="p-next" href="netrunning.html"><span class="p-lab">SHARD-07 · suivant ▸</span><span class="p-title">Netrunning</span></a>
 </nav>
+
 
 
 <footer class="foot">

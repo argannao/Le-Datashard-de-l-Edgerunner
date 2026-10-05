@@ -13,10 +13,13 @@ Site de référence **non officiel** en français pour le jeu de rôle **Cyberpu
 | Personnage | `creation.html` | Méthodes de création, caractéristiques, 66 compétences, Lifepath |
 | Règles | `regles.html` | Test au d10, SD, critiques, Chance, lanceur de dés |
 | Règles | `combat.html` | Initiative, dégâts, armure, blessures, mort |
-| Règles | `netrunning.html` | Architectures NET, actions, programmes, Black ICE |
+| Règles | `netrunning.html` | Architectures NET, netrunning furtif, piratage d'Agent, cyberdecks, Black ICE |
+| Règles | `systemes.html` | Météo, enquêtes, récupération, entretien, QG, sports, succès, règles maison |
 | Matériel | `equipement.html` | Prix, armes, armures, Black Chrome, Night Markets |
 | Matériel | `cyberware.html` | Familles d'implants, Humanité, cyberpsychose |
-| Référence | `extensions.html` | La gamme : livres, boîtes, aides de jeu, VF |
+| Meneur de jeu | `pnj.html` | Gens ordinaires, adversaires renforcés, cyberpets |
+| Meneur de jeu | `missions.html` | Scénarios, Toggle's Temple, prétirés, architectures NET, idées de campagne |
+| Référence | `extensions.html` | La gamme, les titres en VF et les 48 DLC gratuits intégrés |
 
 Styles et scripts partagés dans `assets/` (`style.css`, `app.js`). Aucun outil de build : le site fonctionne tel quel.
 

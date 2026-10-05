@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Systèmes optionnels — Datashard</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hud">
+  <div class="wrap">
+    <a class="hud-logo" href="index.html"><span class="chip"></span>Datashard // Edgerunner</a>
+    <div class="hud-status">
+      <span class="hide-sm">SHARD-08 // RÈGLES</span>
+      <span data-clock>--.--.2045 // --:--:--</span>
+    </div>
+    <a class="hud-back" href="index.html">◂ MENU</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <div class="code" style="color: var(--magenta)">SHARD-08 // MODULES OPTIONNELS</div>
+    <h1 class="glitch" data-text="Systèmes optionnels">Systèmes optionnels</h1>
+    <p class="lede">Des sous-systèmes officiels à brancher sur vos parties selon vos envies : météo, enquêtes, récupération, entretien du matériel, quartier général, sports de rue, rendez-vous, succès et règles maison.</p>
+  </div>
+
+  <div class="layout">
+    <aside class="toc">
+      <div class="toc-title">// SOMMAIRE</div>
+      <a href="#meteo">Météo de Night City</a>
+      <a href="#enquetes">Enquêtes</a>
+      <a href="#recuperation">Récupération</a>
+      <a href="#entretien">Entretien &amp; pannes</a>
+      <a href="#qg">Quartier général</a>
+      <a href="#sports">Sports de rue</a>
+      <a href="#rendezvous">Rendez-vous galants</a>
+      <a href="#succes">Succès &amp; loot boxes</a>
+      <a href="#maison">Règles maison de MJ</a>
+    </aside>
+
+    <div>
+      <section class="block" id="meteo">
+        <h2 data-idx="01">Météo de Night City</h2>
+        <p>Le climat est devenu instable : brouillards jaunes chargés de pollution, sécheresse, et des phénomènes propres à la ville (pluies rouges, vents radioactifs). Le MJ tire la <strong>température</strong> et les <strong>conditions</strong> du jour sur la table de la saison (1d6). Sur un 6 en conditions, on passe à la <em>météo étrange</em>. On peut aussi simplement s'en servir pour l'ambiance.</p>
+        <div class="table-wrap"><table><thead><tr><th>Saison</th><th>Températures</th><th>Conditions courantes</th></tr></thead><tbody>
+<tr><td>Décembre – février</td><td>2 à 15 °C</td><td>dégagé, couvert, pluie ou grésil</td></tr>
+<tr><td>Mars – mai</td><td>4 à 21 °C</td><td>dégagé, couvert, pluie légère ou forte</td></tr>
+<tr><td>Juin – août</td><td>15 à 32 °C</td><td>dégagé, couvert, pluie légère</td></tr>
+<tr><td>Septembre – novembre</td><td>4 à 27 °C</td><td>dégagé, couvert, pluie ou grésil</td></tr>
+</tbody></table></div>
+        <h3>Météo étrange (1d10)</h3>
+        <div class="table-wrap"><table><thead><tr><th>1d10</th><th>Phénomène</th><th>Durée</th><th>Effets en bref</th></tr></thead><tbody>
+<tr><td>1</td><td>Tempête de vent radioactif</td><td>1d6 × 10 min</td><td>Rafales de radiations fortes venues de la Hot Zone, sans combinaison antiradiations</td></tr>
+<tr><td>2</td><td>Tempête de cendres</td><td>1d6 × 10 min</td><td>Sans masque : comme une fiole de poison + corps étranger dans les poumons. −2 aux tests de perception et de tir</td></tr>
+<tr><td>3</td><td>Inondation</td><td>1d6 jours</td><td>L'eau de mer remonte par les fissures : quelques centimètres en surface, sous-sols noyés</td></tr>
+<tr><td>4</td><td>Pluie rouge</td><td>1d6 heures</td><td>Grasse et toxique : effet de pluie acide (1-3) ou de biotoxine (4-6). −1 en perception</td></tr>
+<tr><td>5</td><td>Pluie acide</td><td>1d6 heures</td><td>Chaque minute sans protection : −1 PA sur toute l'armure portée</td></tr>
+<tr><td>6</td><td>Orage meurtrier</td><td>1d6 × 10 min</td><td>Toutes les 10 min, 1d6 : sur 4-6 la foudre frappe le point le plus haut… ou le personnage le plus grand. 6d6 + effet de grenade flash</td></tr>
+<tr><td>7</td><td>Smog d'inversion</td><td>1d6 jours</td><td>Sans masque : comme une fiole de poison. −4 en perception et tir lointain</td></tr>
+<tr><td>8</td><td>Vague de froid / canicule</td><td>1d6 jours</td><td>Exposition. Canicule : malus d'armure augmenté de 2</td></tr>
+<tr><td>9</td><td>Tempête de poussière</td><td>1d6 × 10 min</td><td>Après 5 min sans masque : corps étranger dans les poumons. −2 en perception</td></tr>
+<tr><td>10</td><td>Coupure</td><td>1d6 jours</td><td>Plus d'électricité ni de réseau dans le secteur : les Agents ne captent plus</td></tr>
+</tbody></table></div>
+        <div class="grid g2">
+          <div class="panel amber"><h3>Chaleur et pluie</h3><p>Chaleur : malus d'armure +1. Pluie légère : −1 sur les surfaces glissantes. Forte pluie : −2 en perception et tir à distance. Froid : règles d'exposition sans équipement adapté.</p></div>
+          <div class="panel cyan"><h3>S'équiper</h3><p>Parapluie (10 eb) contre l'acide et +2 contre la pluie rouge ; doublures de veste chaude, froide ou imperméable (500 eb) ; parapluie tactique Militech (1 000 eb), à la fois arme de mêlée et pistolet deux coups.</p></div>
+        </div>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2021/07/RTG-CPR-NightCityWeather.pdf" target="_blank" rel="noopener"><em>Night City Weather</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
+      <section class="block" id="enquetes">
+        <h2 data-idx="02">Enquêtes</h2>
+        <p>Un système optionnel pour mener des mystères sans dépendre du génie déductif des joueurs. Une enquête se joue comme un combat contre une énigme : chaque indice déchiffré lui « inflige des dégâts ».</p>
+        <div class="grid g3">
+          <div class="panel magenta"><h3>Concentration (Focus)</h3><div class="formula" style="font-size:.95rem">10 + 5 × ⌈(INT + WILL) ÷ 2⌉</div><p style="margin:0">À 0, plus de test d'indice possible. Se récupère par le repos (INT + WILL par jour, +5 avec Concentration SD 15).</p></div>
+          <div class="panel cyan"><h3>Complexité</h3><p style="margin:0">Les « PV » du mystère : 25 (facile, une partie de mission), 50 (moyen, une mission), 100 (difficile, plusieurs missions), 150 (intrigue importante), 200 (fil rouge de la campagne).</p></div>
+          <div class="panel amber"><h3>Brouillage</h3><p style="margin:0">L'« armure » d'un indice : 0 (témoin direct), 2 (témoin ivre, enregistrement partiel), 4 (témoin de seconde main), 6 (simple rumeur).</p></div>
+        </div>
+        <p style="margin-top:16px">Chaque personnage peut tenter un <strong>test d'indice</strong> par indice et par jour. Réussite : on lance les dégâts de l'indice, moins le brouillage, retirés de la complexité. Échec : on perd de la Concentration. À 0 de complexité, l'affaire est résolue.</p>
+        <div class="table-wrap"><table><thead><tr><th>Indice</th><th>Compétences</th><th>Dégâts</th><th>En cas d'échec</th></tr></thead><tbody>
+<tr><td>Audit</td><td>Comptabilité, Bureaucratie</td><td>3d6</td><td>2d6 Concentration</td></tr>
+<tr><td>Autopsie</td><td>Paramédic, Chirurgie</td><td>4d6</td><td>3d6 ; maladresse : corps abîmé (−4 ensuite)</td></tr>
+<tr><td>Analyse chimique</td><td>Technique de base, Science</td><td>3d6</td><td>2d6 ; maladresse : échantillon détruit</td></tr>
+<tr><td>Déchiffrement</td><td>Cryptographie</td><td>2d6</td><td>1d6</td></tr>
+<tr><td>Fouille numérique</td><td>Électronique/Sécurité</td><td>4d6</td><td>3d6 ; maladresse : appareil détruit</td></tr>
+<tr><td>Scène de crime</td><td>Criminologie, Déduction</td><td>4d6</td><td>3d6 ; maladresse : preuve perdue</td></tr>
+<tr><td>Ragots</td><td>Conversation, Persuasion, Connaissance de la rue</td><td>2d6</td><td>1d6</td></tr>
+<tr><td>Interrogatoire</td><td>Perception humaine, Interrogatoire</td><td>3d6</td><td>2d6 ; maladresse : impossible de réessayer</td></tr>
+<tr><td>Observation</td><td>Perception, Perception humaine</td><td>2d6</td><td>1d6</td></tr>
+<tr><td>Recherches</td><td>Éducation, Bibliothèque</td><td>2d6</td><td>1d6</td></tr>
+<tr><td>Filature</td><td>Discrétion</td><td>3d6</td><td>2d6 ; maladresse : la cible réagit</td></tr>
+<tr><td>Pistage</td><td>Pistage</td><td>2d6</td><td>1d6</td></tr>
+</tbody></table></div>
+        <ul class="list">
+          <li><strong>Bloqués ?</strong> Déduction SD 15 pour un indice sur la piste suivante, au prix d'1d6 de Concentration.</li>
+          <li><strong>Obstacles</strong> (autorités, juridiction, désinformation, territoire de gang, fausse piste…) : 1d6 de Concentration si on les surmonte, 2d6 sinon.</li>
+          <li><strong>Compte à rebours</strong> : une rançon, un fugitif qui va quitter la ville… la pression du temps est un obstacle en soi.</li>
+          <li>Les joueurs accusent le mauvais suspect ? Tant pis pour eux : un innocent accusé fait un excellent ennemi.</li>
+        </ul>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2024/09/RTG-CPR-DLC-DidSomeoneSayMurder.pdf" target="_blank" rel="noopener"><em>Did Someone Say Murder?</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
+      <section class="block" id="recuperation">
+        <h2 data-idx="03">Récupération</h2>
+        <p>Une activité d'intermission : une semaine à fouiller ruines, décharges et zones de combat pour en tirer du matériel. Dangereux : effondrements, radiations, gaz toxiques, gangs, ferrailleurs, sécurité corpo dans les casses.</p>
+        <div class="grid g2">
+          <div class="panel">
+            <h3>Où fouiller</h3>
+            <ul class="list">
+              <li><strong>Hot Zone</strong> : beaucoup de vieux trésors, et des points chauds radioactifs.</li>
+              <li><strong>Combat Zones</strong> (South Night City, Old Combat Zone, Old Japantown, Little China) : déjà bien pillées, territoire des gangs.</li>
+              <li><strong>Casses</strong> : pleines de trésors, mais les corpos défendent même leurs déchets.</li>
+              <li><strong>Périphérie et Badlands</strong> : villes fantômes, motels, usines. On y croise des Nomads, souvent prêts à négocier.</li>
+            </ul>
+          </div>
+          <div class="panel amber">
+            <h3>Comment ça marche</h3>
+            <ol class="list">
+              <li>Choisir une catégorie (cyberware, armes, matériel, armure, decks) ou tirer au hasard.</li>
+              <li>Test de <em>Technique de base</em> : le résultat fixe la valeur trouvée.</li>
+              <li>Choisir des objets de la catégorie jusqu'à cette valeur. Ils sont <strong>détruits</strong> : il faut les réparer.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="table-wrap"><table><thead><tr><th>Valeur trouvée</th><th>Au hasard</th><th>Catégorie choisie</th></tr></thead><tbody>
+<tr><td>10 eb</td><td>SD 9</td><td>SD 13</td></tr>
+<tr><td>20 eb</td><td>SD 13</td><td>SD 15</td></tr>
+<tr><td>50 eb</td><td>SD 15</td><td>SD 17</td></tr>
+<tr><td>100 eb</td><td>SD 17</td><td>SD 21</td></tr>
+<tr><td>500 eb</td><td>SD 24</td><td>SD 29</td></tr>
+<tr><td>1 000 eb</td><td>SD 29</td><td>—</td></tr>
+</tbody></table></div>
+        <div class="callout red"><span class="label">// ÉCHEC CRITIQUE</span>Rien trouvé, et 1d6 sur les périls : effondrement (6d6 + blessure critique), fusillade (6d6), radiations, chute de 30 m, poche de gaz toxique, électrocution.</div>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2022/04/RTG-CPR-DLC-SalvagingNightCity.pdf" target="_blank" rel="noopener"><em>Salvaging Night City</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
+      <section class="block" id="entretien">
+        <h2 data-idx="04">Entretien &amp; pannes</h2>
+        <p>Règle optionnelle : le matériel s'use. Un objet peut devenir <strong>endommagé</strong> (il fonctionne, mais risque une panne), <strong>détruit</strong> (réparable) ou <strong>détruit sans réparation possible</strong>.</p>
+        <div class="grid g2">
+          <div class="panel cyan">
+            <h3>Entretien mensuel</h3>
+            <p>Le matériel dont la valeur reste dans votre mode de vie est entretenu automatiquement. Au-delà, il faut chaque mois un test de la compétence technique adaptée :</p>
+            <div class="table-wrap"><table><thead><tr><th>Mode de vie</th><th>Entretenu d'office jusqu'à</th><th>SD</th><th>Temps</th></tr></thead><tbody>
+<tr><td>Kibble</td><td>&lt; 500 eb (véhicules &lt; 20 000)</td><td>13</td><td>30 min</td></tr>
+<tr><td>Generic Prepak</td><td>&lt; 1 000 eb (&lt; 50 000)</td><td>15</td><td>1 h</td></tr>
+<tr><td>Good Prepak</td><td>&lt; 5 000 eb (&lt; 100 000)</td><td>17</td><td>3 h</td></tr>
+<tr><td>Fresh Food</td><td>tout</td><td>21</td><td>1 jour</td></tr>
+</tbody></table></div>
+            <p style="margin:0"><small>Techs : un cran de mode de vie en plus pour tout. Solos et Lawmen pour armes et armures, Netrunners pour leur matériel NET, Medias et Rockerboys pour leurs outils de travail. Les Execs, Medtechs et Nomads n'entretiennent pas ce que leur rôle leur fournit.</small></p>
+          </div>
+          <div class="panel">
+            <h3>Quand ça casse</h3>
+            <ul class="list">
+              <li>Causes possibles : manque d'entretien, électrocution, intempéries, 20 dégâts ou plus en un coup, blessure critique, feu ou radiations, drogues à répétition.</li>
+              <li>Repérer un objet endommagé : 1 minute et un test SD 13 (ou opposé à la Contrefaçon du vendeur).</li>
+              <li>Revente : endommagé = une catégorie de prix en dessous ; détruit = deux.</li>
+              <li>Pannes : tables par type d'objet (armure, deck, cyberware, drone, véhicule, arme…), à déclencher au moment le plus dramatique ou sur un 1 naturel.</li>
+              <li>Un Tech peut bricoler une réparation provisoire avec sa spécialité de terrain.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2024/01/RTG-CPR-DLC-BreakingYourStuffv1.1.pdf" target="_blank" rel="noopener"><em>Breaking Your Stuff</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
+      <section class="block" id="qg">
+        <h2 data-idx="05">Quartier général</h2>
+        <p>L'équipe peut se doter d'une base. Chaque fois qu'elle reçoit des PAM de groupe après une mission, elle gagne autant de <strong>PAM de QG</strong>, à dépenser ensemble. Chaque amélioration coûte 40 PAM de QG, et peut être améliorée une fois pour 40 de plus. Perdre l'accès au QG (loyer impayé, attaque…) fait perdre ses bonus.</p>
+        <div class="table-wrap"><table><thead><tr><th>Amélioration</th><th>Effet</th><th>Version améliorée</th></tr></thead><tbody>
+<tr><td>Garage</td><td>Une petite voiture d'équipe</td><td>Les Nomads peuvent réorganiser leurs véhicules Moto</td></tr>
+<tr><td>Mur d'enquête</td><td>+2 aux tests d'enquête pour Lawmen et Medias</td><td>+3 pour les Lawmen, crédibilité accrue pour les Medias</td></tr>
+<tr><td>Cellule</td><td>Retenir un prisonnier (BODY 13 pour s'évader)</td><td>Trois cellules, +2 à l'interrogatoire pour les Lawmen</td></tr>
+<tr><td>Salon</td><td>−50 eb de mode de vie par mois, +2 social pour les Fixers en rendez-vous</td><td>+2 pour organiser des rencontres (Fixers, Medias)</td></tr>
+<tr><td>Infirmerie</td><td>Guérison comme avec BODY +2, +2 aux soins des Medtechs</td><td>Le Medtech peut fabriquer des drogues</td></tr>
+<tr><td>Moral</td><td>Déco et loisirs : 10 paliers de bonus (Humanité regagnée chaque mois, Chance +1, meilleurs petits boulots…)</td><td>Améliorable dix fois</td></tr>
+<tr><td>Loyer réduit</td><td>Loyer d'une catégorie en dessous</td><td>Des lits en plus sans surcoût</td></tr>
+<tr><td>Salle serveur</td><td>Une architecture NET de 20 000 eb pour défendre la base</td><td>Le Netrunner peut fabriquer decks et programmes</td></tr>
+<tr><td>Studio</td><td>+2 aux tests artistiques des Rockerboys</td><td>Œuvre au long cours : le bonus s'accumule semaine après semaine (jusqu'au 1 fatal)</td></tr>
+<tr><td>Salle d'entraînement</td><td>Une semaine d'entraînement : +1 dans une compétence de combat</td><td>Deux compétences pour les Solos</td></tr>
+<tr><td>Atelier</td><td>Le Tech avance deux projets à la fois</td><td>Trois projets</td></tr>
+<tr><td>Poste de travail</td><td>Un subordonné de l'Exec devient membre à part entière de l'équipe</td><td>Loyauté indéfectible</td></tr>
+</tbody></table></div>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2024/08/RTG-CPR-DLC-NoPlaceLikeHome.pdf" target="_blank" rel="noopener"><em>No Place Like Home</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
+      <section class="block" id="sports">
+        <h2 data-idx="06">Sports de rue</h2>
+        <div class="grid g2">
+          <div class="panel amber">
+            <h3>Stickball</h3>
+            <p>Deux équipes de trois, des crosses magnétiques et trois balles électrifiées : il faut ramener les trois dans son cercle, par tous les moyens non létaux. Certains gangs s'en servent pour régler leurs différends sans fusillade.</p>
+            <ul class="list">
+              <li>Interdits : véhicules à moteur, remplaçants, aide extérieure, tout ce qui cause une blessure critique ou fait tomber sous 1 PV.</li>
+              <li>Autorisés : rollers, skates, munitions caoutchouc homologuées, matraques et pistolets paralysants, fumigènes…</li>
+              <li>Ramasser une balle à mains nues : 3d6 d'électrocution. Actions spéciales : ramasser, marquer un adversaire (Athlétisme opposé), passer/tirer (Athlétisme, SD selon la distance).</li>
+            </ul>
+            <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2023/05/RTG-CPR-DLC-Stickball.pdf" target="_blank" rel="noopener"><em>Stickball</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+          </div>
+          <div class="panel magenta">
+            <h3>Roller derby</h3>
+            <p>Cinq joueurs en patins par équipe : deux <em>jammers</em> (attaque), deux <em>blockers</em> (défense) et un <em>rabbit</em> qui porte la cible. On marque en touchant la cible du rabbit adverse ; dix points gagnent la manche (<em>jam</em>).</p>
+            <ul class="list">
+              <li>Armes contondantes seulement, protections obligatoires.</li>
+              <li>Initiative : MOVE + 1d10. Pas d'action Courir. Éjecté à 0 PV ou à la 3<sup>e</sup> blessure critique.</li>
+              <li>Coups spéciaux : bousculer (Bagarre contre Esquive, pousse de 4 m), garder le rabbit, accélérer (Athlétisme SD 13 : +2 MOVE), lancer un coéquipier…</li>
+            </ul>
+            <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2024/02/RTG-CPR-DLC-ChasingtheRabbit.pdf" target="_blank" rel="noopener"><em>Chasing the Rabbit</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="rendezvous">
+        <h2 data-idx="07">Rendez-vous galants</h2>
+        <p>Le <strong>Datepath</strong> est un générateur de premier rendez-vous via l'appli de rencontres de The Garden : deux mots-clés de profil (1d100 chacun : « aventureux », « Netrunner », « Elflines Online », « jardinage »…), un quartier de Night City, puis une table de sorties propre au quartier (stand de tir sur la base militaire, fête de rue, verre de vin avec vue…). Parfait en intermission, et pour créer de nouveaux PNJ quand le Lifepath n'en donne plus.</p>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2022/02/RTG-CPR-DLC-DigitalDating.pdf" target="_blank" rel="noopener"><em>Digital Dating</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
+      <section class="block" id="succes">
+        <h2 data-idx="08">Succès &amp; loot boxes</h2>
+        <p>Un sous-système volontairement léger pour contrebalancer la noirceur. L'équipe débloque des <strong>succès</strong> (une seule fois chacun) : survivre à un combat avec trois blessures critiques, finir un contrat dangereux sans combattre, prendre un bain dans 100 000 eb, survivre aux montagnes russes de Playland by the Sea, que tous les joueurs arrivent à l'heure trois séances de suite…</p>
+        <p>Un succès s'échange, à l'unanimité, contre :</p>
+        <ul class="list">
+          <li>une <strong>relance</strong> d'un d10 d'un joueur, en gardant le meilleur (pas sur une sauvegarde contre la mort) ;</li>
+          <li>ou une <strong>boîte mystère</strong> de Mr. Amaze, qui apparaît sans bruit hors de vue de l'équipe : 1d10 pour la boîte, 1d6 pour son contenu (arme chargée, gadget, cyberware…).</li>
+        </ul>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2023/03/RTG-CPR-DLC-AchievementsandLootBoxes.pdf" target="_blank" rel="noopener"><em>Achievements and Loot Boxes</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
+      <section class="block" id="maison">
+        <h2 data-idx="09">Règles maison de MJ</h2>
+        <p>Des règles maison proposées par deux MJ vidéastes reconnus, publiées par R. Talsorian. À discuter avec la table en séance zéro.</p>
+        <div class="grid g2">
+          <div class="panel">
+            <h3>JonJonTheWise</h3>
+            <ul class="list">
+              <li><strong>Méthode des trois sbires</strong> : des adversaires improvisés en trois niveaux (facile, moyen, élite) avec une seule valeur de compétence, des PV, une armure et une liste d'armes au choix. Seuls les élites esquivent les balles.</li>
+              <li><strong>Pas de sauvegarde pour les sbires</strong> : à 0 PV, ils meurent. Les sauvegardes sont réservées aux PNJ importants.</li>
+              <li><strong>Étourdissement sur gros dégâts</strong>, inspiré de Cyberpunk 2020.</li>
+              <li><strong>Réussites et échecs majeurs</strong> : un résultat très au-dessus ou au-dessous du SD apporte un bonus ou une complication.</li>
+              <li><strong>Délai d'intervention de la police</strong> après une fusillade en public.</li>
+            </ul>
+            <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2023/03/RTG-CPR-DLC-ListenUpJonJon.pdf" target="_blank" rel="noopener"><em>Listen Up! JonJonTheWise</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+          </div>
+          <div class="panel cyan">
+            <h3>Rob Mulligan</h3>
+            <ul class="list">
+              <li><strong>Chance de rattrapage</strong> : dépenser la Chance <em>après</em> le jet, au double du prix. Et un « jet de Chance » (1d10 sous la Chance) pour les questions de pur hasard.</li>
+              <li><strong>Souvenirs</strong> : un test de Concentration pour rappeler une info oubliée entre deux séances.</li>
+              <li><strong>Chaque impact fait mal</strong> : une attaque arrêtée par l'armure inflige quand même 1 PV.</li>
+              <li><strong>Bulletin du MJ</strong> : un retour anonyme des joueurs en fin de campagne.</li>
+              <li><strong>Générateur de campagne rapide</strong> : intrigue, complication, lieux, personnages aux dés.</li>
+            </ul>
+            <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2023/09/RTG-CPR-DLC-ListenUpRobMulligan.pdf" target="_blank" rel="noopener"><em>Listen Up! Rob Mulligan</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<nav class="pager wrap" aria-label="Navigation entre modules">
+  <a class="p-prev" href="netrunning.html"><span class="p-lab">◂ précédent · SHARD-07</span><span class="p-title">Netrunning</span></a>
+  <a class="p-menu" href="index.html">MENU</a>
+  <a class="p-next" href="equipement.html"><span class="p-lab">SHARD-09 · suivant ▸</span><span class="p-title">Équipement &amp; Économie</span></a>
+</nav>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="legal">Site de fan non officiel. Cyberpunk et Cyberpunk RED sont des marques de R. Talsorian Games Inc. et CD Projekt Red. Contenus résumés et reformulés à partir des DLC gratuits de R. Talsorian : référez-vous aux PDF officiels.</div>
+    <div><a href="index.html">◂ retour au menu</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
