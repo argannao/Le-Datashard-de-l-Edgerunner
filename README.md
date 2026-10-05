@@ -4,19 +4,19 @@ Site de référence **non officiel** en français pour le jeu de rôle **Cyberpu
 
 ## Modules
 
-| Fichier | Contenu |
-|---|---|
-| `index.html` | Menu d'accueil |
-| `roles.html` | Les dix rôles et leurs capacités |
-| `creation.html` | Méthodes de création, caractéristiques, Lifepath |
-| `regles.html` | Test au d10, SD, critiques, Chance, lanceur de dés |
-| `combat.html` | Initiative, dégâts, armure, blessures, mort |
-| `netrunning.html` | Architectures NET, actions, programmes, Black ICE |
-| `cyberware.html` | Familles d'implants, Humanité, cyberpsychose |
-| `equipement.html` | Prix, armes, armures, Night Markets |
-| `lore.html` | Chronologie, Night City, corporations, gangs |
-| `glossaire.html` | Argot de la rue |
-| `extensions.html` | La gamme : livres, boîtes, aides de jeu, VF |
+| Groupe | Fichier | Contenu |
+|---|---|---|
+| — | `index.html` | Menu d'accueil |
+| Univers | `lore.html` | Chronologie, Night City, corporations, gangs, districts |
+| Univers | `glossaire.html` | Argot de la rue, correspondances VO / VF |
+| Personnage | `roles.html` | Les dix rôles et leurs capacités |
+| Personnage | `creation.html` | Méthodes de création, caractéristiques, 66 compétences, Lifepath |
+| Règles | `regles.html` | Test au d10, SD, critiques, Chance, lanceur de dés |
+| Règles | `combat.html` | Initiative, dégâts, armure, blessures, mort |
+| Règles | `netrunning.html` | Architectures NET, actions, programmes, Black ICE |
+| Matériel | `equipement.html` | Prix, armes, armures, Black Chrome, Night Markets |
+| Matériel | `cyberware.html` | Familles d'implants, Humanité, cyberpsychose |
+| Référence | `extensions.html` | La gamme : livres, boîtes, aides de jeu, VF |
 
 Styles et scripts partagés dans `assets/` (`style.css`, `app.js`). Aucun outil de build : le site fonctionne tel quel.
 
@@ -28,7 +28,7 @@ GitHub Pages : *Settings → Pages → Deploy from a branch → `main` / root*.
 
 1. Copier un module existant (par ex. `combat.html`).
 2. Changer le code `SHARD-XX`, le titre et le contenu.
-3. Ajouter une carte `.shard` dans `index.html`.
+3. Ajouter une carte `.shard` dans le bon groupe de `index.html`, puis mettre à jour la numérotation et la navigation précédent / suivant.
 
 ## Mentions
 
