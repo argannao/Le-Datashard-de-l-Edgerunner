@@ -102,8 +102,8 @@
             <thead><tr><th>État</th><th>Seuil</th><th>Effets</th></tr></thead>
             <tbody>
               <tr><td><strong>Légèrement blessé</strong></td><td>Sous le maximum de PV</td><td>Aucun malus.</td></tr>
-              <tr><td><strong class="crit">Gravement blessé</strong></td><td>Moitié des PV ou moins</td><td>Malus de −2 à toutes les actions.</td></tr>
-              <tr><td><strong class="ko">Mortellement blessé</strong></td><td>Moins de 1 PV</td><td>Malus de −4 à toutes les actions, mouvement fortement réduit, sauvegarde contre la mort à chaque tour.</td></tr>
+              <tr><td><strong class="crit">Gravement blessé</strong></td><td>Moins de la moitié des PV</td><td>Malus de −2 à toutes les actions.</td></tr>
+              <tr><td><strong class="ko">Mortellement blessé</strong></td><td>Moins de 1 PV</td><td>Malus de −4 à toutes les actions, −6 en MOVE (minimum 1), sauvegarde contre la mort à chaque tour.</td></tr>
             </tbody>
           </table>
         </div>
@@ -130,10 +130,10 @@
 
       <section class="block" id="mort">
         <h2 data-idx="06">Sauvegarde contre la mort</h2>
-        <p>Un personnage mortellement blessé lance <strong>1d10 au début de chacun de ses tours</strong>. Il survit ce tour-ci s'il fait un résultat inférieur ou égal à sa sauvegarde contre la mort (égale à BODY).</p>
+        <p>Un personnage mortellement blessé lance <strong>1d10 au début de chacun de ses tours</strong>. Il survit ce tour-ci s'il fait un résultat <strong>strictement inférieur</strong> à sa sauvegarde contre la mort (égale à BODY). Un seul échec, et c'est la mort.</p>
         <ul class="list">
           <li>Un <strong>10</strong> est toujours un échec.</li>
-          <li>Chaque sauvegarde réussie augmente la difficulté des suivantes.</li>
+          <li>Chaque sauvegarde effectuée ajoute +1 au malus des suivantes, jusqu'à ce que le personnage soit stabilisé.</li>
           <li>Certaines blessures critiques rendent aussi la sauvegarde plus difficile.</li>
           <li>Seule une stabilisation par un allié arrête les jets.</li>
         </ul>
