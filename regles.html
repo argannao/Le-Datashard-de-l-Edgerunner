@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Règles de base — Datashard</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hud">
+  <div class="wrap">
+    <a class="hud-logo" href="index.html"><span class="chip"></span>Datashard // Edgerunner</a>
+    <div class="hud-status">
+      <span class="hide-sm">SHARD-03</span>
+      <span data-clock>--.--.2045 // --:--:--</span>
+    </div>
+    <a class="hud-back" href="index.html">◂ MENU</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <div class="code">SHARD-03 // INTERLOCK SYSTEM</div>
+    <h1 class="glitch" data-text="Règles de base">Règles de base</h1>
+    <p class="lede">Cyberpunk RED repose sur un seul dé : le <strong>d10</strong>. Presque toutes les actions se résolvent de la même façon, ce qui rend le système rapide à apprendre et fluide en jeu.</p>
+  </div>
+
+  <div class="layout">
+    <aside class="toc">
+      <div class="toc-title">// SOMMAIRE</div>
+      <a href="#test">Le test</a>
+      <a href="#sd">Seuils de difficulté</a>
+      <a href="#critiques">Critiques</a>
+      <a href="#oppose">Tests opposés</a>
+      <a href="#chance">La Chance</a>
+      <a href="#des">Lanceur de dés</a>
+      <a href="#progression">Progression</a>
+    </aside>
+
+    <div>
+      <section class="block" id="test">
+        <h2 data-idx="01">Le test</h2>
+        <div class="formula">CARACTÉRISTIQUE + COMPÉTENCE + 1d10 + modificateurs</div>
+        <p>Le résultat doit <strong>dépasser strictement</strong> le seuil de difficulté (SD, ou <em>DV</em> en anglais) fixé par le MJ. Égaler le SD ne suffit pas.</p>
+        <div class="grid g3">
+          <div class="panel"><h3>Caractéristique</h3><p>Celle qui correspond le mieux à l'action : REF pour tirer, TECH pour réparer, COOL pour bluffer…</p></div>
+          <div class="panel cyan"><h3>Compétence</h3><p>Le niveau d'entraînement, de 0 à 10. Chaque compétence est liée à une caractéristique précise.</p></div>
+          <div class="panel amber"><h3>Modificateurs</h3><p>Bonus ou malus de situation : blessures, outils, lumière, temps pris, aide d'un allié…</p></div>
+        </div>
+      </section>
+
+      <section class="block" id="sd">
+        <h2 data-idx="02">Seuils de difficulté</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>SD</th><th>Difficulté</th><th>Exemple</th></tr></thead>
+            <tbody>
+              <tr><td class="num">9</td><td><strong>Simple</strong></td><td>Une tâche que presque tout le monde réussit sans effort.</td></tr>
+              <tr><td class="num">13</td><td><strong>Courante</strong></td><td>Ce qu'un amateur réussit la plupart du temps.</td></tr>
+              <tr><td class="num">15</td><td><strong>Difficile</strong></td><td>Demande un vrai savoir-faire.</td></tr>
+              <tr><td class="num">17</td><td><strong>Professionnelle</strong></td><td>Le travail d'un spécialiste confirmé.</td></tr>
+              <tr><td class="num">21</td><td><strong>Héroïque</strong></td><td>À la limite de ce qu'un expert peut faire.</td></tr>
+              <tr><td class="num">24</td><td><strong>Incroyable</strong></td><td>Réservé aux meilleurs, avec de la chance.</td></tr>
+              <tr><td class="num">29</td><td><strong>Légendaire</strong></td><td>On en parlera encore dans les bars dans dix ans.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="block" id="critiques">
+        <h2 data-idx="03">Critiques</h2>
+        <div class="grid g2">
+          <div class="panel amber">
+            <span class="tag amber">Le dé fait 10</span>
+            <h3>Succès critique</h3>
+            <p>Relancez le d10 une fois et <strong>ajoutez</strong> le résultat. Pas de relance en chaîne : un second 10 compte simplement pour 10.</p>
+          </div>
+          <div class="panel">
+            <span class="tag red">Le dé fait 1</span>
+            <h3>Échec critique</h3>
+            <p>Relancez le d10 une fois et <strong>soustrayez</strong> le résultat. Le MJ peut ajouter une complication narrative.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="oppose">
+        <h2 data-idx="04">Tests opposés</h2>
+        <p>Quand deux personnages s'affrontent (discrétion contre perception, tir contre esquive, bluff contre perception humaine…), chacun fait son test. Le plus haut l'emporte.</p>
+        <div class="callout">
+          <span class="label">// RÈGLE D'OR</span>
+          En cas d'égalité, c'est le <strong>défenseur</strong> qui gagne.
+        </div>
+        <p>Un allié peut aider : s'il réussit d'abord un test d'une compétence complémentaire, il accorde un petit bonus au jet principal, à la discrétion du MJ.</p>
+      </section>
+
+      <section class="block" id="chance">
+        <h2 data-idx="05">La Chance</h2>
+        <p>La caractéristique LUCK est une <strong>réserve de points</strong>. Avant un jet, vous pouvez en dépenser autant que vous voulez : chaque point dépensé donne +1 au résultat.</p>
+        <ul class="list">
+          <li>La dépense se déclare <strong>avant</strong> de lancer le dé.</li>
+          <li>La réserve se recharge entièrement au début de chaque session.</li>
+        </ul>
+      </section>
+
+      <section class="block" id="des">
+        <h2 data-idx="06">Lanceur de dés</h2>
+        <div class="panel cyan" data-dice>
+          <div class="dice">
+            <div>
+              <div class="fields">
+                <div><label for="d-stat">CARAC</label><input id="d-stat" name="stat" type="number" min="0" max="10" value="6"></div>
+                <div><label for="d-skill">COMP</label><input id="d-skill" name="skill" type="number" min="0" max="10" value="4"></div>
+                <div><label for="d-mod">MOD</label><input id="d-mod" name="mod" type="number" min="-10" max="10" value="0"></div>
+              </div>
+              <label for="d-dv">SEUIL DE DIFFICULTÉ</label>
+              <select id="d-dv" name="dv">
+                <option value="9">9 — Simple</option>
+                <option value="13">13 — Courante</option>
+                <option value="15" selected>15 — Difficile</option>
+                <option value="17">17 — Professionnelle</option>
+                <option value="21">21 — Héroïque</option>
+                <option value="24">24 — Incroyable</option>
+                <option value="29">29 — Légendaire</option>
+              </select>
+              <div style="margin-top:16px"><button class="btn" data-roll>Lancer le d10</button></div>
+            </div>
+            <div class="dice-out" data-out aria-live="polite">
+              <div class="detail">// en attente du jet…</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="progression">
+        <h2 data-idx="07">Progression</h2>
+        <p>À la fin des sessions, le MJ attribue des <strong>Points d'Amélioration (PA)</strong>. On les dépense pour :</p>
+        <ul class="list">
+          <li>augmenter une compétence (le coût grimpe avec le niveau visé, et double pour les compétences difficiles) ;</li>
+          <li>augmenter le rang de sa capacité de rôle (beaucoup plus cher) ;</li>
+          <li>apprendre une nouvelle compétence ou une seconde capacité de rôle.</li>
+        </ul>
+        <div class="callout cyan">
+          <span class="label">// À SAVOIR</span>
+          Les caractéristiques ne progressent normalement pas avec les PA : pour les améliorer, il faut passer par le cyberware ou des circonstances exceptionnelles.
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="legal">Site de fan non officiel. Cyberpunk et Cyberpunk RED sont des marques de R. Talsorian Games Inc. et CD Projekt Red. Règles résumées et reformulées : référez-vous au livre de base.</div>
+    <div><a href="index.html">◂ retour au menu</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

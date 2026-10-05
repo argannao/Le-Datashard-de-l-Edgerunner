@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Création &amp; Lifepath — Datashard</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hud">
+  <div class="wrap">
+    <a class="hud-logo" href="index.html"><span class="chip"></span>Datashard // Edgerunner</a>
+    <div class="hud-status">
+      <span class="hide-sm">SHARD-02</span>
+      <span data-clock>--.--.2045 // --:--:--</span>
+    </div>
+    <a class="hud-back" href="index.html">◂ MENU</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <div class="code">SHARD-02 // PROTOCOLE DE GÉNÉRATION</div>
+    <h1 class="glitch" data-text="Création &amp; Lifepath">Création &amp; Lifepath</h1>
+    <p class="lede">Créer un edgerunner, c'est choisir un rôle, définir ses caractéristiques et ses compétences, puis lui donner un passé avec le <strong>Lifepath</strong>. Cyberpunk RED propose trois méthodes, de la plus rapide à la plus personnalisée.</p>
+  </div>
+
+  <div class="layout">
+    <aside class="toc">
+      <div class="toc-title">// SOMMAIRE</div>
+      <a href="#etapes">Les étapes</a>
+      <a href="#methodes">Trois méthodes</a>
+      <a href="#carac">Caractéristiques</a>
+      <a href="#derivees">Valeurs dérivées</a>
+      <a href="#competences">Compétences de base</a>
+      <a href="#lifepath">Le Lifepath</a>
+    </aside>
+
+    <div>
+      <section class="block" id="etapes">
+        <h2 data-idx="01">Les étapes</h2>
+        <ol class="list">
+          <li><strong>Choisir un rôle</strong> — voir le <a href="roles.html">module Rôles</a>.</li>
+          <li><strong>Dérouler le Lifepath</strong> — origines, famille, amis, ennemis, objectifs.</li>
+          <li><strong>Fixer les caractéristiques</strong> — selon la méthode choisie.</li>
+          <li><strong>Répartir les compétences</strong> — ou prendre celles du modèle de rôle.</li>
+          <li><strong>Calculer les valeurs dérivées</strong> — PV, seuil de blessure grave, sauvegarde contre la mort, Humanité.</li>
+          <li><strong>S'équiper</strong> — armes, armure, cyberware, look et logement.</li>
+        </ol>
+        <div class="callout">
+          <span class="label">// CONSEIL</span>
+          Beaucoup de tables font le Lifepath en premier : il donne des idées pour les choix suivants et crée des liens entre les personnages.
+        </div>
+      </section>
+
+      <section class="block" id="methodes">
+        <h2 data-idx="02">Trois méthodes</h2>
+        <div class="grid g3">
+          <div class="panel">
+            <span class="tag red">Rapide</span>
+            <h3>Streetrat</h3>
+            <p>Tout vient du modèle du rôle : caractéristiques tirées sur une table propre au rôle, compétences et équipement prédéfinis. Idéal pour une première partie ou un perso créé en dix minutes.</p>
+          </div>
+          <div class="panel amber">
+            <span class="tag amber">Intermédiaire</span>
+            <h3>Edgerunner</h3>
+            <p>Un compromis : une partie du personnage vient encore des tables du rôle, mais vous gagnez de la liberté pour personnaliser compétences et équipement.</p>
+          </div>
+          <div class="panel cyan">
+            <span class="tag cyan">Personnalisée</span>
+            <h3>Complete Package</h3>
+            <p>Construction à points : <strong>62 points</strong> à répartir entre les caractéristiques (chacune entre 2 et 8) et <strong>86 points</strong> de compétences, plus un budget d'équipement à dépenser librement.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="carac">
+        <h2 data-idx="03">Les dix caractéristiques</h2>
+        <p>Les caractéristiques vont généralement de 2 à 8 à la création (10 étant le maximum humain sans aide).</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Abr.</th><th>Caractéristique</th><th>Ce qu'elle représente</th></tr></thead>
+            <tbody>
+              <tr><td class="num">INT</td><td><strong>Intelligence</strong></td><td>Raisonnement, mémoire, perception, savoir.</td></tr>
+              <tr><td class="num">WILL</td><td><strong>Volonté</strong></td><td>Détermination, résistance à la douleur et à la peur.</td></tr>
+              <tr><td class="num">COOL</td><td><strong>Sang-froid</strong></td><td>Calme sous pression, présence, intimidation.</td></tr>
+              <tr><td class="num">EMP</td><td><strong>Empathie</strong></td><td>Lien avec les autres, charisme. Baisse quand l'Humanité diminue.</td></tr>
+              <tr><td class="num">TECH</td><td><strong>Technique</strong></td><td>Habileté avec les outils, réparation, fabrication.</td></tr>
+              <tr><td class="num">REF</td><td><strong>Réflexes</strong></td><td>Réaction, tir à distance, conduite, initiative.</td></tr>
+              <tr><td class="num">LUCK</td><td><strong>Chance</strong></td><td>Réserve de points à dépenser pour améliorer ses jets.</td></tr>
+              <tr><td class="num">BODY</td><td><strong>Corps</strong></td><td>Force, endurance, résistance aux dégâts.</td></tr>
+              <tr><td class="num">DEX</td><td><strong>Dextérité</strong></td><td>Agilité, combat au corps à corps, esquive.</td></tr>
+              <tr><td class="num">MOVE</td><td><strong>Mouvement</strong></td><td>Vitesse de déplacement.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="block" id="derivees">
+        <h2 data-idx="04">Valeurs dérivées</h2>
+        <div class="grid g2">
+          <div class="panel">
+            <h3>Points de vie (PV)</h3>
+            <div class="formula">10 + 5 × ⌈(BODY + WILL) ÷ 2⌉</div>
+            <p>La moyenne de Corps et Volonté est arrondie au supérieur.</p>
+          </div>
+          <div class="panel amber">
+            <h3>Blessure grave</h3>
+            <div class="formula">⌈PV max ÷ 2⌉</div>
+            <p>Sous ce seuil, le personnage est <em>gravement blessé</em> et subit un malus à toutes ses actions.</p>
+          </div>
+          <div class="panel cyan">
+            <h3>Sauvegarde contre la mort</h3>
+            <div class="formula">= BODY</div>
+            <p>Utilisée quand le personnage tombe à 0 PV. Voir le <a href="combat.html#mort">module Combat</a>.</p>
+          </div>
+          <div class="panel magenta">
+            <h3>Humanité</h3>
+            <div class="formula">EMP × 10</div>
+            <p>Diminue à chaque implant de cyberware. Voir le <a href="cyberware.html#humanite">module Cyberware</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="competences">
+        <h2 data-idx="05">Compétences de base</h2>
+        <p>Tout personnage possède un socle de compétences considérées comme indispensables, avec au minimum <strong>2 points</strong> dans chacune à la création :</p>
+        <div>
+          <span class="tag">Athlétisme</span><span class="tag">Bagarre</span><span class="tag">Concentration</span><span class="tag">Conversation</span><span class="tag">Éducation</span><span class="tag">Esquive</span><span class="tag">Premiers soins</span><span class="tag">Perception humaine</span><span class="tag">Langue (argot de la rue)</span><span class="tag">Expert local</span><span class="tag">Perception</span><span class="tag">Persuasion</span><span class="tag">Discrétion</span>
+        </div>
+        <div class="callout cyan">
+          <span class="label">// À SAVOIR</span>
+          Certaines compétences sont plus difficiles à apprendre (elles coûtent le double en points) : c'est le cas par exemple des arts martiaux, des armes lourdes, de l'autofire ou de la technique médicale.
+        </div>
+      </section>
+
+      <section class="block" id="lifepath">
+        <h2 data-idx="06">Le Lifepath</h2>
+        <p>Le Lifepath est une suite de tables (on peut tirer au dé ou choisir) qui construit l'histoire du personnage. Il ne donne pas de bonus chiffrés : il fournit des <strong>accroches de scénario</strong> au MJ.</p>
+
+        <details class="acc" open>
+          <summary>1. Origines et apparence</summary>
+          <div class="acc-body">
+            <ul class="list">
+              <li><strong>Origines culturelles</strong> et langue maternelle.</li>
+              <li><strong>Personnalité</strong> : comment vous voient les autres ?</li>
+              <li><strong>Style vestimentaire</strong> et <strong>coiffure</strong>.</li>
+              <li><strong>Ce que vous valorisez</strong> le plus, ce que vous pensez des gens, la personne qui compte le plus, votre objet le plus précieux.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="acc">
+          <summary>2. Famille et enfance</summary>
+          <div class="acc-body">
+            <ul class="list">
+              <li><strong>Milieu familial</strong> : corpos, nomades, gangs, rue, déchus…</li>
+              <li><strong>Environnement d'enfance</strong> : où avez-vous grandi ?</li>
+              <li><strong>Crise familiale</strong> : qu'est-il arrivé aux vôtres ?</li>
+            </ul>
+          </div>
+        </details>
+        <details class="acc">
+          <summary>3. Relations</summary>
+          <div class="acc-body">
+            <ul class="list">
+              <li><strong>Amis</strong> : combien, et qui sont-ils ?</li>
+              <li><strong>Ennemis</strong> : qui, pourquoi, que peuvent-ils vous faire, et que ferez-vous s'ils vous retrouvent ?</li>
+              <li><strong>Amours tragiques</strong> : comment ça s'est terminé.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="acc">
+          <summary>4. Objectifs</summary>
+          <div class="acc-body">
+            <p>Ce que le personnage veut accomplir dans la vie : se venger, s'enrichir, faire tomber une corpo, protéger sa famille, devenir célèbre…</p>
+          </div>
+        </details>
+        <details class="acc">
+          <summary>5. Lifepath de rôle</summary>
+          <div class="acc-body">
+            <p>Chaque rôle dispose de tables spécifiques : le type de groupe d'un Rockerboy, les employeurs d'un Solo, l'atelier d'un Tech, la famille d'un Nomad, le territoire d'un Fixer… C'est souvent la partie la plus riche pour le MJ.</p>
+          </div>
+        </details>
+
+        <div class="callout red">
+          <span class="label">// POUR LE MJ</span>
+          Notez les ennemis et les amis de chaque joueur : ce sont des PNJ prêts à l'emploi pour vos prochaines missions.
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="legal">Site de fan non officiel. Cyberpunk et Cyberpunk RED sont des marques de R. Talsorian Games Inc. et CD Projekt Red. Règles résumées et reformulées : référez-vous au livre de base.</div>
+    <div><a href="index.html">◂ retour au menu</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Équipement &amp; Économie — Datashard</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hud">
+  <div class="wrap">
+    <a class="hud-logo" href="index.html"><span class="chip"></span>Datashard // Edgerunner</a>
+    <div class="hud-status">
+      <span class="hide-sm">SHARD-07</span>
+      <span data-clock>--.--.2045 // --:--:--</span>
+    </div>
+    <a class="hud-back" href="index.html">◂ MENU</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <div class="code" style="color: var(--amber)">SHARD-07 // INVENTAIRE</div>
+    <h1 class="glitch" data-text="Équipement &amp; Économie">Équipement &amp; Économie</h1>
+    <p class="lede">Dans le Time of the Red, tout s'achète en <strong>eurobucks (eb)</strong>, mais pas tout se trouve facilement. Les Night Markets et les fixers sont souvent les seuls à avoir ce dont vous avez besoin.</p>
+  </div>
+
+  <div class="layout">
+    <aside class="toc">
+      <div class="toc-title">// SOMMAIRE</div>
+      <a href="#prix">Gammes de prix</a>
+      <a href="#armes">Armes</a>
+      <a href="#armures">Armures</a>
+      <a href="#qualite">Qualité</a>
+      <a href="#marches">Night Markets</a>
+      <a href="#vie">Train de vie</a>
+    </aside>
+
+    <div>
+      <section class="block" id="prix">
+        <h2 data-idx="01">Gammes de prix</h2>
+        <p>Les prix sont regroupés en catégories. Pratique pour improviser : le MJ annonce une catégorie, pas un prix au centime près.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Catégorie</th><th>Prix</th><th>Exemples</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Bon marché</strong></td><td class="num">10 eb</td><td>Repas basique, munitions de base, petit objet.</td></tr>
+              <tr><td><strong>Courant</strong></td><td class="num">20 eb</td><td>Vêtements ordinaires, outils simples.</td></tr>
+              <tr><td><strong>Coûteux</strong></td><td class="num">50 eb</td><td>Pistolet moyen, arme de mêlée légère.</td></tr>
+              <tr><td><strong>Premium</strong></td><td class="num">100 eb</td><td>Pistolet lourd, armure légère, fashionware.</td></tr>
+              <tr><td><strong>Cher</strong></td><td class="num">500 eb</td><td>Fusil d'assaut, cyberware courant, programmes.</td></tr>
+              <tr><td><strong>Très cher</strong></td><td class="num">1 000 eb</td><td>Cyberware avancé, armures lourdes.</td></tr>
+              <tr><td><strong>Luxe</strong></td><td class="num">5 000 eb</td><td>Cyberbras, véhicule d'occasion.</td></tr>
+              <tr><td><strong>Super luxe</strong></td><td class="num">10 000 eb+</td><td>Véhicules haut de gamme, borgware.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="block" id="armes" data-filter-scope>
+        <h2 data-idx="02">Armes</h2>
+        <div class="filterbar">
+          <input class="search" type="search" placeholder="> rechercher une arme…" data-filter-search aria-label="Rechercher">
+          <button class="chip-btn on" data-filter-chip="all">Toutes</button>
+          <button class="chip-btn" data-filter-chip="poing">Armes de poing</button>
+          <button class="chip-btn" data-filter-chip="epaule">Armes d'épaule</button>
+          <button class="chip-btn" data-filter-chip="lourde">Lourdes</button>
+          <button class="chip-btn" data-filter-chip="melee">Mêlée</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Type</th><th>Dégâts</th><th>Compétence</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr data-filter-item data-tags="poing"><td><strong>Pistolet moyen</strong></td><td class="num">2d6</td><td>Armes de poing</td><td>Facile à cacher, bon marché.</td></tr>
+              <tr data-filter-item data-tags="poing"><td><strong>Pistolet lourd</strong></td><td class="num">3d6</td><td>Armes de poing</td><td>Le classique de la rue.</td></tr>
+              <tr data-filter-item data-tags="poing"><td><strong>Pistolet très lourd</strong></td><td class="num">4d6</td><td>Armes de poing</td><td>Puissant, plus difficile à dissimuler.</td></tr>
+              <tr data-filter-item data-tags="poing"><td><strong>Pistolet-mitrailleur</strong></td><td class="num">2d6</td><td>Armes de poing</td><td>Permet le tir automatique.</td></tr>
+              <tr data-filter-item data-tags="poing"><td><strong>Pistolet-mitrailleur lourd</strong></td><td class="num">3d6</td><td>Armes de poing</td><td>Tir automatique, plus de punch.</td></tr>
+              <tr data-filter-item data-tags="epaule"><td><strong>Fusil à pompe</strong></td><td class="num">5d6</td><td>Armes d'épaule</td><td>Dévastateur à courte portée ; munitions spéciales possibles.</td></tr>
+              <tr data-filter-item data-tags="epaule"><td><strong>Fusil d'assaut</strong></td><td class="num">5d6</td><td>Armes d'épaule</td><td>Polyvalent, tir automatique.</td></tr>
+              <tr data-filter-item data-tags="epaule"><td><strong>Fusil de précision</strong></td><td class="num">5d6</td><td>Armes d'épaule</td><td>Excellent à longue portée, mauvais au contact.</td></tr>
+              <tr data-filter-item data-tags="epaule"><td><strong>Arc / arbalète</strong></td><td class="num">4d6</td><td>Archerie</td><td>Silencieux, flèches spéciales.</td></tr>
+              <tr data-filter-item data-tags="lourde"><td><strong>Lance-grenades</strong></td><td class="num">6d6</td><td>Armes lourdes</td><td>Dégâts de zone.</td></tr>
+              <tr data-filter-item data-tags="lourde"><td><strong>Lance-roquettes</strong></td><td class="num">8d6</td><td>Armes lourdes</td><td>Pour les véhicules… et les problèmes très gros.</td></tr>
+              <tr data-filter-item data-tags="melee"><td><strong>Arme de mêlée légère</strong></td><td class="num">1d6</td><td>Armes de mêlée</td><td>Couteau, matraque légère.</td></tr>
+              <tr data-filter-item data-tags="melee"><td><strong>Arme de mêlée moyenne</strong></td><td class="num">2d6</td><td>Armes de mêlée</td><td>Machette, batte.</td></tr>
+              <tr data-filter-item data-tags="melee"><td><strong>Arme de mêlée lourde</strong></td><td class="num">3d6</td><td>Armes de mêlée</td><td>Katana, hache.</td></tr>
+              <tr data-filter-item data-tags="melee"><td><strong>Arme de mêlée très lourde</strong></td><td class="num">4d6</td><td>Armes de mêlée</td><td>Masse, tronçonneuse.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="empty-msg hidden" data-filter-empty>// aucune arme trouvée</p>
+        <div class="callout">
+          <span class="label">// MUNITIONS</span>
+          En plus des balles basiques, on trouve des munitions perforantes, incendiaires, explosives, à impulsion (contre l'électronique), non létales… Plus chères, souvent plus rares.
+        </div>
+      </section>
+
+      <section class="block" id="armures">
+        <h2 data-idx="03">Armures</h2>
+        <p>On porte une armure pour le corps et une pour la tête. La valeur de <strong>PA</strong> (SP) est retirée des dégâts reçus.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Armure</th><th>PA</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Cuir</strong></td><td class="num">4</td><td>Le minimum syndical.</td></tr>
+              <tr><td><strong>Kevlar</strong></td><td class="num">7</td><td>Discret, se porte sous les vêtements.</td></tr>
+              <tr><td><strong>Armorjack léger</strong></td><td class="num">11</td><td>Le meilleur compromis pour la plupart des edgerunners.</td></tr>
+              <tr><td><strong>Combinaison intégrale</strong></td><td class="num">11</td><td>Protège le corps et la tête d'un seul tenant.</td></tr>
+              <tr><td><strong>Armorjack moyen</strong></td><td class="num">12</td><td>Commence à gêner les mouvements.</td></tr>
+              <tr><td><strong>Armorjack lourd</strong></td><td class="num">13</td><td>Malus aux REF, DEX et MOVE.</td></tr>
+              <tr><td><strong>Flak</strong></td><td class="num">15</td><td>Militaire, lourd et encombrant.</td></tr>
+              <tr><td><strong>Metalgear</strong></td><td class="num">18</td><td>Quasi un char d'assaut portatif. Gros malus.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout cyan">
+          <span class="label">// RAPPEL</span>
+          Chaque fois qu'une attaque traverse l'armure, elle perd 1 PA. Voir le <a href="combat.html#degats">module Combat</a>.
+        </div>
+      </section>
+
+      <section class="block" id="qualite">
+        <h2 data-idx="04">Qualité</h2>
+        <div class="grid g3">
+          <div class="panel"><span class="tag red">Mauvaise</span><h3>Camelote</h3><p>Moins chère, mais malus au toucher et risque de s'enrayer.</p></div>
+          <div class="panel cyan"><span class="tag cyan">Standard</span><h3>Normale</h3><p>Ce qu'on trouve partout. Fiable sans être exceptionnel.</p></div>
+          <div class="panel amber"><span class="tag amber">Excellente</span><h3>Haut de gamme</h3><p>Plus chère, avec un bonus au toucher. Souvent signée d'un fabricant réputé.</p></div>
+        </div>
+      </section>
+
+      <section class="block" id="marches">
+        <h2 data-idx="05">Night Markets</h2>
+        <p>Des marchés éphémères, souvent organisés par un fixer, qui apparaissent pour une nuit dans un parking, un entrepôt ou sous un échangeur. On y trouve de tout : nourriture, armes, cyberware, médicaments, objets exotiques.</p>
+        <ul class="list">
+          <li>Chaque Night Market a ses <strong>spécialités</strong> (le MJ tire ou choisit les catégories disponibles).</li>
+          <li>C'est l'endroit idéal pour trouver ce qui ne se vend pas en boutique.</li>
+          <li>C'est aussi un excellent lieu de rencontre… et de règlements de comptes.</li>
+        </ul>
+      </section>
+
+      <section class="block" id="vie">
+        <h2 data-idx="06">Train de vie</h2>
+        <p>Chaque mois, un edgerunner doit payer son <strong>logement</strong> et son <strong>mode de vie</strong> (essentiellement la nourriture). Du conteneur réaménagé au bel appartement, en passant par l'hôtel-capsule, et de la bouillie protéinée aux produits frais hors de prix.</p>
+        <div class="callout red">
+          <span class="label">// RÉALITÉ DE LA RUE</span>
+          Le loyer, ça tombe tous les mois. Un edgerunner fauché accepte des contrats qu'il aurait dû refuser : excellent moteur d'intrigue pour le MJ.
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="legal">Site de fan non officiel. Cyberpunk et Cyberpunk RED sont des marques de R. Talsorian Games Inc. et CD Projekt Red. Valeurs résumées : référez-vous au livre de base pour les profils complets.</div>
+    <div><a href="index.html">◂ retour au menu</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

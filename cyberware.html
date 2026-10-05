@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberware &amp; Humanité — Datashard</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hud">
+  <div class="wrap">
+    <a class="hud-logo" href="index.html"><span class="chip"></span>Datashard // Edgerunner</a>
+    <div class="hud-status">
+      <span class="hide-sm">SHARD-06</span>
+      <span data-clock>--.--.2045 // --:--:--</span>
+    </div>
+    <a class="hud-back" href="index.html">◂ MENU</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <div class="code" style="color: var(--cyan)">SHARD-06 // CHROME</div>
+    <h1 class="glitch" data-text="Cyberware &amp; Humanité">Cyberware &amp; Humanité</h1>
+    <p class="lede">Le cyberware rend plus rapide, plus fort, plus précis. Mais chaque morceau de chrome éloigne un peu plus de l'humanité. Trop d'implants, et c'est la <strong>cyberpsychose</strong>.</p>
+  </div>
+
+  <div class="layout">
+    <aside class="toc">
+      <div class="toc-title">// SOMMAIRE</div>
+      <a href="#principe">Le principe</a>
+      <a href="#humanite">Humanité &amp; EMP</a>
+      <a href="#psychose">Cyberpsychose</a>
+      <a href="#pose">Installation</a>
+      <a href="#familles">Familles d'implants</a>
+    </aside>
+
+    <div>
+      <section class="block" id="principe">
+        <h2 data-idx="01">Le principe</h2>
+        <p>Beaucoup d'implants fonctionnent en deux temps :</p>
+        <div class="grid g2">
+          <div class="panel cyan">
+            <h3>Cyberware de base</h3>
+            <p>Le support : un <strong>neural link</strong>, un <strong>cyberœil</strong>, un <strong>cyberbras</strong>, un <strong>kit cyberaudio</strong>… Il offre des emplacements d'options.</p>
+          </div>
+          <div class="panel">
+            <h3>Options</h3>
+            <p>Les fonctions qu'on y installe : vision infrarouge dans un cyberœil, lame rétractable dans un cyberbras, boost de réflexes dans le neural link…</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="humanite">
+        <h2 data-idx="02">Humanité &amp; EMP</h2>
+        <div class="formula">HUMANITÉ de départ = EMP × 10</div>
+        <p>Chaque implant installé fait perdre de l'Humanité (une valeur fixe ou un jet de dés selon l'implant). L'Empathie réelle du personnage suit cette baisse :</p>
+        <div class="formula">EMP actuelle = Humanité ÷ 10 (arrondi à l'inférieur)</div>
+        <div class="callout">
+          <span class="label">// EN JEU</span>
+          Un personnage qui perd de l'EMP devient plus froid, plus détaché. Jouez-le : c'est le cœur du thème cyberpunk.
+        </div>
+        <p>Des événements traumatisants peuvent aussi faire perdre de l'Humanité, et une <strong>thérapie</strong> permet d'en regagner une partie, au prix de temps et d'argent.</p>
+      </section>
+
+      <section class="block" id="psychose">
+        <h2 data-idx="03">Cyberpsychose</h2>
+        <div class="panel" style="--accent: var(--red)">
+          <p>Quand l'Humanité tombe trop bas, le personnage bascule dans la <strong>cyberpsychose</strong> : il ne voit plus les autres comme des êtres humains et devient violent et imprévisible. Il passe alors sous le contrôle du MJ.</p>
+          <p style="margin-bottom:0">Les cyberpsychos sont traqués par des unités spécialisées, comme la <strong>Psycho Squad</strong>, lourdement armées et équipées pour neutraliser du chrome.</p>
+        </div>
+        <div class="callout red">
+          <span class="label">// AVERTISSEMENT</span>
+          Gardez un œil sur votre Humanité. Plus de chrome, c'est plus de puissance, mais aussi un pas de plus vers le gouffre.
+        </div>
+      </section>
+
+      <section class="block" id="pose">
+        <h2 data-idx="04">Installation</h2>
+        <p>Selon sa complexité, un implant se pose dans un lieu plus ou moins équipé :</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Lieu</th><th>Exemples</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Boutique / centre commercial</strong></td><td>Fashionware, petits implants posés en quelques minutes.</td></tr>
+              <tr><td><strong>Clinique</strong></td><td>La majorité des options et des implants courants. Le domaine du ripperdoc.</td></tr>
+              <tr><td><strong>Hôpital</strong></td><td>Cyberware lourd : membres complets, neural link, modifications internes.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Un Medtech peut poser lui-même du cyberware grâce à sa capacité de chirurgie.</p>
+      </section>
+
+      <section class="block" id="familles" data-filter-scope>
+        <h2 data-idx="05">Familles d'implants</h2>
+        <div class="filterbar">
+          <input class="search" type="search" placeholder="> rechercher un implant…" data-filter-search aria-label="Rechercher">
+          <button class="chip-btn on" data-filter-chip="all">Tous</button>
+          <button class="chip-btn" data-filter-chip="leger">Légers</button>
+          <button class="chip-btn" data-filter-chip="combat">Combat</button>
+          <button class="chip-btn" data-filter-chip="sens">Sens</button>
+        </div>
+
+        <div class="grid g2">
+          <div class="panel magenta" data-filter-item data-tags="leger">
+            <h3>Fashionware</h3>
+            <p>Implants esthétiques et pratiques, quasiment sans coût en Humanité : peau qui change de couleur, cheveux lumineux, tatouages animés, montre sous-cutanée…</p>
+            <span class="tag">Faible risque</span>
+          </div>
+          <div class="panel cyan" data-filter-item data-tags="sens combat">
+            <h3>Neuralware</h3>
+            <p>Le neural link et ses options : prises d'interface, chipware (puces de compétences), boosters de réflexes (Kerenzikov, Sandevistan), enregistreur de braindance.</p>
+            <span class="tag cyan">Indispensable aux Netrunners</span>
+          </div>
+          <div class="panel" data-filter-item data-tags="sens combat">
+            <h3>Cyberoptiques</h3>
+            <p>Cyberyeux et leurs options : vision nocturne, infrarouge, zoom, viseur de visée, enregistrement vidéo, mire anti-éblouissement…</p>
+            <span class="tag red">Très répandu</span>
+          </div>
+          <div class="panel amber" data-filter-item data-tags="sens">
+            <h3>Cyberaudio</h3>
+            <p>Kit auditif et options : radio intégrée, téléphone interne, audition amplifiée, détecteur de mensonges vocal, brouilleur, scanner radio.</p>
+            <span class="tag amber">Utile partout</span>
+          </div>
+          <div class="panel" data-filter-item data-tags="combat">
+            <h3>Cyberware interne</h3>
+            <p>Améliorations sous la peau : armure sous-cutanée, branchies, filtres toxiques, biomoniteur, muscles et os renforcés, contraceptif, réserves d'air…</p>
+            <span class="tag red">Discret</span>
+          </div>
+          <div class="panel cyan" data-filter-item data-tags="combat">
+            <h3>Cyberware externe</h3>
+            <p>Implants visibles : armure corporelle intégrée, poches sous-cutanées, griffes et lames (rippers, scratchers, wolvers), poings renforcés.</p>
+            <span class="tag cyan">Intimidant</span>
+          </div>
+          <div class="panel amber" data-filter-item data-tags="combat">
+            <h3>Cyberlimbs</h3>
+            <p>Bras et jambes cybernétiques complets. Ils accueillent des options : arme intégrée, pistolet escamotable, mains outils, jambes de saut…</p>
+            <span class="tag amber">Coût élevé</span>
+          </div>
+          <div class="panel magenta" data-filter-item data-tags="combat">
+            <h3>Borgware</h3>
+            <p>Le chrome extrême : bras multiples, implants militaires, conversion totale du corps. Réservé aux plus riches… et aux plus déshumanisés.</p>
+            <span class="tag">Risque maximal</span>
+          </div>
+        </div>
+        <p class="empty-msg hidden" data-filter-empty>// aucun implant ne correspond</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="legal">Site de fan non officiel. Cyberpunk et Cyberpunk RED sont des marques de R. Talsorian Games Inc. et CD Projekt Red. Règles résumées et reformulées : référez-vous au livre de base.</div>
+    <div><a href="index.html">◂ retour au menu</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

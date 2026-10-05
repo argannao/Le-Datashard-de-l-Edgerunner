@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Rôles — Datashard</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hud">
+  <div class="wrap">
+    <a class="hud-logo" href="index.html"><span class="chip"></span>Datashard // Edgerunner</a>
+    <div class="hud-status">
+      <span class="hide-sm">SHARD-01</span>
+      <span data-clock>--.--.2045 // --:--:--</span>
+    </div>
+    <a class="hud-back" href="index.html">◂ MENU</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <div class="code">SHARD-01 // DOSSIERS DU PERSONNEL</div>
+    <h1 class="glitch" data-text="Les Rôles">Les Rôles</h1>
+    <p class="lede">Dans Cyberpunk RED, un <strong>rôle</strong> remplace la notion de classe. Chacun apporte une <strong>capacité de rôle</strong> unique, notée de 1 à 10 (on commence généralement au rang 4), qui progresse avec l'expérience. Une bonne équipe mélange les rôles pour couvrir le combat, le Net, la technique et les relations.</p>
+  </div>
+
+  <div class="layout">
+    <aside class="toc">
+      <div class="toc-title">// SOMMAIRE</div>
+      <a href="#principe">Le principe</a>
+      <a href="#liste">Les dix rôles</a>
+      <a href="#equipe">Composer une équipe</a>
+      <a href="#multi">Multi-rôles</a>
+    </aside>
+
+    <div>
+      <section class="block" id="principe">
+        <h2 data-idx="01">Le principe</h2>
+        <div class="grid g3">
+          <div class="panel">
+            <h3>Une capacité unique</h3>
+            <p>Seul votre rôle possède sa capacité. Un Solo ne peut pas netrunner sans la capacité <em>Interface</em>, et personne d'autre qu'un Medtech ne peut faire de chirurgie lourde.</p>
+          </div>
+          <div class="panel cyan">
+            <h3>Un rang de 1 à 10</h3>
+            <p>Le rang de la capacité sert souvent de bonus ou débloque de nouveaux effets. On l'augmente avec les Points d'Amélioration (PA) gagnés en jeu.</p>
+          </div>
+          <div class="panel amber">
+            <h3>Des compétences libres</h3>
+            <p>Les compétences ne sont pas verrouillées par le rôle. Un Fixer peut très bien savoir tirer : le rôle oriente, il n'enferme pas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="liste" data-filter-scope>
+        <h2 data-idx="02">Les dix rôles</h2>
+
+        <div class="filterbar">
+          <input class="search" type="search" placeholder="> rechercher un rôle, une capacité…" data-filter-search aria-label="Rechercher">
+          <button class="chip-btn on" data-filter-chip="all">Tous</button>
+          <button class="chip-btn" data-filter-chip="combat">Combat</button>
+          <button class="chip-btn" data-filter-chip="social">Social</button>
+          <button class="chip-btn" data-filter-chip="tech">Tech &amp; Net</button>
+        </div>
+
+        <article class="panel role-card" data-filter-item data-tags="social">
+          <div class="role-head">
+            <h3>Rockerboy</h3>
+            <span class="ability">CAPACITÉ : IMPACT CHARISMATIQUE (Charismatic Impact)</span>
+          </div>
+          <p class="quote">Musicien, poète, artiste de rue : la rébellion par la voix et la scène.</p>
+          <p>Le Rockerboy utilise son art pour réveiller les foules contre les corpos et l'autorité. Ce n'est pas forcément un rockeur : le rôle couvre tous les artistes engagés, du rappeur au peintre de graffitis.</p>
+          <dl>
+            <dt>Capacité</dt><dd>Influencer ses fans pour obtenir faveurs, informations ou soutien. Plus le rang est élevé, plus l'audience est large et loyale, jusqu'à pouvoir mobiliser une foule entière.</dd>
+            <dt>Dans l'équipe</dt><dd>Visage public, négociateur charismatique, source de contacts dans la rue.</dd>
+            <dt>Compétences clés</dt><dd>Jouer d'un instrument, Persuasion, Perception humaine, Composition</dd>
+          </dl>
+        </article>
+
+        <article class="panel role-card" data-filter-item data-tags="combat" style="--accent: var(--red)">
+          <div class="role-head">
+            <h3>Solo</h3>
+            <span class="ability">CAPACITÉ : CONSCIENCE DU COMBAT (Combat Awareness)</span>
+          </div>
+          <p class="quote">Garde du corps, assassin, mercenaire : une arme humaine à louer.</p>
+          <p>Le Solo est le professionnel du combat. Souvent bardé de cyberware et entraîné jusqu'au réflexe, il vit de contrats de protection ou d'élimination.</p>
+          <dl>
+            <dt>Capacité</dt><dd>À chaque combat, il répartit son rang entre plusieurs bonus tactiques : réduire les dégâts subis, éviter les maladresses, agir plus tôt à l'initiative, viser plus juste, repérer les points faibles ou détecter les menaces.</dd>
+            <dt>Dans l'équipe</dt><dd>Muscle principal, protection, gestion des situations qui tournent mal.</dd>
+            <dt>Compétences clés</dt><dd>Armes de poing, Armes d'épaule, Esquive, Bagarre, Perception</dd>
+          </dl>
+        </article>
+
+        <article class="panel role-card magenta" data-filter-item data-tags="tech" style="--accent: var(--magenta)">
+          <div class="role-head">
+            <h3>Netrunner</h3>
+            <span class="ability" style="color: var(--magenta)">CAPACITÉ : INTERFACE</span>
+          </div>
+          <p class="quote">Pirate cybernétique qui plonge dans les architectures NET.</p>
+          <p>Depuis le DataKrash, le Net mondial n'existe plus : le Netrunner doit s'approcher physiquement des systèmes pour les pirater, en plein milieu de l'action, avec son cyberdeck et ses programmes.</p>
+          <dl>
+            <dt>Capacité</dt><dd>Permet de se connecter aux architectures NET et d'y effectuer des actions NET. Le rang détermine le nombre d'actions NET par tour et sert de bonus aux actions d'Interface.</dd>
+            <dt>Dans l'équipe</dt><dd>Ouvrir les portes, couper les caméras, prendre le contrôle des tourelles, voler des données.</dd>
+            <dt>Compétences clés</dt><dd>Électronique et sécurité, Cryptographie, Programmation de base, Langage de la rue</dd>
+          </dl>
+          <p style="margin-top:12px"><a href="netrunning.html">▸ Voir le module Netrunning</a></p>
+        </article>
+
+        <article class="panel role-card cyan" data-filter-item data-tags="tech" style="--accent: var(--cyan)">
+          <div class="role-head">
+            <h3>Tech</h3>
+            <span class="ability" style="color: var(--cyan)">CAPACITÉ : CRÉATEUR (Maker)</span>
+          </div>
+          <p class="quote">Bricoleur de génie qui répare, améliore et invente.</p>
+          <p>Dans un monde où tout est cassé, le Tech fait tenir les choses ensemble. Il répare les armes, modifie les véhicules et peut même concevoir des objets entièrement nouveaux.</p>
+          <dl>
+            <dt>Capacité</dt><dd>Le rang se répartit entre quatre spécialités : réparation sur le terrain, amélioration d'objets existants, fabrication à partir de plans, et invention de nouveaux objets.</dd>
+            <dt>Dans l'équipe</dt><dd>Entretien du matériel, création d'équipement sur mesure, sabotage.</dd>
+            <dt>Compétences clés</dt><dd>Technique de base, Cybertechnique, Électronique et sécurité, Armurerie</dd>
+          </dl>
+        </article>
+
+        <article class="panel role-card" data-filter-item data-tags="tech" style="--accent: var(--green)">
+          <div class="role-head">
+            <h3>Medtech</h3>
+            <span class="ability" style="color: var(--green)">CAPACITÉ : MÉDECINE</span>
+          </div>
+          <p class="quote">Médecin de rue, ripperdoc ou ancien de Trauma Team.</p>
+          <p>Le Medtech soigne là où les hôpitaux ne vont pas. Il pose le cyberware, traite les blessures critiques et garde l'équipe en vie entre deux fusillades.</p>
+          <dl>
+            <dt>Capacité</dt><dd>Le rang se répartit entre la chirurgie (soigner les blessures critiques graves, installer du cyberware), la pharmacologie (fabriquer des produits médicaux) et l'utilisation de cryosystèmes.</dd>
+            <dt>Dans l'équipe</dt><dd>Soins, stabilisation, installation de cyberware, chimie.</dd>
+            <dt>Compétences clés</dt><dd>Premiers soins, Paramédic, Technique médicale, Sciences</dd>
+          </dl>
+        </article>
+
+        <article class="panel role-card amber" data-filter-item data-tags="social" style="--accent: var(--amber)">
+          <div class="role-head">
+            <h3>Media</h3>
+            <span class="ability" style="color: var(--amber)">CAPACITÉ : CRÉDIBILITÉ</span>
+          </div>
+          <p class="quote">Journaliste, reporter, lanceur d'alerte : la vérité comme arme.</p>
+          <p>Le Media enquête et révèle ce que les corpos veulent cacher. Sa réputation lui ouvre des sources et lui donne une audience capable de faire tomber des puissants.</p>
+          <dl>
+            <dt>Capacité</dt><dd>Détermine la taille de son public, le crédit accordé à ses révélations, et lui permet de capter passivement des rumeurs de la rue.</dd>
+            <dt>Dans l'équipe</dt><dd>Enquête, informations, pression médiatique sur les cibles.</dd>
+            <dt>Compétences clés</dt><dd>Composition, Persuasion, Perception humaine, Recherche en bibliothèque</dd>
+          </dl>
+        </article>
+
+        <article class="panel role-card" data-filter-item data-tags="social" style="--accent: #9aa8ff">
+          <div class="role-head">
+            <h3>Exec</h3>
+            <span class="ability" style="color:#9aa8ff">CAPACITÉ : ESPRIT D'ÉQUIPE (Teamwork)</span>
+          </div>
+          <p class="quote">Cadre d'entreprise qui monte sa propre structure.</p>
+          <p>Dans le Time of the Red, les grandes corpos sont affaiblies. L'Exec bâtit son réseau, gravit les échelons d'une corporation et dispose de ressources que la rue n'a pas.</p>
+          <dl>
+            <dt>Capacité</dt><dd>Lui donne une équipe de subordonnés loyaux qui grossit avec le rang, ainsi que des avantages : logement d'entreprise, assurance santé, accès aux ressources de la corpo.</dd>
+            <dt>Dans l'équipe</dt><dd>Financement, accès aux milieux corporatistes, sous-traitance.</dd>
+            <dt>Compétences clés</dt><dd>Bureaucratie, Commerce, Persuasion, Corruption</dd>
+          </dl>
+        </article>
+
+        <article class="panel role-card" data-filter-item data-tags="combat social" style="--accent: #5fa8ff">
+          <div class="role-head">
+            <h3>Lawman</h3>
+            <span class="ability" style="color:#5fa8ff">CAPACITÉ : RENFORTS (Backup)</span>
+          </div>
+          <p class="quote">Flic, shérif, agent de sécurité ou chasseur de primes.</p>
+          <p>Le Lawman fait respecter une forme de loi dans un monde qui en manque. Selon son rang, il peut appartenir à une petite milice de quartier ou à une unité d'élite.</p>
+          <dl>
+            <dt>Capacité</dt><dd>Lui permet d'appeler des renforts armés. Plus le rang est élevé, plus les renforts sont nombreux, bien équipés et rapides à arriver.</dd>
+            <dt>Dans l'équipe</dt><dd>Couverture légale, puissance de feu ponctuelle, accès aux dossiers.</dd>
+            <dt>Compétences clés</dt><dd>Armes d'épaule, Interrogatoire, Criminologie, Pistage</dd>
+          </dl>
+        </article>
+
+        <article class="panel role-card cyan" data-filter-item data-tags="social" style="--accent: var(--cyan)">
+          <div class="role-head">
+            <h3>Fixer</h3>
+            <span class="ability" style="color: var(--cyan)">CAPACITÉ : OPÉRATEUR</span>
+          </div>
+          <p class="quote">Négociant, intermédiaire, marchand de tout ce qui se vend.</p>
+          <p>Le Fixer connaît tout le monde. Il trouve le matériel introuvable, monte les contrats et fait le lien entre la rue, les gangs et les corpos.</p>
+          <dl>
+            <dt>Capacité</dt><dd>Réseau de contacts, capacité à trouver des objets rares, à marchander et à naviguer entre les cultures. À haut rang, il peut organiser ses propres Night Markets.</dd>
+            <dt>Dans l'équipe</dt><dd>Trouver des jobs, se procurer l'équipement, revendre le butin.</dd>
+            <dt>Compétences clés</dt><dd>Commerce, Langage de la rue, Persuasion, Corruption</dd>
+          </dl>
+        </article>
+
+        <article class="panel role-card amber" data-filter-item data-tags="combat tech" style="--accent: var(--amber)">
+          <div class="role-head">
+            <h3>Nomad</h3>
+            <span class="ability" style="color: var(--amber)">CAPACITÉ : MOTO (Famille)</span>
+          </div>
+          <p class="quote">Membre d'un clan itinérant, as du volant et de la logistique.</p>
+          <p>Les Nomads font circuler les marchandises entre les cités. Ils sont pilotes, contrebandiers et convoyeurs, liés à une famille élargie qui les soutient.</p>
+          <dl>
+            <dt>Capacité</dt><dd>Donne accès aux véhicules de la famille nomade, de plus en plus nombreux et améliorés avec le rang, et au soutien du clan.</dd>
+            <dt>Dans l'équipe</dt><dd>Transport, poursuites, contrebande, logistique hors de la ville.</dd>
+            <dt>Compétences clés</dt><dd>Conduite, Pilotage, Survie, Bagarre</dd>
+          </dl>
+        </article>
+
+        <p class="empty-msg hidden" data-filter-empty>// aucun dossier ne correspond à la recherche</p>
+      </section>
+
+      <section class="block" id="equipe">
+        <h2 data-idx="03">Composer une équipe</h2>
+        <p>Une équipe d'edgerunners classique compte trois à cinq personnages. L'idée n'est pas d'avoir tous les rôles, mais de couvrir quatre besoins :</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Besoin</th><th>Rôles idéaux</th><th>Pourquoi</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Puissance de feu</strong></td><td>Solo, Lawman, Nomad</td><td>Les missions finissent souvent en fusillade.</td></tr>
+              <tr><td><strong>Accès NET</strong></td><td>Netrunner</td><td>Indispensable pour les portes, caméras et tourelles. Sans lui, beaucoup de bâtiments restent fermés.</td></tr>
+              <tr><td><strong>Soins</strong></td><td>Medtech</td><td>Les blessures critiques ne guérissent pas seules.</td></tr>
+              <tr><td><strong>Réseau et contrats</strong></td><td>Fixer, Exec, Media, Rockerboy</td><td>Pour trouver du travail, de l'équipement et des informations.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">
+          <span class="label">// CONSEIL</span>
+          Le Lifepath de chaque personnage peut créer des liens entre eux (ennemis communs, amis d'enfance…). Faites-le en groupe à la table.
+        </div>
+      </section>
+
+      <section class="block" id="multi">
+        <h2 data-idx="04">Multi-rôles</h2>
+        <p>Un personnage peut acquérir une <strong>seconde capacité de rôle</strong> en dépensant des Points d'Amélioration, avec l'accord du MJ et une justification en jeu (formation, mentor…). C'est coûteux : la plupart des personnages restent concentrés sur leur rôle principal, qui progresse plus vite.</p>
+        <div class="callout cyan">
+          <span class="label">// À LA TABLE</span>
+          Discutez-en avec votre MJ : un Solo qui apprend le netrunning auprès d'un PNJ, c'est une excellente intrigue secondaire.
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="legal">Site de fan non officiel. Cyberpunk et Cyberpunk RED sont des marques de R. Talsorian Games Inc. et CD Projekt Red. Les noms de capacités en français sont des traductions libres ; règles résumées et reformulées.</div>
+    <div><a href="index.html">◂ retour au menu</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netrunning — Datashard</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hud">
+  <div class="wrap">
+    <a class="hud-logo" href="index.html"><span class="chip"></span>Datashard // Edgerunner</a>
+    <div class="hud-status">
+      <span class="hide-sm">SHARD-05</span>
+      <span data-clock>--.--.2045 // --:--:--</span>
+    </div>
+    <a class="hud-back" href="index.html">◂ MENU</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <div class="code" style="color: var(--magenta)">SHARD-05 // JACK IN</div>
+    <h1 class="glitch" data-text="Netrunning">Netrunning</h1>
+    <p class="lede">Depuis le <strong>DataKrash</strong>, le Net mondial est mort. Les données vivent désormais dans des <strong>architectures NET</strong> locales et isolées. Pour les pirater, le Netrunner doit être sur place, au milieu du danger, pendant que son équipe le couvre.</p>
+  </div>
+
+  <div class="layout">
+    <aside class="toc">
+      <div class="toc-title">// SOMMAIRE</div>
+      <a href="#contexte">Le Net en 2045</a>
+      <a href="#materiel">Matériel requis</a>
+      <a href="#actions">Actions NET</a>
+      <a href="#architecture">Architectures</a>
+      <a href="#interface">Capacités d'Interface</a>
+      <a href="#programmes">Programmes</a>
+      <a href="#ice">Black ICE</a>
+    </aside>
+
+    <div>
+      <section class="block" id="contexte">
+        <h2 data-idx="01">Le Net en 2045</h2>
+        <div class="grid g2">
+          <div class="panel magenta">
+            <h3>Le DataKrash</h3>
+            <p>Pendant la Quatrième Guerre corporatiste, le légendaire netrunner Rache Bartmoss libère des virus dévastateurs. Le vieux Net est infesté d'IA voyous et devient inutilisable.</p>
+          </div>
+          <div class="panel cyan">
+            <h3>Le Blackwall</h3>
+            <p>NetWatch érige une barrière, le Blackwall, pour contenir ce qui rôde dans les ruines du vieux Net. Personne de sensé ne cherche à le franchir.</p>
+          </div>
+        </div>
+        <p style="margin-top:16px">Résultat : les bâtiments, les véhicules et les installations ont chacun leur réseau fermé. Les communications passent par le <strong>CitiNet</strong> et les <strong>Data Pools</strong>, plus limités, et les vrais secrets restent derrière des architectures locales.</p>
+      </section>
+
+      <section class="block" id="materiel">
+        <h2 data-idx="02">Matériel requis</h2>
+        <div class="grid g3">
+          <div class="panel"><h3>Neural link &amp; prises</h3><p>Le cyberware de base qui relie le cerveau aux machines, avec des prises d'interface.</p></div>
+          <div class="panel magenta"><h3>Cyberdeck</h3><p>L'ordinateur du Netrunner. Il possède un nombre limité d'emplacements pour charger programmes et améliorations.</p></div>
+          <div class="panel cyan"><h3>Lunettes de virtualité</h3><p>Optionnelles mais conseillées : elles superposent la vision du Net à la réalité pour garder un œil sur la menace physique.</p></div>
+        </div>
+        <div class="callout red">
+          <span class="label">// PROXIMITÉ</span>
+          Il faut être physiquement proche d'un point d'accès (connexion sans fil à courte portée ou câble). Pendant qu'il court, le corps du Netrunner reste vulnérable : protégez-le.
+        </div>
+      </section>
+
+      <section class="block" id="actions">
+        <h2 data-idx="03">Actions NET</h2>
+        <p>Une fois connecté, le Netrunner dispose d'<strong>actions NET</strong> en plus de son action de mouvement. Leur nombre dépend du rang d'Interface :</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Rang d'Interface</th><th>Actions NET par tour</th></tr></thead>
+            <tbody>
+              <tr><td class="num">1 – 3</td><td>2</td></tr>
+              <tr><td class="num">4 – 6</td><td>3</td></tr>
+              <tr><td class="num">7 – 9</td><td>4</td></tr>
+              <tr><td class="num">10</td><td>5</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Les tests de netrunning utilisent en général : <span class="mono" style="color:var(--cyan)">Interface + 1d10</span> (plus bonus de programmes) contre la difficulté de l'élément ciblé.</p>
+      </section>
+
+      <section class="block" id="architecture">
+        <h2 data-idx="04">Architectures NET</h2>
+        <p>Une architecture est une suite d'<strong>étages</strong> que le Netrunner descend un par un. Chaque étage contient un élément :</p>
+        <div class="grid g2">
+          <div class="panel amber"><span class="tag amber">Verrou</span><h3>Mot de passe</h3><p>Bloque la progression tant qu'il n'est pas forcé (Backdoor) ou connu.</p></div>
+          <div class="panel cyan"><span class="tag cyan">Données</span><h3>Fichier</h3><p>Contient des informations précieuses, à décrypter (Eye-Dee) et copier.</p></div>
+          <div class="panel magenta"><span class="tag" style="color:var(--magenta);border-color:#6a1258">Contrôle</span><h3>Nœud de contrôle</h3><p>Gère un équipement réel : caméras, portes, tourelles, ascenseurs, alarmes… À prendre avec Control.</p></div>
+          <div class="panel"><span class="tag red">Danger</span><h3>Black ICE &amp; Démons</h3><p>Programmes défensifs qui attaquent l'intrus ou ses programmes. Les Démons gèrent l'architecture et lancent des contre-mesures.</p></div>
+        </div>
+        <div class="callout cyan">
+          <span class="label">// POUR LE MJ</span>
+          Une petite architecture compte 3 ou 4 étages, une grosse en compte une dizaine, parfois avec des embranchements. Dessinez-la comme un donjon vertical.
+        </div>
+      </section>
+
+      <section class="block" id="interface" data-filter-scope>
+        <h2 data-idx="05">Capacités d'Interface</h2>
+        <div class="filterbar">
+          <input class="search" type="search" placeholder="> filtrer les capacités…" data-filter-search aria-label="Filtrer">
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Capacité</th><th>Effet</th></tr></thead>
+            <tbody>
+              <tr data-filter-item><td><strong>Scanner</strong></td><td>Repérer les points d'accès et architectures à proximité.</td></tr>
+              <tr data-filter-item><td><strong>Pathfinder</strong></td><td>Cartographier l'architecture : savoir ce qui se trouve dans les étages suivants.</td></tr>
+              <tr data-filter-item><td><strong>Backdoor</strong></td><td>Forcer un mot de passe pour passer à l'étage suivant.</td></tr>
+              <tr data-filter-item><td><strong>Eye-Dee</strong></td><td>Identifier un fichier ou un élément et comprendre ce qu'il contient.</td></tr>
+              <tr data-filter-item><td><strong>Control</strong></td><td>Prendre le contrôle d'un nœud et de l'équipement qui y est relié.</td></tr>
+              <tr data-filter-item><td><strong>Cloak</strong></td><td>Masquer ses traces pour que personne ne sache qu'un intrus est passé.</td></tr>
+              <tr data-filter-item><td><strong>Slide</strong></td><td>Échapper à un Black ICE qui vous poursuit en changeant d'étage.</td></tr>
+              <tr data-filter-item><td><strong>Zap</strong></td><td>Attaque de base, sans programme, contre un Black ICE ou un autre Netrunner.</td></tr>
+              <tr data-filter-item><td><strong>Virus</strong></td><td>Une fois au fond de l'architecture, y laisser un virus aux effets durables.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="empty-msg hidden" data-filter-empty>// aucune capacité trouvée</p>
+        <p>À cela s'ajoutent les actions de base : se connecter, se déconnecter (<em>jack out</em>), activer ou désactiver un programme.</p>
+      </section>
+
+      <section class="block" id="programmes">
+        <h2 data-idx="06">Programmes</h2>
+        <div class="grid g3">
+          <div class="panel cyan"><span class="tag cyan">Boosters</span><h3>Améliorer</h3><p>Donnent des bonus aux capacités d'Interface : percer plus vite, voir plus loin, rester discret.</p></div>
+          <div class="panel amber"><span class="tag amber">Defenders</span><h3>Protéger</h3><p>Réduisent les dégâts subis ou protègent le cyberdeck contre les attaques.</p></div>
+          <div class="panel"><span class="tag red">Attackers</span><h3>Attaquer</h3><p>Anti-programme (détruire ICE et programmes) ou anti-personnel (blesser directement un Netrunner ennemi).</p></div>
+        </div>
+        <p style="margin-top:16px">Chaque programme occupe un emplacement du cyberdeck. Choisir sa configuration avant une mission fait partie du jeu.</p>
+      </section>
+
+      <section class="block" id="ice">
+        <h2 data-idx="07">Black ICE</h2>
+        <p>Le Black ICE est une IA de sécurité agressive. Chaque modèle a ses propres valeurs de <strong>perception, vitesse, attaque, défense</strong> et de <strong>REZ</strong> (ses points de vie numériques).</p>
+        <ul class="list">
+          <li><strong>Anti-personnel</strong> : s'attaque directement au cerveau du Netrunner. Les dégâts touchent ses PV réels.</li>
+          <li><strong>Anti-programme</strong> : détruit les programmes chargés ou endommage le cyberdeck.</li>
+        </ul>
+        <div class="callout red">
+          <span class="label">// RÈGLE DE SURVIE</span>
+          Face à un Black ICE trop puissant, la meilleure action est souvent <em>Slide</em> ou un <em>jack out</em> immédiat. Un Netrunner mort ne pirate plus rien.
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="legal">Site de fan non officiel. Cyberpunk et Cyberpunk RED sont des marques de R. Talsorian Games Inc. et CD Projekt Red. Règles résumées et reformulées : référez-vous au livre de base.</div>
+    <div><a href="index.html">◂ retour au menu</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

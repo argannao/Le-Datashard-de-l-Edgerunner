@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combat — Datashard</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hud">
+  <div class="wrap">
+    <a class="hud-logo" href="index.html"><span class="chip"></span>Datashard // Edgerunner</a>
+    <div class="hud-status">
+      <span class="hide-sm">SHARD-04</span>
+      <span data-clock>--.--.2045 // --:--:--</span>
+    </div>
+    <a class="hud-back" href="index.html">◂ MENU</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <div class="code">SHARD-04 // FRICTION</div>
+    <h1 class="glitch" data-text="Combat">Combat</h1>
+    <p class="lede">Le combat dans Cyberpunk RED est <strong>rapide et mortel</strong>. Une balle bien placée peut mettre fin à une carrière. Les meilleurs edgerunners savent quand se mettre à couvert… et quand partir.</p>
+  </div>
+
+  <div class="layout">
+    <aside class="toc">
+      <div class="toc-title">// SOMMAIRE</div>
+      <a href="#init">Initiative &amp; tour</a>
+      <a href="#attaque">Attaquer</a>
+      <a href="#degats">Dégâts &amp; armure</a>
+      <a href="#etats">États de blessure</a>
+      <a href="#critiques">Blessures critiques</a>
+      <a href="#mort">Sauvegarde contre la mort</a>
+      <a href="#tactique">Options tactiques</a>
+    </aside>
+
+    <div>
+      <section class="block" id="init">
+        <h2 data-idx="01">Initiative &amp; tour</h2>
+        <div class="formula">INITIATIVE = REF + 1d10</div>
+        <p>On agit du plus haut au plus bas. En cas d'égalité, on relance entre les personnages concernés. L'ordre reste le même pour tout le combat.</p>
+        <div class="grid g2">
+          <div class="panel cyan">
+            <h3>Action de mouvement</h3>
+            <p>Se déplacer d'un nombre de cases égal à <strong>MOVE</strong> (une case = 2 m). On peut se déplacer avant ou après son action.</p>
+          </div>
+          <div class="panel">
+            <h3>Action</h3>
+            <p>Attaquer, recharger, utiliser un objet, faire un test de compétence, ou se déplacer une seconde fois (courir).</p>
+          </div>
+        </div>
+        <div class="callout cyan">
+          <span class="label">// À SAVOIR</span>
+          Un tour représente environ trois secondes. Les Netrunners connectés disposent en plus de leurs actions NET.
+        </div>
+      </section>
+
+      <section class="block" id="attaque">
+        <h2 data-idx="02">Attaquer</h2>
+        <div class="grid g2">
+          <div class="panel">
+            <span class="tag red">Distance</span>
+            <h3>Arme à distance</h3>
+            <div class="formula" style="font-size:1rem">REF + compétence d'arme + 1d10</div>
+            <p>Le résultat doit dépasser un SD qui dépend du type d'arme et de la distance. Plus la cible est loin, plus c'est dur.</p>
+            <p>Une cible avec <strong>REF 8 ou plus</strong> peut tenter d'esquiver les balles : on oppose alors son DEX + Esquive + 1d10.</p>
+          </div>
+          <div class="panel amber">
+            <span class="tag amber">Corps à corps</span>
+            <h3>Mêlée &amp; bagarre</h3>
+            <div class="formula" style="font-size:1rem">DEX + compétence + 1d10</div>
+            <p>Opposé au DEX + Esquive + 1d10 du défenseur. En cas d'égalité, le défenseur gagne.</p>
+          </div>
+        </div>
+        <h3 style="margin-top:24px">Tir visé</h3>
+        <p>On peut viser une partie précise au prix d'un gros malus. Viser la <strong>tête</strong> double les dégâts qui traversent l'armure. Viser une jambe, une main ou une arme permet des effets particuliers (désarmer, ralentir…).</p>
+      </section>
+
+      <section class="block" id="degats">
+        <h2 data-idx="03">Dégâts &amp; armure</h2>
+        <ol class="list">
+          <li>On lance les dés de dégâts de l'arme (par exemple 3d6 pour un pistolet lourd).</li>
+          <li>On soustrait la <strong>valeur d'armure (PA, ou SP)</strong> de la zone touchée : corps ou tête.</li>
+          <li>Ce qui reste est retiré des PV.</li>
+          <li>Si l'attaque a traversé l'armure, celle-ci perd <strong>1 point de PA</strong> : c'est l'<em>ablation</em>.</li>
+        </ol>
+        <div class="callout">
+          <span class="label">// ABLATION</span>
+          L'armure s'use au fil des impacts. Après une grosse fusillade, pensez à la faire réparer par un Tech ou à la remplacer.
+        </div>
+        <p>En règle générale, les armes de mêlée ne tiennent compte que de la <strong>moitié</strong> de l'armure de la cible : une lame passe là où une balle rebondirait.</p>
+      </section>
+
+      <section class="block" id="etats">
+        <h2 data-idx="04">États de blessure</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>État</th><th>Seuil</th><th>Effets</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Légèrement blessé</strong></td><td>Sous le maximum de PV</td><td>Aucun malus.</td></tr>
+              <tr><td><strong class="crit">Gravement blessé</strong></td><td>Moitié des PV ou moins</td><td>Malus de −2 à toutes les actions.</td></tr>
+              <tr><td><strong class="ko">Mortellement blessé</strong></td><td>Moins de 1 PV</td><td>Malus de −4 à toutes les actions, mouvement fortement réduit, sauvegarde contre la mort à chaque tour.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="block" id="critiques">
+        <h2 data-idx="05">Blessures critiques</h2>
+        <p>Quand les dés de dégâts montrent <strong>au moins deux 6</strong>, la cible subit une <em>blessure critique</em> : on tire sur une table (corps ou tête) et la victime prend en plus 5 points de dégâts directs, qui ignorent l'armure.</p>
+        <div class="grid g2">
+          <div class="panel">
+            <h3>Exemples au corps</h3>
+            <p>Bras ou jambe cassés, côtes fêlées, organe perforé, colonne touchée… Chaque blessure impose ses propres malus.</p>
+          </div>
+          <div class="panel magenta">
+            <h3>Exemples à la tête</h3>
+            <p>Œil perdu, commotion cérébrale, mâchoire brisée, oreille arrachée… Certaines touchent aussi le cyberware.</p>
+          </div>
+        </div>
+        <div class="callout red">
+          <span class="label">// SOIGNER</span>
+          Les blessures critiques ne disparaissent pas avec les PV : il faut un traitement rapide (Premiers soins ou Paramédic) ou une vraie prise en charge (chirurgie du Medtech).
+        </div>
+      </section>
+
+      <section class="block" id="mort">
+        <h2 data-idx="06">Sauvegarde contre la mort</h2>
+        <p>Un personnage mortellement blessé lance <strong>1d10 au début de chacun de ses tours</strong>. Il survit ce tour-ci s'il fait un résultat inférieur ou égal à sa sauvegarde contre la mort (égale à BODY).</p>
+        <ul class="list">
+          <li>Un <strong>10</strong> est toujours un échec.</li>
+          <li>Chaque sauvegarde réussie augmente la difficulté des suivantes.</li>
+          <li>Certaines blessures critiques rendent aussi la sauvegarde plus difficile.</li>
+          <li>Seule une stabilisation par un allié arrête les jets.</li>
+        </ul>
+        <div class="callout cyan">
+          <span class="label">// TRAUMA TEAM</span>
+          Avec un abonnement Trauma Team, une équipe médicale armée vient vous récupérer en plein combat. Si vous pouvez payer.
+        </div>
+      </section>
+
+      <section class="block" id="tactique">
+        <h2 data-idx="07">Options tactiques</h2>
+        <details class="acc" open>
+          <summary>Couverture</summary>
+          <div class="acc-body"><p>Les éléments de couverture (murs, voitures, comptoirs…) ont leurs propres points de vie. Tant qu'ils tiennent, ils encaissent les balles à votre place. Un mur en béton tient bien plus longtemps qu'une porte en bois.</p></div>
+        </details>
+        <details class="acc">
+          <summary>Tir automatique (autofire)</summary>
+          <div class="acc-body"><p>Les armes qui le permettent peuvent tirer une rafale sur une cible. Cela demande la compétence <em>Tir automatique</em> et beaucoup de munitions. Les dégâts se calculent différemment : on lance moins de dés, mais le résultat est multiplié selon la marge de réussite.</p></div>
+        </details>
+        <details class="acc">
+          <summary>Tir de suppression</summary>
+          <div class="acc-body"><p>Au lieu de viser, on arrose une zone. Tous ceux qui s'y trouvent doivent réussir un test de Concentration ou se mettre à couvert immédiatement.</p></div>
+        </details>
+        <details class="acc">
+          <summary>Armes à deux mains, tir en mouvement, tir en aveugle</summary>
+          <div class="acc-body"><p>Toutes ces situations imposent des modificateurs. En cas de doute, le MJ applique un malus de −2 à −4 selon la difficulté de la situation.</p></div>
+        </details>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="legal">Site de fan non officiel. Cyberpunk et Cyberpunk RED sont des marques de R. Talsorian Games Inc. et CD Projekt Red. Règles résumées et reformulées : référez-vous au livre de base.</div>
+    <div><a href="index.html">◂ retour au menu</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
