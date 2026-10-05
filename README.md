@@ -16,6 +16,7 @@ Site de référence **non officiel** en français pour le jeu de rôle **Cyberpu
 | `equipement.html` | Prix, armes, armures, Night Markets |
 | `lore.html` | Chronologie, Night City, corporations, gangs |
 | `glossaire.html` | Argot de la rue |
+| `extensions.html` | La gamme : livres, boîtes, aides de jeu, VF |
 
 Styles et scripts partagés dans `assets/` (`style.css`, `app.js`). Aucun outil de build : le site fonctionne tel quel.
 
