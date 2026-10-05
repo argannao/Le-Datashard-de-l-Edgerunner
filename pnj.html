@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PNJ &amp; Adversaires — Datashard</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="hud">
+  <div class="wrap">
+    <a class="hud-logo" href="index.html"><span class="chip"></span>Datashard // Edgerunner</a>
+    <div class="hud-status">
+      <span class="hide-sm">SHARD-10 // MENEUR DE JEU</span>
+      <span data-clock>--.--.2045 // --:--:--</span>
+    </div>
+    <a class="hud-back" href="index.html">◂ MENU</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <div class="code" style="color: var(--amber)">SHARD-10 // DOSSIERS DE RENCONTRE</div>
+    <h1 class="glitch" data-text="PNJ &amp; Adversaires">PNJ &amp; Adversaires</h1>
+    <p class="lede">Pour le MJ : des gens ordinaires à croiser dans la rue, des adversaires calibrés pour les équipes qui tapent fort, et les cyberpets de Biotechnica.</p>
+  </div>
+
+  <div class="layout">
+    <aside class="toc">
+      <div class="toc-title">// SOMMAIRE</div>
+    </aside>
+
+    <div>
+      <section class="block" id="gens">
+        <h2 data-idx="01">Gens ordinaires</h2>
+        <p>Tout le monde à Night City n'est pas un tueur ou un caïd. Pendant une mission, l'équipe croise des barmans à faire parler, des réceptionnistes à baratiner, des agents d'entretien à soudoyer. Leur donner un visage et un profil rend les scènes sociales plus vivantes, et certains deviennent des PNJ récurrents.</p>
+        <div class="panel amber">
+          <h3>Créer un PNJ ordinaire</h3>
+          <p>En combat, il compte comme un <strong>sbire</strong>. Repères de création :</p>
+          <div class="table-wrap"><table><thead><tr><th>Élément</th><th>Repère</th></tr></thead><tbody>
+<tr><td>Caractéristiques</td><td>33 points, aucune au-dessus de 6</td></tr>
+<tr><td>Compétences</td><td>30 points, niveau 10 maximum</td></tr>
+<tr><td>PV / armure</td><td>20 à 35 PV, PA 0 à 7</td></tr>
+<tr><td>Compétence de combat principale</td><td>base 6 à 10</td></tr>
+<tr><td>Compétence de métier principale</td><td>base 8 à 12</td></tr>
+<tr><td>Budget</td><td>300 eb d'équipement (armes de mauvaise qualité), 500 eb de cyberware</td></tr>
+<tr><td>Capacité de rôle</td><td>possible, au rang 2</td></tr>
+</tbody></table></div>
+        </div>
+        <div data-filter-scope style="margin-top:22px">
+          <h3>Vingt archétypes prêts à l'emploi</h3>
+          <div class="filterbar"><input class="search" type="search" placeholder="> chercher un métier…" data-filter-search aria-label="Rechercher"></div>
+          <div class="table-wrap"><table><thead><tr><th>Archétype</th><th>PV</th><th>Rôle</th><th>En bref</th><th>Variantes</th></tr></thead><tbody>
+<tr data-filter-item><td><strong>Barman</strong></td><td><span class="num">30</span></td><td>—</td><td>Écoute, retient les habitudes des habitués et ramasse les ragots sans le vouloir.</td><td><small>bar miteux (fusil à pompe sous le comptoir), carré VIP</small></td></tr>
+<tr data-filter-item><td><strong>Videur</strong></td><td><span class="num">35</span></td><td>Solo 2</td><td>Gardien de la porte : il décide qui entre, et intervient quand ça dégénère.</td><td><small>soirée mondaine, gros bras</small></td></tr>
+<tr data-filter-item><td><strong>Artiste de rue</strong></td><td><span class="num">30</span></td><td>Rockerboy 2</td><td>Musicien, poète ou jongleur qui joue pour quelques eb. Souvent membre (forcé) de la Julliard Guild.</td><td><small>mime, magicien, poète</small></td></tr>
+<tr data-filter-item><td><strong>Ouvrier du bâtiment</strong></td><td><span class="num">35</span></td><td>—</td><td>Night City se reconstruit en permanence : il connaît les chantiers de l'intérieur.</td><td><small>opérateur de drones (Netrunner 2), spécialiste (Tech 2), nomade (Moto 2)</small></td></tr>
+<tr data-filter-item><td><strong>Chercheur corpo</strong></td><td><span class="num">20</span></td><td>Netrunner 2</td><td>Analyste, documentaliste ou comptable : indispensable aux mégacorpos, oublié de ses chefs.</td><td><small>complotiste, juriste-comptable</small></td></tr>
+<tr data-filter-item><td><strong>Petit dealer</strong></td><td><span class="num">30</span></td><td>Fixer 2</td><td>Fixer de coin de rue qui revend objets volés, drogue ou infos. Souvent lié à un gang.</td><td><small>travailleur·se du sexe indépendant·e, bookmaker, indic</small></td></tr>
+<tr data-filter-item><td><strong>Glitterkid</strong></td><td><span class="num">25</span></td><td>—</td><td>Enfant gâté de l'élite corpo, toujours à la recherche de la prochaine fête.</td><td><small>héritier déshérité, recrue Inquisitor, étudiant fortuné</small></td></tr>
+<tr data-filter-item><td><strong>Graffeur</strong></td><td><span class="num">25</span></td><td>—</td><td>Du tagueur de gang à l'artiste de génie, il connaît chaque mur et chaque toit du quartier.</td><td><small>graffeur numérique (Tech 2), explorateur urbain</small></td></tr>
+<tr data-filter-item><td><strong>Jardinier guérilla</strong></td><td><span class="num">25</span></td><td>—</td><td>Fait pousser de vrais légumes pour compléter le scop. Les corpos agroalimentaires le détestent.</td><td><small>éleveur de poules, ouvrier agricole des Outskirts</small></td></tr>
+<tr data-filter-item><td><strong>Manœuvre</strong></td><td><span class="num">30</span></td><td>—</td><td>Main-d'œuvre jetable : moins chère qu'un robot à entretenir.</td><td><small>matelot, cariste (Netrunner 2)</small></td></tr>
+<tr data-filter-item><td><strong>Cuisinier</strong></td><td><span class="num">25</span></td><td>—</td><td>Transforme le kibble et le scop en quelque chose de mangeable.</td><td><small>chef-streamer (Rockerboy 2), propriétaire de food-truck (Moto 2)</small></td></tr>
+<tr data-filter-item><td><strong>Tech de quartier</strong></td><td><span class="num">25</span></td><td>Tech 2</td><td>Répare tout ce que les supply chains ne remplacent plus.</td><td><small>mécanicien, Tech de Reclaimers</small></td></tr>
+<tr data-filter-item><td><strong>Ambulancier</strong></td><td><span class="num">30</span></td><td>Medtech 2</td><td>Douze heures dans une ambulance rafistolée, à éviter les gangs qui volent les médicaments.</td><td><small>préparateur en pharmacie, artiste fashionware</small></td></tr>
+<tr data-filter-item><td><strong>Ferrailleur</strong></td><td><span class="num">30</span></td><td>—</td><td>Fouille les décombres et la Hot Zone pour revendre ce qu'il trouve. Espérance de vie courte.</td><td><small>gros bras armé, solitaire, rat des tunnels</small></td></tr>
+<tr data-filter-item><td><strong>Pigiste de screamsheet</strong></td><td><span class="num">25</span></td><td>Media 2</td><td>Doit sortir plusieurs articles par jour pour nourrir le Data Pool.</td><td><small>livecaster, reporter radio nomade</small></td></tr>
+<tr data-filter-item><td><strong>Vigile</strong></td><td><span class="num">35</span></td><td>Lawman 2</td><td>Peu formé, beaucoup d'assurance. Même une épicerie a besoin d'être gardée.</td><td><small>surveillant caméras (Netrunner 2), flic qui arrondit ses fins de mois</small></td></tr>
+<tr data-filter-item><td><strong>Vendeur</strong></td><td><span class="num">25</span></td><td>—</td><td>L'éternel employé de supérette qui ne sait pas où sont rangées les munitions.</td><td><small>gardien de parking, épicier de quartier, boutique spécialisée</small></td></tr>
+<tr data-filter-item><td><strong>Rat des rues</strong></td><td><span class="num">20</span></td><td>—</td><td>Survit au jour le jour de petits boulots. Il sait souvent des choses, contre un peu d'argent.</td><td><small>edgerunner raté, cambrioleur, apprenti fixer (Opérateur 1)</small></td></tr>
+<tr data-filter-item><td><strong>Chauffeur de taxi</strong></td><td><span class="num">30</span></td><td>Nomad 2</td><td>Connaît chaque raccourci et chaque bouchon. Bavard.</td><td><small>chauffeur Combat Cabb, cyclo-taxi</small></td></tr>
+<tr data-filter-item><td><strong>Employé de bureau</strong></td><td><span class="num">25</span></td><td>Exec 2</td><td>Le petit col blanc qui fait le travail dont ses chefs ne veulent pas.</td><td><small>guerrier du week-end, petit patron (Fixer 2)</small></td></tr>
+</tbody></table></div>
+          <p class="empty-msg hidden" data-filter-empty>// aucun archétype trouvé</p>
+        </div>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2026/01/RTG-CPR-DLC-EverydayPeoplev1.01.pdf" target="_blank" rel="noopener"><em>Everyday People</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
+      <section class="block" id="renforces">
+        <h2 data-idx="02">Adversaires renforcés</h2>
+        <p>La série <em>Hardened</em> crée un palier d'adversaires pour les équipes <strong>optimisées pour le combat</strong> : un vrai défi, sans multiplier les ennemis ni casser l'économie du jeu.</p>
+        <div class="grid g2">
+          <div class="panel">
+            <h3>Une équipe « renforcée » ?</h3>
+            <p>Un personnage l'est s'il remplit au moins un de ces critères :</p>
+            <ul class="list">
+              <li>REF 8 et Esquive 6 ou plus ;</li>
+              <li>une attaque à caractéristique + compétence + modificateur de 15 ou plus ;</li>
+              <li>WILL + BODY de 16 ou plus ;</li>
+              <li>une arme de valeur Luxe ou plus ;</li>
+              <li>DEX 8 et MOVE 8 ;</li>
+              <li>Tir automatique ou Arts martiaux à 6 ou plus ;</li>
+              <li>Solo de rang 4 ou plus.</li>
+            </ul>
+            <p style="margin:0">Il suffit d'<strong>un seul</strong> personnage non renforcé dans l'équipe pour que ces adversaires deviennent dangereux pour lui.</p>
+          </div>
+          <div class="panel amber">
+            <h3>Dosage</h3>
+            <div class="table-wrap"><table><thead><tr><th>Niveau</th><th>Remplace</th><th>Proportion</th></tr></thead><tbody>
+<tr><td>Sbire renforcé</td><td>les sbires du livre de base</td><td>1 par edgerunner</td></tr>
+<tr><td>Lieutenant renforcé</td><td>les lieutenants</td><td>1 pour 2 edgerunners (1 lieutenant ≈ 2 sbires)</td></tr>
+<tr><td>Mini-boss renforcé</td><td>les mini-boss</td><td>1 pour 3 edgerunners</td></tr>
+</tbody></table></div>
+            <p style="margin:0">Les sbires renforcés se mélangent sans trop de risque aux sbires ordinaires. Les lieutenants et mini-boss renforcés face à une équipe non renforcée : c'est un enterrement.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top:26px">Sbires renforcés</h3>
+        <div class="grid g4">
+          <div class="panel"><span class="tag red">40 PV</span><h3>Garde du corps</h3><p>Fusil à pompe, pistolet très lourd, armorjack léger.</p></div>
+          <div class="panel amber"><span class="tag amber">30 PV</span><h3>Booster</h3><p>Pistolet très lourd, wolvers, cuir. Une dose de drogue de combat.</p></div>
+          <div class="panel cyan"><span class="tag cyan">25 PV</span><h3>Road ganger</h3><p>Pistolet et arme de mêlée très lourds, kevlar. Insaisissable.</p></div>
+          <div class="panel magenta"><span class="tag">30 PV</span><h3>Agent de sécurité</h3><p>Fusil d'assaut, pistolet très lourd. Spécialiste du tir automatique.</p></div>
+        </div>
+        <details class="acc" style="margin-top:14px">
+          <summary>Complications de rencontre (1d10)</summary>
+          <div class="acc-body"><div class="table-wrap"><table><thead><tr><th>1d10</th><th>Complication</th></tr></thead><tbody>
+<tr><td>1</td><td>Un sbire tire des munitions incendiaires (10 seulement).</td></tr>
+<tr><td>2</td><td>Deux sbires de plus arrivent au 2<sup>e</sup> round.</td></tr>
+<tr><td>3</td><td>Deux sbires sont sous Black Lace.</td></tr>
+<tr><td>4</td><td>Un sbire lance très bien une grenade perforante.</td></tr>
+<tr><td>5</td><td>Un sbire en armorjack lourd, assez costaud pour le porter.</td></tr>
+<tr><td>6</td><td>Les sbires sont organisés : un tacticien avec une grenade fumigène.</td></tr>
+<tr><td>7</td><td>Un sbire d'un autre type se joint au combat.</td></tr>
+<tr><td>8</td><td>Deux sbires de plus, déjà blessés à la tête.</td></tr>
+<tr><td>9</td><td>Un renfort arrive au début des rounds 2, 3 et 4.</td></tr>
+<tr><td>10</td><td>Un sbire au PM, as du tir automatique, sans casque ni instinct de survie.</td></tr>
+</tbody></table></div></div>
+        </details>
+
+        <h3 style="margin-top:26px">Lieutenants renforcés (40 PV chacun)</h3>
+        <div class="grid g3">
+          <div class="panel magenta"><h3>Netrunner</h3><p>Interface 4, deux configurations : <em>anti-personnel</em> (programmes qui blessent) ou <em>anti-programme</em> (qui détruisent votre deck).</p></div>
+          <div class="panel amber"><h3>Chef Reclaimer</h3><p>Deux versions pour commander des sbires : <em>Lightning</em> mène de front (mêlée, fusil à pompe, Kerenzikov), <em>Thunder</em> appuie de l'arrière (lance-grenades escamotable).</p></div>
+          <div class="panel cyan"><h3>Officier de sécurité</h3><p>Versions <em>Raid</em> et <em>Siege</em>, taillées pour les combats en intérieur autour d'objectifs : couverture, fontaines, verrières…</p></div>
+        </div>
+        <details class="acc" style="margin-top:14px">
+          <summary>Tactiques de lieutenant (1d10)</summary>
+          <div class="acc-body"><div class="table-wrap"><table><thead><tr><th>1d10</th><th>Tactique</th></tr></thead><tbody>
+<tr><td>1</td><td>Le lieutenant et ses alliés tendent une embuscade.</td></tr>
+<tr><td>2</td><td>Il tient un otage comme bouclier humain.</td></tr>
+<tr><td>3</td><td>Il ordonne de concentrer le feu sur un joueur précis.</td></tr>
+<tr><td>4</td><td>Il lance ses alliés dans une charge furieuse.</td></tr>
+<tr><td>5</td><td>Il occupe une position très défendable.</td></tr>
+<tr><td>6</td><td>Il est excellent en Premiers soins et Paramédic.</td></tr>
+<tr><td>7</td><td>Il a piégé le terrain avec une grenade perforante (Perception SD 15 pour la voir, Explosifs SD 9 pour la désarmer).</td></tr>
+<tr><td>8</td><td>Il a étudié les capacités de l'équipe.</td></tr>
+<tr><td>9</td><td>Il tente un face-à-face avant ou au début du combat.</td></tr>
+<tr><td>10</td><td>Tacticien hors pair, il commande la rencontre.</td></tr>
+</tbody></table></div></div>
+        </details>
+
+        <h3 style="margin-top:26px">Mini-boss renforcés</h3>
+        <div class="grid g3">
+          <div class="panel"><span class="tag red">50 PV · Solo</span><h3>Assassin Arasaka</h3><p>Karaté, discrétion, Sandevistan et cyberyeux. Pour ralentir la partie d'un coup quand les joueurs vous surprennent.</p></div>
+          <div class="panel cyan"><span class="tag cyan">60 PV · Solo</span><h3>Protection rapprochée</h3><p>Judo, exosquelette implanté, paramédic. Un mur temporaire qui laisse l'histoire avancer.</p></div>
+          <div class="panel amber"><span class="tag amber">55 PV · Solo</span><h3>Vétéran Militech</h3><p>Fusil d'assaut à lance-grenades, munitions perforantes et Black Lace en réserve.</p></div>
+          <div class="panel magenta"><span class="tag">50 PV · Nomad</span><h3>Outrider</h3><p>Pilote d'exception (terre, mer, air), moto blindée, fusil d'assaut à tambour.</p></div>
+          <div class="panel"><span class="tag red">50 PV · Solo/Tech</span><h3>Pyro</h3><p>Lance-flammes amélioré et roquette incendiaire de sa propre invention.</p></div>
+        </div>
+        <details class="acc" style="margin-top:14px">
+          <summary>Mini-promotions (1d10)</summary>
+          <div class="acc-body"><div class="table-wrap"><table><thead><tr><th>1d10</th><th>Promotion</th></tr></thead><tbody>
+<tr><td>1</td><td>Une compétence au-dessus de 10 passe à 17.</td></tr>
+<tr><td>2</td><td>+10 PV.</td></tr>
+<tr><td>3</td><td>Travail d'équipe 3 et un subordonné au choix.</td></tr>
+<tr><td>4</td><td>Armorjack moyen amélioré, sans malus.</td></tr>
+<tr><td>5</td><td>600 eb de cyberware en plus.</td></tr>
+<tr><td>6</td><td>Réputation 5.</td></tr>
+<tr><td>7</td><td>Une grenade IEM et un excellent lancer.</td></tr>
+<tr><td>8</td><td>Une dose de Black Lace ou de Synthcoke avant le combat.</td></tr>
+<tr><td>9</td><td>MOVE 8 ou une Esquive redoutable.</td></tr>
+<tr><td>10</td><td>Branchies et bodysculpt exotique : requin ? arowana ? À vous de voir.</td></tr>
+</tbody></table></div></div>
+        </details>
+        <p class="dlc-src">Source : DLC gratuits <a href="https://rtalsoriangames.com/wp-content/uploads/2021/05/RTG-CPR-HardenedMooks.pdf" target="_blank" rel="noopener"><em>Hardened Mooks</em></a>, <a href="https://rtalsoriangames.com/wp-content/uploads/2021/06/RTG-CPR-HardenedLTs.pdf" target="_blank" rel="noopener"><em>Hardened Lieutenants</em></a>, <a href="https://rtalsoriangames.com/wp-content/uploads/2022/01/RTG-CPR-DLC-HardenedMB.pdf" target="_blank" rel="noopener"><em>Hardened Mini Bosses</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
+      <section class="block" id="cyberpets">
+        <h2 data-idx="03">Cyberpets</h2>
+        <p>Biotechnica relance sa gamme d'animaux cybernétiques, entre nostalgie des années 2020 et outils de sécurité. Mignons, utiles… et parfois victimes de « crises cyberpsychotiques » que la corpo nie farouchement.</p>
+        <div class="grid g3">
+          <div class="panel amber"><h3>Entretien</h3><p>L'animal a son propre <strong>mode de vie</strong> à payer chaque mois, sans prorata, et prend de la place dans le logement : rien pour un sbire, un lit pour un lieutenant, deux pour un mini-boss, trois pour un boss.</p></div>
+          <div class="panel cyan"><h3>Dressage</h3><p>Il faut une base de <em>Dressage</em> (INT + compétence) d'au moins 10 pour qu'il obéisse. Mal nourri, mal logé ou maltraité, il n'en fait qu'à sa tête… voire se retourne contre vous.</p></div>
+          <div class="panel magenta"><h3>Le chromer</h3><p>Il faut un Medtech avec Science (Biologie) 4+ et un lieu adapté. Le cyberware animal est propre à chaque espèce. Apprendre à l'animal à s'en servir : un jour et un test de Dressage contre le SD d'installation.</p></div>
+        </div>
+        <div class="table-wrap"><table><thead><tr><th>Animal</th><th>Prix</th><th>Niveau</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>Datarabbit</strong></td><td><span class="num">1 000 eb</span></td><td>Sbire</td><td>Lapin porteur de données : son œil est un coffre à puces protégé des IEM, et il se retrouve grâce à un traceur.</td></tr>
+<tr><td><strong>Forever Turtle</strong></td><td><span class="num">2 000 eb</span></td><td>Sbire renforcé</td><td>Tortue aux mâchoires de combat et à la carapace blindée qui se répare. Rentre dans sa carapace pour se protéger.</td></tr>
+<tr><td><strong>Neon Newt</strong></td><td><span class="num">2 000 eb</span></td><td>Sbire renforcé</td><td>Triton de poche aux couleurs néon : souffle comme un lance-flammes, et sa peau acide ronge l'armure.</td></tr>
+<tr><td><strong>Cyberrat</strong></td><td><span class="num">1 000 eb</span></td><td>Sbire</td><td>Rat espion venimeux, équipé de micro et de caméra. Idéal pour surveiller un appartement… ou une réunion.</td></tr>
+<tr><td><strong>Obsidian Ocelot</strong></td><td><span class="num">4 000 eb</span></td><td>Lieutenant renforcé</td><td>Prédateur de luxe au camouflage optique, compagnon d'assassins. Combat comme un Solo.</td></tr>
+<tr><td><strong>Cyberboa</strong></td><td><span class="num">4 000 eb</span></td><td>Lieutenant renforcé</td><td>Serpent mêlant l'ADN des plus dangereux ophidiens, crochets injecteurs chargés de poison ou de drogue.</td></tr>
+<tr><td><strong>Cyberwolf</strong></td><td><span class="num">4 000 eb</span></td><td>Lieutenant renforcé</td><td>Chien de garde en meute, reliés par Agent interne. Plus efficaces ensemble, livrés avec armure.</td></tr>
+<tr><td><strong>Cyberbear</strong></td><td><span class="num">20 000 eb</span></td><td>Mini-boss</td><td>Ours de combat aux tumeurs cérébrales et au style de combat imprévisible. Certains se sont échappés au Yukon.</td></tr>
+</tbody></table></div>
+        <div class="callout">
+          <span class="label">// ACCROCHES</span>
+          Un monstre dans les égouts · un conteneur censé contenir des pièces électroniques… et un Cyberbear · une lanceuse d'alerte de Biotechnica à protéger d'un assassin · un réseau clandestin de combats de cyberpets à démanteler.
+        </div>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2024/10/RTG-CPR-DLC-YourNewBestFriendv1.1.pdf" target="_blank" rel="noopener"><em>Your New Best Friend</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<nav class="pager wrap" aria-label="Navigation entre modules">
+  <a class="p-prev" href="cyberware.html"><span class="p-lab">◂ précédent · SHARD-09</span><span class="p-title">Cyberware &amp; Humanité</span></a>
+  <a class="p-menu" href="index.html">MENU</a>
+  <a class="p-next" href="missions.html"><span class="p-lab">SHARD-11 · suivant ▸</span><span class="p-title">Missions &amp; Prétirés</span></a>
+</nav>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="legal">Site de fan non officiel. Cyberpunk et Cyberpunk RED sont des marques de R. Talsorian Games Inc. et CD Projekt Red. Contenus résumés et reformulés à partir des DLC gratuits de R. Talsorian : référez-vous aux PDF officiels.</div>
+    <div><a href="index.html">◂ retour au menu</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

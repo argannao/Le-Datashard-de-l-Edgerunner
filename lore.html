@@ -34,6 +34,7 @@
       <a href="#ville">Night City</a>
       <a href="#corpos">Corporations</a>
       <a href="#gangs">Gangs &amp; factions</a>
+      <a href="#culture">Culture : les jeux vidéo</a>
       <a href="#ambiance">Jouer l'ambiance</a>
       <a href="#sources">Pour aller plus loin</a>
     </aside>
@@ -178,20 +179,76 @@
         <p class="empty-msg hidden" data-filter-empty>// aucune corpo trouvée</p>
       </section>
 
-      <section class="block" id="gangs">
+      <section class="block" id="gangs" data-filter-scope>
         <h2 data-idx="05">Gangs &amp; factions</h2>
-        <div class="grid g2">
-          <div class="panel"><h3>Maelstrom</h3><p>Obsédés par le chrome, ils remplacent leur chair par toujours plus de métal. Imprévisibles et dangereux.</p></div>
-          <div class="panel cyan"><h3>Tyger Claws</h3><p>Gang aux codes stricts, mêlant trafics, racket et motos rapides. Très implanté dans les quartiers asiatiques.</p></div>
-          <div class="panel amber"><h3>Valentinos</h3><p>Gang soudé par l'honneur, la famille et la foi. Fier de son quartier, il le défend avec acharnement.</p></div>
-          <div class="panel magenta"><h3>Bozos</h3><p>Sculptés en clowns grâce à la chirurgie esthétique. Le rire comme marque de fabrique, la violence comme mode d'action.</p></div>
-          <div class="panel"><h3>Inquisitors</h3><p>Anti-technologie radicaux qui considèrent le cyberware comme une abomination. Ils s'en prennent aux plus chromés.</p></div>
-          <div class="panel cyan"><h3>Familles nomades</h3><p>Les Aldecaldos et d'autres clans font circuler marchandises et passagers entre les villes. Alliés précieux, ennemis redoutables.</p></div>
-        </div>
+        <p>Boostergangs, poseurs, gangs de fête, gardiens de quartier, sectes… En 2045, la plupart ne rentrent plus dans une seule case. Ce répertoire couvre les gangs, pas les organisations criminelles classiques (famille Skiv, tong Weng Fang) ni les sociétés de sécurité. Les familles nomades comme les Aldecaldos campent hors de la ville.</p>
+        <div class="filterbar"><input class="search" type="search" placeholder="> chercher un gang, un quartier, un thème…" data-filter-search aria-label="Rechercher"></div>
+        <div class="table-wrap"><table><thead><tr><th>Gang</th><th>Activités</th><th>Où les croiser</th><th>Signes</th></tr></thead><tbody>
+<tr data-filter-item><td><strong>6th Street</strong><br><small style='color:var(--muted)'>Solomon « X » Wright</small></td><td>Vétérans de la 4<sup>e</sup> Guerre corporatiste : contrats de sécurité, glissent vers le racket et la contrebande.</td><td><small>Little Europe, The Glen, North Heywood, Rancho Coronado</small></td><td><small>écussons de style militaire</small></td></tr>
+<tr data-filter-item><td><strong>Albino Alligators</strong><br><small style='color:var(--muted)'>Big Bruno</small></td><td>Gang de fête au poids inattendu : il contrôle la seule source d'eau fiable de son quartier.</td><td><small>Rancho Coronado</small></td><td><small>cols relevés, mascotte alligator blanc</small></td></tr>
+<tr data-filter-item><td><strong>Andersons</strong><br><small style='color:var(--muted)'>Molly Anderson</small></td><td>Jeune gang « familial » : récup, vols, agressions. Sa cheffe organise des Night Markets. Menacé par les Piranhas.</td><td><small>Old Combat Zone, Playland by the Sea</small></td><td><small>denim, ANDERSON tatoué sur les doigts</small></td></tr>
+<tr data-filter-item><td><strong>Arzin Tynon</strong><br><small style='color:var(--muted)'>Jimmy « Dequiallo » Miles</small></td><td>Vieux gang de motards façon XX<sup>e</sup> siècle : contrebande, drogue, courses.</td><td><small>New Westbrook, Watson Development</small></td><td><small>armorjack brodé au logo</small></td></tr>
+<tr data-filter-item><td><strong>Bozos</strong><br><small style='color:var(--muted)'>multiples</small></td><td>Farceurs meurtriers grimés en clowns, divisés en « cirques » qui se font la guerre.</td><td><small>partout</small></td><td><small>ce sont des clowns, choomba</small></td></tr>
+<tr data-filter-item><td><strong>Culper Ring</strong><br><small style='color:var(--muted)'>inconnu</small></td><td>Cellule secrète de militaires qui veut ramener NorCal dans les États-Unis. Espionnage.</td><td><small>base militaire NorCal, peut-être South Night City</small></td><td><small>logo en bijou ou tatouage</small></td></tr>
+<tr data-filter-item><td><strong>DeadWoods</strong><br><small style='color:var(--muted)'>Isaiah « Gunslinger » Hurston</small></td><td>Cow-boys protecteurs autoproclamés des voies ferrées. Tiennent le casino The Molly May.</td><td><small>The Glen, South Night City, gares de triage</small></td><td><small>tenue western</small></td></tr>
+<tr data-filter-item><td><strong>Dirty Hippies</strong><br><small style='color:var(--muted)'>Canary</small></td><td>Jardiniers guérilla qui vendent des herbes droguées. Pas si pacifistes : ils sont armés.</td><td><small>Rancho Coronado, University District</small></td><td><small>tie-dye délavé</small></td></tr>
+<tr data-filter-item><td><strong>Dragula Racers</strong><br><small style='color:var(--muted)'>Frankie Sparks</small></td><td>Courses de corbillards gonflés et bodysculpts de monstres. Plutôt inoffensifs, ils dominent les courses de rue.</td><td><small>Watson Development</small></td><td><small>bodysculpt monstrueux</small></td></tr>
+<tr data-filter-item><td><strong>Enhanced</strong><br><small style='color:var(--muted)'>inconnu</small></td><td>Secte qui voit la cyberpsychose comme l'évolution de l'humanité. Liens avec GunMart.</td><td><small>zone industrielle de Heywood, South Night City (?)</small></td><td><small>logo gravé sur le cyberware</small></td></tr>
+<tr data-filter-item><td><strong>Eurotrashers</strong><br><small style='color:var(--muted)'>Lys « Refrain » Schärer</small></td><td>Gang de fête à l'accent « européen » introuvable. Matraques et couteaux plutôt que flingues.</td><td><small>Little Europe</small></td><td><small>mode années 1980</small></td></tr>
+<tr data-filter-item><td><strong>Fixie's Couriers</strong><br><small style='color:var(--muted)'>Fixie</small></td><td>Collectif de coursiers à vélo : la moitié des petites livraisons de la ville.</td><td><small>zone industrielle de Heywood, les rues</small></td><td><small>casquettes et brassards réfléchissants</small></td></tr>
+<tr data-filter-item><td><strong>G3</strong><br><small style='color:var(--muted)'>Hazumi Ihara</small></td><td>Poseurs anime étonnamment violents, avec leur propre radio. Beaucoup frôlent la cyberpsychose.</td><td><small>Kabuki, Watson Development</small></td><td><small>bodysculpt anime, mode J-pop</small></td></tr>
+<tr data-filter-item><td><strong>Generation Red</strong><br><small style='color:var(--muted)'>Apex</small></td><td>Jeunes débrouillards qui ont repoussé l'assaut des Kill Krashers. Danger Gal les a à l'œil.</td><td><small>Old Combat Zone</small></td><td><small>écusson du gang</small></td></tr>
+<tr data-filter-item><td><strong>Gold Dragons</strong><br><small style='color:var(--muted)'>Edwina « Eddy » Sing</small></td><td>Protection de Little China pour le compte du city manager. Code d'honneur de films hongkongais, cascades au câble.</td><td><small>Little China</small></td><td><small>blousons dorés matelassés</small></td></tr>
+<tr data-filter-item><td><strong>Inquisitors</strong><br><small style='color:var(--muted)'>inconnu</small></td><td>Culte anti-cyberware organisé en cellules, qui s'en prend aux plus chromés.</td><td><small>n'importe où</small></td><td><small>hoodies blancs, masques à gaz</small></td></tr>
+<tr data-filter-item><td><strong>Iron Sights</strong><br><small style='color:var(--muted)'>BloodGuts</small></td><td>Punks à l'ancienne, très territoriaux. En guerre contre la Red Chrome Legion, parrainés par le fixer Hornet.</td><td><small>Old Combat Zone, Old Japantown</small></td><td><small>scarifications, crêtes</small></td></tr>
+<tr data-filter-item><td><strong>Julliard Guild</strong><br><small style='color:var(--muted)'>Sebastian « Shakespeare » McBride</small></td><td>Contrôle tous les artistes de rue de la ville, d'une poigne de chrome.</td><td><small>Downtown, The Glen, stations NCART</small></td><td><small>autocollants sur les étuis</small></td></tr>
+<tr data-filter-item><td><strong>Kill Krashers</strong><br><small style='color:var(--muted)'>Carrion</small></td><td>La violence pour la violence. Peu dangereux seuls, dévastateurs en masse. En pleine croissance.</td><td><small>sud de l'île</small></td><td><small>rippers peints rouge et noir</small></td></tr>
+<tr data-filter-item><td><strong>Lightning Cats</strong><br><small style='color:var(--muted)'>Bengal Khan</small></td><td>Exotiques félins qui vivent « à l'état sauvage » dans les ruines de l'ancien centre médical. Arts martiaux.</td><td><small>Hot Zone</small></td><td><small>bodysculpt félin</small></td></tr>
+<tr data-filter-item><td><strong>Maelstrom</strong><br><small style='color:var(--muted)'>Warlock</small></td><td>La loi du plus fort, devenue une vraie entreprise criminelle.</td><td><small>Hot Zone, Little Europe, Old Japantown, Upper Marina</small></td><td><small>logo gravé sur le cyberware</small></td></tr>
+<tr data-filter-item><td><strong>Mudang Gumi</strong><br><small style='color:var(--muted)'>inconnu</small></td><td>Netrunners et voleurs : espionnage, vol d'identité, arnaques sur le CitiNet.</td><td><small>Pacific Playground, le CitiNet</small></td><td><small>inconnus</small></td></tr>
+<tr data-filter-item><td><strong>Muses</strong><br><small style='color:var(--muted)'>Calliope</small></td><td>Poseurs disco-antiquité et équipe de roller derby, propriétaires du club Xanadu.</td><td><small>North Heywood</small></td><td><small>toges, disco</small></td></tr>
+<tr data-filter-item><td><strong>Philharmonic Vampyres</strong><br><small style='color:var(--muted)'>The Master &amp; Acme</small></td><td>Gang à deux visages : gothiques théâtraux d'un côté, farceurs de l'autre.</td><td><small>University District</small></td><td><small>mode gothique, crocs</small></td></tr>
+<tr data-filter-item><td><strong>Piranhas</strong><br><small style='color:var(--muted)'>Corpse Reviver</small></td><td>Le gang de fête n°1 : ils ne vont plus aux soirées, ils les organisent.</td><td><small>Pacific Playground, Playland by the Sea, toute fête</small></td><td><small>logo tatoué</small></td></tr>
+<tr data-filter-item><td><strong>Prime-Time Players</strong><br><small style='color:var(--muted)'>Vicktor Vang</small></td><td>Poseurs inspirés des vieilles séries télé, en factions par thème. Racket, chantage.</td><td><small>New Westbrook, Upper Marina</small></td><td><small>costumes et bodysculpt télé</small></td></tr>
+<tr data-filter-item><td><strong>Princesses of Justice</strong><br><small style='color:var(--muted)'>Adorable</small></td><td>Poseurs d'un vieux dessin animé qui protègent les victimes de violences conjugales.</td><td><small>University District</small></td><td><small>costumes de la série</small></td></tr>
+<tr data-filter-item><td><strong>Rat Kings</strong><br><small style='color:var(--muted)'>Mario « Corona » Fernandez</small></td><td>Petit boostergang qui frappe puis disparaît dans la mégatour H4 en chantier.</td><td><small>Santo Domingo</small></td><td><small>logo peint sur la veste</small></td></tr>
+<tr data-filter-item><td><strong>Reckoners</strong><br><small style='color:var(--muted)'>« l'Œil béant »</small></td><td>Culte nihiliste qui annonce la Moisson des âmes… et vend des peluches.</td><td><small>Hot Zone, The Glen, South Night City</small></td><td><small>médaillon</small></td></tr>
+<tr data-filter-item><td><strong>Red Chrome Legion</strong><br><small style='color:var(--muted)'>Vox &amp; Populi</small></td><td>Groupe haineux néonazi, en guerre d'usure contre les Iron Sights.</td><td><small>Little China, Old Japantown</small></td><td><small>masques à gaz aux verres rouges</small></td></tr>
+<tr data-filter-item><td><strong>Scavvers</strong><br><small style='color:var(--muted)'>variés</small></td><td>Plus une catégorie qu'un gang : équipes qui fouillent ruines et décharges.</td><td><small>Hot Zone, décharges</small></td><td><small>variés</small></td></tr>
+<tr data-filter-item><td><strong>Shroomers</strong><br><small style='color:var(--muted)'>Pa Saddlefoot &amp; May</small></td><td>Survivalistes qui cultivent des champignons sous la ville. À 18 ans, ils remontent à la surface pour une année d'errance.</td><td><small>sous l'Old Combat Zone</small></td><td><small>cyberoptiques spéciales, jetons</small></td></tr>
+<tr data-filter-item><td><strong>Sinful Adams</strong><br><small style='color:var(--muted)'>Gomez &amp; Ophelia</small></td><td>Poseurs gothiques qui font vivre une communauté de réfugiés.</td><td><small>South Night City</small></td><td><small>mode gothique</small></td></tr>
+<tr data-filter-item><td><strong>Steel Vaqueros</strong><br><small style='color:var(--muted)'>Ximena Rose</small></td><td>Meute nomade indépendante de la côte ouest. Contrebande.</td><td><small>New Westbrook, Rancho Coronado</small></td><td><small>logo brodé au dos</small></td></tr>
+<tr data-filter-item><td><strong>Street Queens</strong><br><small style='color:var(--muted)'>Maxine Raunch</small></td><td>Gang protecteur de la communauté queer, lié aux clubs underground.</td><td><small>New Westbrook, Upper Marina</small></td><td><small>bijoux à l'iconographie queer</small></td></tr>
+<tr data-filter-item><td><strong>Toecutters</strong><br><small style='color:var(--muted)'>inconnu</small></td><td>Clan Raffen Shiv aux marges de la ville, aux rumeurs atroces.</td><td><small>North Heywood, Outskirts</small></td><td><small>cuir nomade taché de sang</small></td></tr>
+<tr data-filter-item><td><strong>Tombstone Preservers</strong><br><small style='color:var(--muted)'>Mister Rieper</small></td><td>Gardiens du respect dû aux morts, experts en arts martiaux.</td><td><small>cimetières, funérariums</small></td><td><small>crâne rasé, costume sobre</small></td></tr>
+<tr data-filter-item><td><strong>Tyger Claws</strong><br><small style='color:var(--muted)'>Shinobu le Second</small></td><td>Ancien gang par procuration d'Arasaka, maître de la sécurité et du crime à Kabuki et Old Japantown.</td><td><small>Kabuki, Old Japantown, New Westbrook, Watson</small></td><td><small>logo en bijou, écusson ou tatouage</small></td></tr>
+<tr data-filter-item><td><strong>Undertow</strong><br><small style='color:var(--muted)'>Johnny Rydell</small></td><td>Greasers têtes brûlées qui luttent (mal) contre la reprise de Downtown par la chambre de commerce.</td><td><small>Downtown</small></td><td><small>style années 1950</small></td></tr>
+<tr data-filter-item><td><strong>Voodoo Boys</strong><br><small style='color:var(--muted)'>Baron D</small></td><td>Poseurs « vaudou » façon Hollywood, centrés sur la drogue. Perdent du terrain face aux Piranhas.</td><td><small>Pacific Playground, Rancho Coronado</small></td><td><small>mode vaudou</small></td></tr>
+<tr data-filter-item><td><strong>Wild Things</strong><br><small style='color:var(--muted)'>Jenny Nails</small></td><td>Combats de gladiateurs au Redline.</td><td><small>Watson Development</small></td><td><small>logo scarifié sur la poitrine</small></td></tr>
+<tr data-filter-item><td><strong>Willows</strong><br><small style='color:var(--muted)'>Ingénue</small></td><td>Groupe de parole de vétéranes, dont certaines des meilleures edgerunners de la ville.</td><td><small>Old Combat Zone (clinique From the Ashes)</small></td><td><small>pièce frappée au logo</small></td></tr>
+<tr data-filter-item><td><strong>Yellow Brick Road</strong><br><small style='color:var(--muted)'>Dorothy</small></td><td>Poseurs du Magicien d'Oz, armés selon leur personnage. Drogue.</td><td><small>aucun lieu fixe</small></td><td><small>costumes d'Oz</small></td></tr>
+<tr data-filter-item><td><strong>Zoners</strong><br><small style='color:var(--muted)'>Tearjerker &amp; FreeFall</small></td><td>Organisation de quartier : leurs manifestations tournent souvent à l'émeute.</td><td><small>South Night City</small></td><td><small>aucun signe distinctif</small></td></tr>
+</tbody></table></div>
+        <p class="empty-msg hidden" data-filter-empty>// aucun gang trouvé</p>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2026/07/RTG-CPR-DLC-GangGuide.pdf" target="_blank" rel="noopener"><em>Night City Gang Guide</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
+      </section>
+
+      <section class="block" id="culture">
+        <h2 data-idx="06">Culture : les jeux vidéo</h2>
+        <p>Après vingt ans de pénurie, le jeu vidéo renaît avec une nouvelle console Segotari. L'histoire de la marque en cinq machines :</p>
+        <div class="table-wrap"><table><thead><tr><th>Machine</th><th>Époque</th><th>En bref</th><th>Prix</th></tr></thead><tbody>
+<tr><td><strong>VRIcade</strong></td><td>2014</td><td>Bornes d'arcade en virtualité : on voit tout, on ne sent rien.</td><td><span class="num">1 000 eb</span> la borne</td></tr>
+<tr><td><strong>RUSH</strong></td><td>2018</td><td>Première console de virtualité à domicile. Est restée 22 ans sur le marché.</td><td><span class="num">100 eb</span> d'occasion</td></tr>
+<tr><td><strong>Agent</strong></td><td>2019</td><td>La console portable devenue le smartphone de tout le monde (voir <a href="equipement.html#agent">l'Agent</a>). « Segotari Agent » est aujourd'hui une marque de jeux.</td><td><span class="num">20 eb</span> le jeu</td></tr>
+<tr><td><strong>Mindgames</strong></td><td>2020</td><td>Puces de jeu pour neural link. Un flop… relancé par des contrefaçons vendues sur les marchés.</td><td><span class="num">50 eb</span> la puce</td></tr>
+<tr><td><strong>RUSH Revolution</strong></td><td>2040</td><td>Braindance interactive : on sent le toucher et les odeurs, sans la douleur.</td><td><span class="num">500 eb</span></td></tr>
+</tbody></table></div>
+        <p>Titres cultes : <em>Elflines Online</em> (le MMO le plus joué au monde), <em>Compass Rose</em>, <em>Château Frankenberg</em>, la trilogie <em>Hackman</em>, <em>Mekton Warrior</em>, <em>Glub-Glob</em>… De quoi donner des passions, des dettes ou des rivalités à vos personnages. Des mini-règles inspirées de ces jeux sont dans le <a href="regles.html#minijeux">module Règles</a>.</p>
+        <p class="dlc-src">Source : DLC gratuit <a href="https://rtalsoriangames.com/wp-content/uploads/2025/10/RTG-CPR-DLC-SegotariPowerv1.11.pdf" target="_blank" rel="noopener"><em>Segotari Power</em></a> (R. Talsorian, VO). Résumé reformulé : profils et règles complets dans le PDF.</p>
       </section>
 
       <section class="block" id="ambiance">
-        <h2 data-idx="06">Jouer l'ambiance</h2>
+        <h2 data-idx="07">Jouer l'ambiance</h2>
         <div class="callout red">
           <span class="label">// LA DEVISE</span>
           Le style avant la substance. L'attitude compte. Vivez sur le fil (<em>Living on the Edge</em>). Et brisez les règles.
@@ -205,7 +262,7 @@
       </section>
 
       <section class="block" id="sources">
-        <h2 data-idx="07">Pour aller plus loin</h2>
+        <h2 data-idx="08">Pour aller plus loin</h2>
         <div class="grid g2">
           <div class="panel cyan">
             <span class="tag cyan">Supplément 2026</span>
@@ -238,6 +295,7 @@
   <a class="p-menu" href="index.html">MENU</a>
   <a class="p-next" href="glossaire.html"><span class="p-lab">SHARD-02 · suivant ▸</span><span class="p-title">Argot de la rue</span></a>
 </nav>
+
 
 <footer class="foot">
   <div class="wrap">
