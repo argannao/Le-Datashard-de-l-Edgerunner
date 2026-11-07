@@ -243,6 +243,37 @@
   }
 
   /* ------------------------------------------------ Utilitaires DOM */
+
+  function bodySvg(zones, cls = '') {
+    return `<svg viewBox="0 0 160 300" class="cy-svg ${cls}" aria-label="Silhouette : zones chromées">
+            <g class="z ${zones.has('back') ? 'on' : ''}"><path d="M44 78 L116 78 L124 170 L36 170 Z" class="back"/></g>
+            <g class="z ${zones.has('skin') ? 'on' : ''}"><path d="M80 8 C98 8 104 22 104 38 C104 56 96 66 80 66 C64 66 56 56 56 38 C56 22 62 8 80 8 Z M50 74 L110 74 L118 168 L42 168 Z" class="skin"/></g>
+            <g class="z ${zones.has('head') ? 'on' : ''}"><circle cx="80" cy="36" r="22"/></g>
+            <g class="z ${zones.has('eyes') ? 'on' : ''}"><rect x="66" y="31" width="10" height="5" rx="1"/><rect x="84" y="31" width="10" height="5" rx="1"/></g>
+            <g class="z ${zones.has('ears') ? 'on' : ''}"><rect x="54" y="32" width="5" height="12" rx="2"/><rect x="101" y="32" width="5" height="12" rx="2"/></g>
+            <g class="z ${zones.has('torso') ? 'on' : ''}"><rect x="58" y="84" width="44" height="74" rx="4"/></g>
+            <g class="z ${zones.has('arms') ? 'on' : ''}"><rect x="24" y="78" width="16" height="96" rx="7"/><rect x="120" y="78" width="16" height="96" rx="7"/></g>
+            <g class="z ${zones.has('legs') ? 'on' : ''}"><rect x="50" y="176" width="24" height="112" rx="9"/><rect x="86" y="176" width="24" height="112" rx="9"/></g>
+            <line x1="80" y1="58" x2="80" y2="80" class="neck"/>
+          </svg>`;
+  }
+  const zonesOf = () => new Set(st.gear.filter(g => g.cat === 'Cyberware').map(g => (CYB[g.cid] || {}).zone || 'skin'));
+  const hashId = () => Math.abs([...(st.handle || 'x') + (st.name || '')].reduce((a, c) => a * 31 + c.charCodeAt(0) | 0, 7));
+  function barcode(seed, w = 220, h = 34) {
+    let x = 0, out = '', n = seed || 1;
+    while (x < w - 4) { n = (n * 1103515245 + 12345) & 0x7fffffff; const bw = 1 + (n >> 8) % 3, gap = 1 + (n >> 12) % 3; out += `<rect x="${x}" y="0" width="${bw}" height="${h}"/>`; x += bw + gap; }
+    return `<svg class="cs-bar" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">${out}</svg>`;
+  }
+  // Armes et armures : compétence utilisée, dégâts et PA usuels du livre de base
+  const WEAP = [[/mitrailleur/i, 'Pistolet', '2d6'], [/très lourd/i, 'Pistolet', '4d6'], [/pistolet lourd/i, 'Pistolet', '3d6'], [/pistolet/i, 'Pistolet', '2d6'],
+    [/pompe/i, "Armes d'épaule", '5d6'], [/assaut/i, "Armes d'épaule", '5d6'], [/précision/i, "Armes d'épaule", '5d6'], [/fusil/i, "Armes d'épaule", '5d6'],
+    [/arc\b/i, "Tir à l'arc", '4d6'], [/mêlée lourde/i, 'Arme de mêlée', '3d6'], [/mêlée légère/i, 'Arme de mêlée', '1d6'], [/mêlée|lame|katana|couteau/i, 'Arme de mêlée', '2d6']];
+  const ARM = [[/cuir/i, 4], [/kevlar/i, 7], [/armorjack léger/i, 11], [/armorjack moyen/i, 12], [/armorjack lourd/i, 13], [/flak/i, 15], [/metalgear/i, 18], [/sous-cutanée/i, 11], [/peau tissée/i, 7]];
+  const weapInfo = n => { const w = WEAP.find(([re]) => re.test(n)); return w ? { sk: w[1], dmg: w[2] } : null; };
+  const armSP = n => { const a = ARM.find(([re]) => re.test(n)); return a ? a[1] : null; };
+  const skillTot = n => (st.skills[n] || 0) + (SK[n] ? st.stats[SK[n].stat] : 0);
+  const ROMAN = ['I', 'II', 'III', 'IV', 'V'];
+
   const $ = (s, el = document) => el.querySelector(s);
   const esc = v => String(v ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const pick = a => a[Math.floor(Math.random() * a.length)];
@@ -465,17 +496,7 @@
           }).join('')}</div>
         </div>
         <div class="cy-body">
-          <svg viewBox="0 0 160 300" class="cy-svg" aria-label="Silhouette : zones chromées">
-            <g class="z ${zones.has('back') ? 'on' : ''}"><path d="M44 78 L116 78 L124 170 L36 170 Z" class="back"/></g>
-            <g class="z ${zones.has('skin') ? 'on' : ''}"><path d="M80 8 C98 8 104 22 104 38 C104 56 96 66 80 66 C64 66 56 56 56 38 C56 22 62 8 80 8 Z M50 74 L110 74 L118 168 L42 168 Z" class="skin"/></g>
-            <g class="z ${zones.has('head') ? 'on' : ''}"><circle cx="80" cy="36" r="22"/></g>
-            <g class="z ${zones.has('eyes') ? 'on' : ''}"><rect x="66" y="31" width="10" height="5" rx="1"/><rect x="84" y="31" width="10" height="5" rx="1"/></g>
-            <g class="z ${zones.has('ears') ? 'on' : ''}"><rect x="54" y="32" width="5" height="12" rx="2"/><rect x="101" y="32" width="5" height="12" rx="2"/></g>
-            <g class="z ${zones.has('torso') ? 'on' : ''}"><rect x="58" y="84" width="44" height="74" rx="4"/></g>
-            <g class="z ${zones.has('arms') ? 'on' : ''}"><rect x="24" y="78" width="16" height="96" rx="7"/><rect x="120" y="78" width="16" height="96" rx="7"/></g>
-            <g class="z ${zones.has('legs') ? 'on' : ''}"><rect x="50" y="176" width="24" height="112" rx="9"/><rect x="86" y="176" width="24" height="112" rx="9"/></g>
-            <line x1="80" y1="58" x2="80" y2="80" class="neck"/>
-          </svg>
+          ${bodySvg(zones)}
           <div class="cy-hum">
             <div class="cy-hum-h"><span>Humanité</span><b class="${d.hum <= 20 ? 'ko' : ''}">${d.hum}<small>/${d.humMax}</small></b></div>
             <div class="cy-segs">${Array.from({ length: segs }, (_, i) => {
@@ -504,15 +525,27 @@
 
     sheet: () => {
       const r = role(), d = derived();
-      const missing = STEPS.slice(0, -1).filter((_, i) => !stepOk(i)).map(s => s[0]);
-      const sk = SKILLS.filter(s => st.skills[s[1]] > 0);
-      const armor = st.gear.filter(g => g.cat === 'Armure'), weap = st.gear.filter(g => g.cat === 'Arme');
-      const cyber = st.gear.filter(g => g.cat === 'Cyberware'), other = st.gear.filter(g => g.cat === 'Matériel' || g.cat === 'Mode');
+      const missing = STEPS.slice(0, -1).filter((_, i) => !stepOk(i)).map(x => x[0]);
+      const id = hashId(), idHex = id.toString(16).toUpperCase().padStart(8, '0').slice(0, 8);
+      const rs = r ? r.skills : [];
+      const weap = st.gear.filter(g => g.cat === 'Arme' && !/munition/i.test(g.name));
+      const ammo = st.gear.filter(g => g.cat === 'Arme' && /munition/i.test(g.name));
+      const armor = st.gear.filter(g => g.cat === 'Armure' || (g.cat === 'Cyberware' && armSP(g.name)));
+      const cyber = st.gear.filter(g => g.cat === 'Cyberware');
+      const other = st.gear.filter(g => g.cat === 'Matériel'), mode = st.gear.filter(g => g.cat === 'Mode');
+      const bestSP = Math.max(0, ...armor.map(g => armSP(g.name) || 0));
+      const threat = Math.max(1, Math.min(5, Math.round((st.stats.REF + st.stats.DEX + Math.max(0, ...['Pistolet', "Armes d'épaule", 'Bagarre', 'Arme de mêlée', 'Tir automatique', 'Arts martiaux'].map(n => st.skills[n] || 0)) + bestSP / 3) / 4.5)));
+      const cats = [...new Set(SKILLS.map(x => x[0]))];
+      const empLoss = st.stats.EMP - d.empNow;
+      const boxes = (n, mark = -1, cls = '') => Array.from({ length: n }, (_, i) => `<i class="${cls} ${i + 1 === mark ? 'mk' : ''}"></i>`).join('');
+      const life = LIFEPATH.filter(([k]) => (st.life[k] || '').trim());
+      const now = new Date(), date = `${String(now.getDate()).padStart(2, '0')}.${String(now.getMonth() + 1).padStart(2, '0')}.2045`;
       return `
       <div class="cc-sheet-head">
         <h2 class="cc-h">Fiche</h2>
         <div class="cc-tools">
           <button class="chip-btn" data-act="print">⎙ Imprimer / PDF</button>
+          <button class="chip-btn" data-act="png">▣ Image PNG</button>
           <button class="chip-btn" data-act="export">⇩ Exporter (.json)</button>
           <label class="chip-btn cc-file">⇧ Importer<input type="file" accept=".json,application/json" id="ccimport"></label>
           <button class="chip-btn" data-act="copy">⧉ Copier en texte</button>
@@ -521,35 +554,92 @@
       </div>
       ${missing.length ? `<div class="callout red"><span class="label">// INCOMPLET</span>À finaliser : ${missing.join(', ')}.</div>` : '<div class="callout cyan"><span class="label">// PRÊT</span>Edgerunner prêt pour Night City. Bonne chance, choom.</div>'}
       <article class="cc-sheet" style="--rc:${r ? r.color : 'var(--red)'}">
-        <header class="cs-top">
-          <div class="cs-badge">${esc((st.handle || '?').slice(0, 2).toUpperCase())}</div>
-          <div class="cs-who"><div class="cs-handle">${esc(st.handle || 'Sans nom')}</div>
-            <div class="cs-sub">${esc(st.name)}${st.name && st.pronoms ? ' · ' : ''}${esc(st.pronoms)}</div>
-            <div class="cs-role">${r ? `${r.name.toUpperCase()} // ${r.ab} rang 4` : 'RÔLE NON DÉFINI'}</div></div>
-          <div class="cs-code">NC-ID<br>${Math.abs([...(st.handle || 'x')].reduce((a, c) => a * 31 + c.charCodeAt(0) | 0, 7)).toString(16).toUpperCase().slice(0, 8).padStart(8, '0')}</div>
+        <div class="cs-band"><span>NIGHT CITY // DOSSIER EDGERUNNER</span><span>RÉF. ${idHex} · ÉMIS LE ${date} · ACCÈS : <b>RED</b></span></div>
+
+        <header class="cs-id">
+          <div class="cs-photo">
+            <div class="cs-badge">${esc((st.handle || '?').slice(0, 2).toUpperCase())}</div>
+            <div class="cs-scan"></div>
+            <div class="cs-photo-lab">CAPTURE ${idHex.slice(0, 4)}</div>
+          </div>
+          <div class="cs-who">
+            <div class="cs-k">ALIAS</div>
+            <div class="cs-handle">${esc(st.handle || 'Sans nom')}</div>
+            <div class="cs-sub"><span class="cs-k">IDENTITÉ CIVILE</span> ${esc(st.name || '[EFFACÉE]')}${st.pronoms ? ' · ' + esc(st.pronoms) : ''}</div>
+            <div class="cs-role">${r ? `<b>${r.name.toUpperCase()}</b> <span>(${r.vf})</span> // ${r.ab.toUpperCase()} · RANG 4` : 'RÔLE NON DÉFINI'}</div>
+            ${r ? `<div class="cs-pitch">${esc(r.pitch)}</div>` : ''}
+          </div>
+          <div class="cs-flags">
+            <div class="cs-stamp">${missing.length ? 'BROUILLON' : 'CLASSIFIÉ'}</div>
+            <div class="cs-threat"><span class="cs-k">NIVEAU DE MENACE</span><div>${[1, 2, 3, 4, 5].map(i => `<i class="${i <= threat ? 'on' : ''}"></i>`).join('')}</div><b>${['FAIBLE', 'MODÉRÉ', 'SÉRIEUX', 'ÉLEVÉ', 'EXTRÊME'][threat - 1]}</b></div>
+            <div class="cs-k">STATUT : <b class="cs-ok">ACTIF</b></div>
+          </div>
         </header>
-        <div class="cs-stats">${STATS.map(([k, vf]) => `<div><span>${vf}</span><b>${k === 'EMP' && d.empNow !== st.stats.EMP ? `${d.empNow}<small>/${st.stats.EMP}</small>` : st.stats[k]}</b></div>`).join('')}</div>
-        <div class="cs-der">
-          <div><span>Points de vie</span><b>${d.hp}</b></div><div><span>Blessure grave</span><b>${d.sw}</b></div>
-          <div><span>Sauvegarde mort</span><b>${d.ds}</b></div><div><span>Humanité</span><b>${d.hum}<small>/${d.humMax}</small></b></div>
-        </div>
+
+        <section class="cs-bio">
+          <h3><span>01</span>Biométrie</h3>
+          <div class="cs-stats">${STATS.map(([k, vf]) => {
+            const v = k === 'EMP' ? d.empNow : st.stats[k];
+            return `<div class="${rs.length && r.stats.includes(k) ? 'key' : ''}"><span>${vf}${vf !== k ? `<em>${k}</em>` : ''}</span><b>${v}${k === 'EMP' && empLoss ? `<small>/${st.stats.EMP}</small>` : ''}</b><u>${Array.from({ length: 8 }, (_, i) => `<i class="${i < v ? 'on' : ''}"></i>`).join('')}</u></div>`; }).join('')}</div>
+        </section>
+
+        <section class="cs-vitals">
+          <div class="cs-v cs-hp"><div class="cs-vh"><span>Points de vie</span><b>${d.hp}</b></div>
+            <div class="cs-boxes">${boxes(d.hp, d.sw)}</div>
+            <div class="cs-vf"><span>▲ Blessure grave à ${d.sw}</span><span>Sauvegarde contre la mort : ${d.ds}</span></div></div>
+          <div class="cs-v cs-hum"><div class="cs-vh"><span>Humanité</span><b class="${d.hum <= 20 ? 'ko' : ''}">${d.hum}<small>/${d.humMax}</small></b></div>
+            <div class="cs-segs">${Array.from({ length: Math.max(1, st.stats.EMP) }, (_, i) => `<i class="${i * 10 < 20 ? 'red' : ''}"><b style="width:${Math.max(0, Math.min(10, d.hum - i * 10)) * 10}%"></b></i>`).join('')}</div>
+            <div class="cs-vf"><span>EMP ${st.stats.EMP} → ${d.empNow}${empLoss ? ` (−${empLoss})` : ''}</span><span>${d.hum <= 20 ? '⚠ ZONE ROUGE' : 'Stable'}</span></div></div>
+          <div class="cs-v cs-small">
+            <div><span>Chance</span><div class="cs-boxes sm">${boxes(st.stats.LUCK)}</div></div>
+            <div><span>Initiative</span><b>REF ${st.stats.REF} + 1d10</b></div>
+            <div><span>Esquive</span><b>+${skillTot('Esquive')}</b>${st.stats.REF >= 8 ? '<em>peut esquiver les balles</em>' : ''}</div>
+            <div><span>Mouvement</span><b>${st.stats.MOVE * 2} m / action</b></div>
+            <div class="cs-blank"><span>Eurodollars</span><b>${Math.max(0, BUDGET - money('x'))} eb</b></div>
+            <div class="cs-blank"><span>PA (amélioration)</span><b>&nbsp;</b></div>
+          </div>
+        </section>
+
+        <section class="cs-arsenal">
+          <h3><span>02</span>Arsenal &amp; protection</h3>
+          <div class="cs-tbl">
+            <div class="th"><span>Arme</span><span>Compétence</span><span>Attaque</span><span>Dégâts</span></div>
+            ${weap.map(g => { const w = weapInfo(g.name); return `<div><span>${esc(g.name)}</span><span>${w ? esc(w.sk) : '—'}</span><b>${w ? '+' + skillTot(w.sk) : '—'}</b><b>${w ? w.dmg : '—'}</b></div>`; }).join('') || '<div class="muted"><span>Aucune arme</span></div>'}
+            <div><span>Mains nues</span><span>Bagarre</span><b>+${skillTot('Bagarre')}</b><b>${st.stats.BODY >= 11 ? '4d6' : st.stats.BODY >= 7 ? '3d6' : st.stats.BODY >= 5 ? '2d6' : '1d6'}</b></div>
+          </div>
+          ${ammo.length ? `<p class="cs-note">Munitions : ${ammo.map(g => esc(g.name)).join(', ')}</p>` : ''}
+          <div class="cs-armor">${armor.length ? armor.map(g => { const sp = armSP(g.name); return `<div><span>${esc(g.name)}</span><b>${sp ? 'PA ' + sp : 'PA —'}</b><span class="cs-boxes sm">${sp ? boxes(sp) : ''}</span></div>`; }).join('') : '<div class="muted"><span>Aucune armure</span></div>'}</div>
+        </section>
+
         <div class="cs-cols">
-          <section><h3>Compétences</h3>
-            <div class="cs-skills">${sk.map(([c, n, stat]) => `<div><span>${esc(n)}</span><i>${st.skills[n]}</i><b>+${st.skills[n] + st.stats[stat]}</b></div>`).join('')}</div>
+          <section>
+            <h3><span>03</span>Compétences <small>◆ compétence de rôle · total = niveau + carac.</small></h3>
+            <div class="cs-skills">${cats.map(c => {
+              const list = SKILLS.filter(x => x[0] === c && st.skills[x[1]] > 0);
+              return list.length ? `<div class="cs-cat">${c}</div>` + list.map(([, n, stat]) => `<div class="${rs.includes(n) ? 'rs' : ''}"><span>${rs.includes(n) ? '◆ ' : ''}${esc(n)} <em>${(STATS.find(x => x[0] === stat) || [, stat])[1]}</em></span><i>${st.skills[n]}</i><b>+${skillTot(n)}</b></div>`).join('') : ''; }).join('')}</div>
           </section>
           <section>
-            <h3>Armes</h3>${weap.length ? weap.map(g => `<div class="cs-line">${esc(g.name)}</div>`).join('') : '<div class="cs-line muted">—</div>'}
-            <h3>Armure</h3>${armor.length ? armor.map(g => `<div class="cs-line">${esc(g.name)}</div>`).join('') : '<div class="cs-line muted">—</div>'}
-            <h3>Cyberware</h3>${cyber.length ? cyber.map(g => `<div class="cs-line">${esc(g.name)} <small>−${+g.hl || 0} HUM${g.dice ? ' (' + g.dice + ')' : ''}${g.loc ? ' · ' + g.loc : ''}</small></div>`).join('') : '<div class="cs-line muted">—</div>'}
-            <h3>Matériel &amp; mode</h3>${other.length ? other.map(g => `<div class="cs-line">${esc(g.name)}</div>`).join('') : '<div class="cs-line muted">—</div>'}
-            <div class="cs-line"><small>Reste en poche : ${Math.max(0, BUDGET - money('x'))} eb</small></div>
+            <h3><span>04</span>Chrome installé</h3>
+            <div class="cs-chrome">
+              ${bodySvg(zonesOf(), 'cs-body')}
+              <div>${cyber.length ? cyber.map(g => `<div class="cs-line">${esc(g.name)}<small>−${+g.hl || 0} HUM${g.dice ? ' · ' + g.dice : ''}</small></div>`).join('') : '<div class="cs-line muted">100 % chair et os</div>'}</div>
+            </div>
+            <h3><span>05</span>Matériel</h3>
+            ${other.length ? other.map(g => `<div class="cs-line">${esc(g.name)}</div>`).join('') : '<div class="cs-line muted">—</div>'}
+            ${mode.length ? `<div class="cs-line"><small>Garde-robe : ${mode.map(g => esc(g.name)).join(', ')}</small></div>` : ''}
           </section>
         </div>
-        <section class="cs-life"><h3>Lifepath</h3>
-          <dl>${LIFEPATH.filter(([k]) => (st.life[k] || '').trim()).map(([k, l]) => `<dt>${l}</dt><dd>${esc(st.life[k])}</dd>`).join('') || '<dd class="muted">—</dd>'}</dl>
-          ${st.notes ? `<p class="cs-notes">${esc(st.notes)}</p>` : ''}
+
+        <section class="cs-life">
+          <h3><span>06</span>Antécédents connus</h3>
+          <dl>${life.map(([k, l]) => `<dt>${l}</dt><dd>${esc(st.life[k])}</dd>`).join('') || '<dt>Dossier</dt><dd><span class="cs-redact">██████████ ███████ ████</span></dd>'}</dl>
+          ${st.notes ? `<p class="cs-notes">« ${esc(st.notes)} »</p>` : ''}
         </section>
-        <footer class="cs-foot">DATASHARD // EDGERUNNER — fiche générée pour Cyberpunk RED (fan-made, non officiel)</footer>
+
+        <footer class="cs-foot">
+          ${barcode(id)}
+          <div><span>${idHex}-${(st.role || 'XX').slice(0, 2).toUpperCase()}-2045</span><span>Toute falsification de ce dossier est passible de flatline.</span><span>Datashard // Edgerunner · fiche fan-made pour Cyberpunk RED, non officielle</span></div>
+        </footer>
       </article>`;
     },
   };
@@ -597,6 +687,21 @@
     cyClear: () => { st.gear = st.gear.filter(g => g.cat !== 'Cyberware'); },
     cyReroll: () => st.gear.forEach(g => { if (g.cat === 'Cyberware' && g.dice) g.hl = rollDice(g.dice); }),
     print: () => window.print(),
+    png: () => {
+      const go = () => {
+        const el = $('.cc-sheet', root); toast('Rendu de l\'image…');
+        window.html2canvas(el, { backgroundColor: '#07090d', scale: 2, useCORS: true }).then(c => {
+          const a = document.createElement('a'); a.href = c.toDataURL('image/png');
+          a.download = (st.handle || 'edgerunner').replace(/[^\w-]+/g, '_') + '_dossier.png'; a.click();
+        }).catch(() => toast('Échec du rendu : utilisez Imprimer › PDF'));
+      };
+      if (window.html2canvas) { go(); return false; }
+      const sc = document.createElement('script');
+      sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+      sc.onload = go; sc.onerror = () => toast('Hors ligne : utilisez Imprimer › PDF');
+      document.head.appendChild(sc);
+      return false;
+    },
     export: () => {
       const blob = new Blob([JSON.stringify(st, null, 2)], { type: 'application/json' });
       const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
@@ -632,7 +737,7 @@
     const t = e.target.closest('button, [data-go]'); if (!t) return;
     const ds = t.dataset;
     if (ds.go !== undefined) { step = +ds.go; render(); root.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
-    if (ds.act) { actions[ds.act](); return update(); }
+    if (ds.act) { if (actions[ds.act]() === false) return; return update(); }
     if (ds.role) { st.role = ds.role; return update(); }
     if (ds.stat) { setStat(ds.stat, +ds.v); return update(); }
     if (ds.su) { setStat(ds.su, st.stats[ds.su] + 1); return update(); }
