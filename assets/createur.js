@@ -493,7 +493,7 @@
           <label class="cy-num">eb<input data-g="${i}" data-k="price" type="number" min="0" value="${+g.price || 0}"></label>
           <label class="cy-num">HUM<input data-g="${i}" data-k="hl" type="number" min="0" value="${+g.hl || 0}"></label>
           <button class="cc-del" data-reroll="${i}" ${g.dice ? '' : 'disabled'} title="Relancer ${esc(g.dice || '')}">🎲</button>
-          <button class="cc-del" data-del="${i}" aria-label="Retirer">✕</button></div>`).join('') || '<p class="empty-msg">// aucun implant : 100 % chair et os</p>'}
+          <button class="cy-minus" data-del="${i}" title="Retirer ${esc(g.name)}" aria-label="Retirer ${esc(g.name)}">−</button></div>`).join('') || '<p class="empty-msg">// aucun implant : 100 % chair et os</p>'}
         <button class="chip-btn" data-act="cyCustom" style="margin-top:8px">+ Implant personnalisé</button>
       </div>
       <div class="cc-totals">
