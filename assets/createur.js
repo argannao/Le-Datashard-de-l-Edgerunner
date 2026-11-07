@@ -688,16 +688,20 @@
     cyReroll: () => st.gear.forEach(g => { if (g.cat === 'Cyberware' && g.dice) g.hl = rollDice(g.dice); }),
     print: () => window.print(),
     png: () => {
+      const el = $('.cc-sheet', root);
+      const name = (st.handle || 'edgerunner').replace(/[^\w-]+/g, '_') + '_dossier.png';
+      const save = url => { const a = document.createElement('a'); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); toast('Image téléchargée'); };
+      const opts = { pixelRatio: 2, backgroundColor: '#07090d', cacheBust: true };
       const go = () => {
-        const el = $('.cc-sheet', root); toast('Rendu de l\'image…');
-        window.html2canvas(el, { backgroundColor: '#07090d', scale: 2, useCORS: true }).then(c => {
-          const a = document.createElement('a'); a.href = c.toDataURL('image/png');
-          a.download = (st.handle || 'edgerunner').replace(/[^\w-]+/g, '_') + '_dossier.png'; a.click();
-        }).catch(() => toast('Échec du rendu : utilisez Imprimer › PDF'));
+        toast('Rendu de l\'image…');
+        window.htmlToImage.toPng(el, opts)
+          .catch(() => window.htmlToImage.toPng(el, { ...opts, skipFonts: true }))
+          .then(save)
+          .catch(() => toast('Échec du rendu : utilisez Imprimer › PDF'));
       };
-      if (window.html2canvas) { go(); return false; }
+      if (window.htmlToImage) { go(); return false; }
       const sc = document.createElement('script');
-      sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+      sc.src = 'https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js';
       sc.onload = go; sc.onerror = () => toast('Hors ligne : utilisez Imprimer › PDF');
       document.head.appendChild(sc);
       return false;
