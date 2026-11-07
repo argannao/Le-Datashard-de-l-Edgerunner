@@ -663,3 +663,6 @@ nav .shards { padding-bottom: 44px; }
 }
 a.tag { text-decoration: none; }
 a.tag:hover { background: var(--cyan); color: #000; text-shadow: none; }
+
+/* Boutons de téléchargement */
+.dl-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0 6px; }
