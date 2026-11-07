@@ -459,7 +459,8 @@
               <div class="cy-top"><b>${c.req ? '↳ ' : ''}${esc(c.n)}</b>${n ? `<span class="tag cyan">×${n}</span>` : ''}${slot}</div>
               <p>${esc(c.desc)}</p>
               <div class="cy-meta"><span class="tag">${c.loc}</span><span class="num">${c.price} eb</span><span class="cy-hl">−${c.hl}${c.dice ? ` <small>(${c.dice})</small>` : ''} HUM</span>
-                <button class="chip-btn cy-add" data-cy="${c.id}" ${why ? 'disabled' : ''} title="${esc(why)}">${why ? esc(why) : '+ Installer'}</button></div>
+                <span class="cy-btns">${n ? `<button class="chip-btn cy-rm" data-uncy="${c.id}" title="Retirer ${esc(c.n)}${c.base ? ' (et les options qui n\'ont plus de place)' : ''}">✕ Retirer</button>` : ''}
+                ${n && why ? '' : `<button class="chip-btn cy-add" data-cy="${c.id}" ${why ? 'disabled' : ''} title="${esc(why)}">${why ? esc(why) : '+ Installer'}</button>`}</span></div>
             </div>`;
           }).join('')}</div>
         </div>
@@ -641,6 +642,11 @@
     if (ds.filt) { window.__ccf = ds.filt; return update(); }
     if (ds.roll) { const l = LIFEPATH.find(x => x[0] === ds.roll); st.life[ds.roll] = pick(l[2]); return update(); }
     if (ds.del !== undefined) { st.gear.splice(+ds.del, 1); cyPrune(); return update(); }
+    if (ds.uncy) {
+      const i = st.gear.map(g => g.cid).lastIndexOf(ds.uncy);
+      if (i >= 0) { const nm = st.gear[i].name; st.gear.splice(i, 1); cyPrune(); toast(nm + ' retiré'); }
+      return update();
+    }
     if (ds.cy) { if (!cyAdd(ds.cy)) toast(cyBlock(CYB[ds.cy])); return update(); }
     if (ds.fam) { window.__ccfam = ds.fam; return update(); }
     if (ds.hlmode) {
