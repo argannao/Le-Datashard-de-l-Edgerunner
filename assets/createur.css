@@ -70,8 +70,27 @@
   background: var(--panel); border: 1px solid var(--line); padding: 10px 14px;
 }
 .cc-stat.prio { border-left: 3px solid var(--amber); }
-.cc-sl b { font-family: var(--f-mono); color: var(--cyan); font-size: 1.05rem; margin-right: 8px; }
-.cc-sl span { color: var(--muted); font-size: .9rem; }
+.cc-sl { position: relative; }
+.cc-sl > b { font-family: var(--f-mono); color: var(--cyan); font-size: 1.05rem; margin-right: 8px; cursor: help; border-bottom: 1px dotted var(--cyan-dim); }
+.cc-sl > b:hover, .cc-sl > b:focus-visible { text-shadow: 0 0 8px var(--cyan); outline: none; }
+.cc-sl > span { color: var(--muted); font-size: .9rem; }
+
+/* Infobulle au survol du sigle */
+.cc-tip {
+  position: absolute; left: 0; top: calc(100% + 10px); z-index: 50;
+  width: max-content; max-width: min(360px, 82vw);
+  background: linear-gradient(180deg, var(--panel-2), #090c13); border: 1px solid var(--cyan-dim);
+  border-left: 3px solid var(--cyan); box-shadow: 0 10px 30px rgba(0,0,0,.6), 0 0 18px -6px var(--cyan);
+  padding: 10px 14px; font-size: .88rem; line-height: 1.45; color: var(--text);
+  opacity: 0; visibility: hidden; transform: translateY(-4px); pointer-events: none;
+  transition: opacity .15s, transform .15s, visibility .15s;
+}
+.cc-sl > b:hover ~ .cc-tip, .cc-sl > b:focus ~ .cc-tip { opacity: 1; visibility: visible; transform: none; }
+.cc-tip p { margin: 0 0 6px; }
+.cc-tip p:last-child { margin-bottom: 0; }
+.cc-tip-h { font-family: var(--f-mono); color: var(--cyan); text-transform: uppercase; letter-spacing: .05em; font-size: .78rem; }
+.cc-tip-l { color: var(--muted); font-size: .82rem; }
+.cc-tip-l b { display: block; font-family: var(--f-mono); color: var(--amber); font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
 .cc-sl i { color: var(--amber); font-style: normal; margin-left: 6px; }
 .cc-pips { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; }
 .pip {
