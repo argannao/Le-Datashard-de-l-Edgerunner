@@ -10,6 +10,20 @@
     ['TECH', 'TECH', 'Technique'], ['COOL', 'PRES', 'Présence'], ['WILL', 'VOL', 'Volonté'],
     ['LUCK', 'CHA', 'Chance'], ['MOVE', 'MOUV', 'Mouvement'], ['BODY', 'COR', 'Corps'], ['EMP', 'EMP', 'Empathie'],
   ];
+  // Résumés affichés au survol du sigle (étape Caractéristiques)
+  const STAT_INFO = {
+    INT: "Vivacité d'esprit, mémoire, culture et sens de l'observation. Sert à remarquer, savoir, déduire et enquêter.",
+    REF: "Temps de réaction et coordination. Sert à toutes les armes à distance et au pilotage. À 8 ou plus, on peut tenter d'esquiver les balles.",
+    DEX: "Agilité, équilibre et adresse du corps. Sert au corps à corps, à l'esquive, à l'athlétisme et à la discrétion.",
+    TECH: "Aptitude technique : comprendre une machine, la réparer, la bricoler, la fabriquer ou l'améliorer. Du savoir-faire pratique et manuel, à ne pas confondre avec INT.",
+    COOL: "Sang-froid et prestance : garder son calme sous la pression, impressionner, convaincre, intimider. Base de la plupart des compétences sociales.",
+    WILL: "Détermination et résistance mentale : tenir face à la douleur, à la peur et à la fatigue. Entre dans le calcul des PV.",
+    LUCK: "Une réserve de points à dépenser pendant la séance : chaque point dépensé ajoute +1 à un jet. Elle se recharge entièrement à chaque séance.",
+    MOVE: "Vitesse de déplacement : MOUV × 2 mètres par action de mouvement. Compte pour courir, fuir ou se mettre à couvert à temps.",
+    BODY: "Carrure, force et robustesse. Fait les PV, sert de seuil pour les jets de sauvegarde contre la mort et augmente les dégâts à mains nues.",
+    EMP: "Capacité à comprendre les autres et à créer du lien. L'Humanité vaut EMP × 10 : chaque implant la ronge, et l'EMP baisse avec elle.",
+  };
+
   const STAT_POINTS = 62, STAT_MIN = 2, STAT_MAX = 8;
   const SKILL_POINTS = 86, SKILL_MAX = 6;
   const BUDGET = 2550, FASHION = 800;
@@ -76,6 +90,18 @@
     ['Technique', 'Armurerie', 'TECH', 0, 0],
   ];
   const SK = Object.fromEntries(SKILLS.map(s => [s[1], { cat: s[0], stat: s[2], base: !!s[3], x2: !!s[4] }]));
+
+  // Infobulle d'une caractéristique : résumé + compétences liées + rôles qui la privilégient
+  const statTip = (k, vf, full) => {
+    const sk = SKILLS.filter(s => s[2] === k).map(s => s[1]);
+    const ro = ROLES.filter(r => r.stats.includes(k)).map(r => r.name);
+    return `<div class="cc-tip" id="tip-${k}" role="tooltip">
+      <p class="cc-tip-h">${vf} · ${full}</p>
+      <p>${STAT_INFO[k]}</p>
+      <p class="cc-tip-l"><b>Compétences</b>${sk.length ? sk.join(', ') : 'aucune, elle agit directement'}</p>
+      ${ro.length ? `<p class="cc-tip-l"><b>Rôles clés</b>${ro.join(', ')}</p>` : ''}
+    </div>`;
+  };
 
   // Suggestions de Lifepath (idées libres, à réécrire à volonté)
   const LIFEPATH = [
@@ -383,7 +409,7 @@
       <div class="cc-stats">${STATS.map(([k, vf, full]) => {
         const v = st.stats[k], prio = r && r.stats.includes(k);
         return `<div class="cc-stat ${prio ? 'prio' : ''}">
-          <div class="cc-sl"><b>${vf}</b><span>${full}</span>${prio ? '<i title="Importante pour ce rôle">★</i>' : ''}</div>
+          <div class="cc-sl"><b tabindex="0" aria-describedby="tip-${k}">${vf}</b><span>${full}</span>${prio ? '<i title="Importante pour ce rôle">★</i>' : ''}${statTip(k, vf, full)}</div>
           <div class="cc-pips">${Array.from({ length: 10 }, (_, i) => `<button class="pip ${i < v ? 'f' : ''} ${i + 1 < STAT_MIN || i + 1 > STAT_MAX ? 'x' : ''}" data-stat="${k}" data-v="${i + 1}" aria-label="${full} ${i + 1}"></button>`).join('')}</div>
           <div class="cc-step"><button data-sd="${k}" aria-label="moins">−</button><output>${v}</output><button data-su="${k}" aria-label="plus">+</button></div>
         </div>`;
