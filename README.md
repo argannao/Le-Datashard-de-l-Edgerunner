@@ -26,7 +26,9 @@ Styles et scripts partagés dans `assets/` (`style.css`, `app.js`). Aucun outil 
 
 ## Publication
 
-GitHub Pages : *Settings → Pages → Deploy from a branch → `main` / root*.
+GitHub Pages : *Settings → Pages → Source → **GitHub Actions***.
+
+Le workflow `.github/workflows/pages.yml` publie le site à chaque push sur `main` et remplace le numéro de version des CSS/JS (`?v=...`) par l'identifiant du commit : pas besoin de le changer à la main pour contourner le cache des navigateurs.
 
 ## Ajouter un module
 
