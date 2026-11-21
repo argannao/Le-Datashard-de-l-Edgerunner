@@ -85,7 +85,7 @@
   opacity: 0; visibility: hidden; transform: translateY(-4px); pointer-events: none;
   transition: opacity .15s, transform .15s, visibility .15s;
 }
-.cc-sl > b:hover ~ .cc-tip, .cc-sl > b:focus ~ .cc-tip { opacity: 1; visibility: visible; transform: none; }
+.tip-t:hover ~ .cc-tip, .tip-t:focus ~ .cc-tip { opacity: 1; visibility: visible; transform: none; }
 .cc-tip p { margin: 0 0 6px; }
 .cc-tip p:last-child { margin-bottom: 0; }
 .cc-tip-h { font-family: var(--f-mono); color: var(--cyan); text-transform: uppercase; letter-spacing: .05em; font-size: .78rem; }
@@ -117,7 +117,9 @@
 }
 .cc-sk.has { border-left: 3px solid var(--cyan); }
 .cc-sk.prio .nm i { color: var(--amber); font-style: normal; margin-right: 6px; }
-.cc-sk .nm { font-size: .97rem; }
+.cc-sk .nm { font-size: .97rem; position: relative; }
+.cc-sk .nm .tip-t { cursor: help; border-bottom: 1px dotted var(--line-2); }
+.cc-sk .nm .tip-t:hover, .cc-sk .nm .tip-t:focus-visible { color: var(--cyan); border-bottom-color: var(--cyan-dim); outline: none; }
 .cc-sk .nm .tag { margin: 0 0 0 4px; font-size: .62rem; padding: 0 5px; }
 .cc-sk .st { font-family: var(--f-mono); font-size: .8rem; color: var(--muted); }
 .cc-sk .tot { font-family: var(--f-mono); color: var(--cyan); text-align: right; font-size: 1.05rem; }

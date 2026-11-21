@@ -89,7 +89,99 @@
     ['Technique', 'Crochetage', 'TECH', 0, 0], ['Technique', 'Pickpocket', 'TECH', 0, 0], ['Technique', 'Maritech', 'TECH', 0, 0],
     ['Technique', 'Armurerie', 'TECH', 0, 0],
   ];
+  // Résumés affichés au survol du nom d'une compétence (étape Compétences)
+  const SKILL_INFO = {
+    // Vigilance
+    'Concentration': "Garder sa concentration malgré le bruit, la douleur ou la pression, et se souvenir avec précision de ce qu'on a vu ou entendu.",
+    "Dissimulation / Révélation d'objet": "Cacher une arme ou un objet sur soi ou dans une pièce, et à l'inverse trouver ce que d'autres ont caché (fouille, contrôle).",
+    'Lecture sur les lèvres': "Comprendre ce que dit quelqu'un à distance ou dans le vacarme, rien qu'en observant ses lèvres.",
+    'Perception': "Repérer ce qui est caché ou discret : embuscade, indice, piège, détail qui cloche. L'une des compétences les plus utilisées.",
+    'Pistage': "Suivre une piste : traces, indices laissés en route, trajet d'une personne en ville comme dans la nature.",
+    // Corps
+    'Athlétisme': "Courir, sauter, grimper, nager et lancer. Sert aussi pour les armes de jet (grenades, couteaux lancés).",
+    'Contorsion': "Se glisser dans un passage étroit, se défaire de liens ou de menottes, se tordre dans des positions impossibles.",
+    'Danse': "Danser avec talent, en club comme sur scène. Utile pour se fondre dans une foule ou briller en soirée.",
+    'Endurance': "Tenir dans la durée face à la fatigue, la faim, la soif, le froid ou la chaleur.",
+    'Résistance torture / drogues': "Résister à l'interrogatoire, à la douleur infligée, aux drogues, aux poisons et aux sérums de vérité.",
+    'Discrétion': "Se déplacer sans être vu ni entendu, se cacher, filer quelqu'un sans se faire repérer.",
+    // Pilotage
+    'Conduite de véhicule terrestre': "Conduire voitures, motos et camions, y compris en poursuite ou sous le feu.",
+    'Pilotage de véhicule aérien': "Piloter AV, hélicoptères, avions et drones volants. Compétence coûteuse (×2).",
+    'Pilotage de véhicule marin': "Piloter bateaux, hors-bords, jet-skis et autres engins nautiques.",
+    'Équitation': "Monter et diriger un animal (cheval, etc.). Rare en ville, mais utile hors de Night City.",
+    // Éducation
+    'Comptabilité': "Tenir des comptes, équilibrer un budget, repérer une fraude ou de l'argent blanchi dans des livres comptables.",
+    'Dressage': "Dresser, calmer et diriger des animaux, cyberpets compris.",
+    'Bureaucratie': "Naviguer dans l'administration : obtenir un document, trouver le bon interlocuteur, contourner la paperasse.",
+    "Gestion d'affaires": "Connaître le monde de l'entreprise : diriger une affaire, lire un contrat, comprendre le fonctionnement d'une corpo.",
+    'Composition': "Écrire des chansons, des articles, des discours ou des histoires qui touchent leur public.",
+    'Criminologie': "Connaître les méthodes de police et la criminalistique : consulter les fichiers, analyser une scène de crime.",
+    'Cryptographie': "Chiffrer et déchiffrer des messages et des codes.",
+    'Déduction': "Relier les indices pour en tirer une conclusion que les autres n'ont pas vue.",
+    'Éducation': "Culture générale et niveau d'instruction : lire, écrire, compter, connaître le monde.",
+    'Jeux de hasard': "Connaître les jeux, calculer ses chances, repérer un tricheur… ou tricher soi-même.",
+    'Langue (argot de la rue)': "La langue de base de la rue à Night City. Chaque autre langue apprise est une compétence Langue distincte.",
+    'Recherche en bibliothèque': "Trouver une information dans les bases de données, archives et réseaux publics.",
+    'Guide local (votre quartier)': "Connaître un quartier sur le bout des doigts : rues, raccourcis, commerces, qui est qui.",
+    'Science': "Connaissances dans un domaine scientifique précis (chimie, biologie, physique…), à choisir à l'achat.",
+    'Tactique': "Lire un champ de bataille, organiser une équipe, prévoir les mouvements adverses.",
+    'Survie en milieu hostile': "Survivre hors des villes : trouver de l'eau et de quoi manger, s'abriter, s'orienter dans les Badlands.",
+    // Combat
+    'Bagarre': "Se battre à mains nues. Les dégâts dépendent du CORPS.",
+    'Esquive': "Éviter les attaques de mêlée. Avec RÉF 8 ou plus, permet aussi d'esquiver les tirs.",
+    'Arts martiaux': "Combat à mains nues codifié, avec des techniques spéciales selon le style choisi. Compétence coûteuse (×2).",
+    'Arme de mêlée': "Se battre avec couteaux, épées, battes, haches et autres armes de corps à corps.",
+    // Spectacle
+    "Jeu d'acteur": "Jouer un rôle, prendre une fausse identité, mentir avec aplomb. Indispensable pour se faire passer pour quelqu'un d'autre.",
+    'Instrument': "Jouer d'un instrument de musique (à choisir). La base du Rockeur.",
+    // Distance
+    "Tir à l'arc": "Tirer à l'arc et à l'arbalète.",
+    'Tir automatique': "Tirer en rafale ou en arrosage avec mitraillettes et fusils d'assaut. Compétence coûteuse (×2).",
+    'Pistolet': "Tirer au pistolet, du petit calibre au très gros calibre.",
+    'Armes lourdes': "Utiliser lance-grenades, lance-roquettes et autres armes lourdes. Compétence coûteuse (×2).",
+    "Armes d'épaule": "Tirer avec fusils, fusils de précision et fusils à pompe (en tir simple).",
+    // Social
+    'Corruption': "Savoir qui acheter, combien proposer et comment glisser le pot-de-vin sans vexer ni se faire prendre.",
+    'Conversation': "Faire parler les gens sans qu'ils s'en rendent compte, en bavardant tranquillement.",
+    'Perception humaine': "Lire les émotions et repérer les mensonges, les intentions cachées et les sous-entendus.",
+    'Interrogatoire': "Arracher des informations à quelqu'un qui ne veut pas parler, par la pression ou l'intimidation.",
+    'Persuasion': "Convaincre, négocier, rallier les gens à sa cause par la parole.",
+    'Look': "Soin de son apparence : coiffure, maquillage, présentation. Fait bonne impression au premier regard.",
+    'Connaissance de la rue': "Savoir comment marche la rue : trouver un dealer, un receleur, une arme ou un contact, et éviter les mauvais coins.",
+    'Négoce': "Acheter, vendre, marchander et estimer la valeur d'une marchandise.",
+    'Habillement et style': "S'habiller juste et avec style selon l'occasion. Compte beaucoup à Night City, où l'apparence fait le statut.",
+    // Technique
+    'Aérotech': "Réparer et entretenir les véhicules aériens : AV, hélicoptères, avions.",
+    'Technique de base': "Réparations de tous les jours : électricité, mécanique simple, appareils courants.",
+    'Cybertech': "Entretenir, réparer et améliorer le cyberware. Ne remplace pas la chirurgie pour poser un implant.",
+    'Explosifs': "Poser, fabriquer et désamorcer des explosifs. Compétence coûteuse (×2).",
+    'Électronique / Sécurité': "Électronique avancée et sécurité : pirater une serrure électronique, une caméra, une alarme. Compétence coûteuse (×2).",
+    'Premiers secours': "Soigner les blessures légères et stabiliser un blessé grave en attendant mieux.",
+    'Contrefaçon': "Fabriquer faux papiers, fausses identités et faux documents, et repérer ceux des autres.",
+    'Terratech': "Réparer et entretenir les véhicules terrestres : voitures, motos, camions.",
+    'Arts plastiques': "Peindre, dessiner, sculpter. Pour l'art, les portraits-robots ou les tags.",
+    'Assistance médicale (Paramédic)': "Soins avancés : traiter les blessures graves et soigner un personnage mourant. Compétence coûteuse (×2).",
+    'Photos et films': "Photographier et filmer avec talent, pour l'art, les médias ou la preuve.",
+    'Crochetage': "Ouvrir les serrures mécaniques sans la clé.",
+    'Pickpocket': "Voler dans les poches sans se faire repérer, ou y glisser discrètement quelque chose.",
+    'Maritech': "Réparer et entretenir les véhicules marins.",
+    'Armurerie': "Réparer, entretenir et améliorer les armes.",
+  };
+
   const SK = Object.fromEntries(SKILLS.map(s => [s[1], { cat: s[0], stat: s[2], base: !!s[3], x2: !!s[4] }]));
+
+  // Infobulle d'une compétence : résumé + caractéristique + coût + rôles qui la suggèrent
+  const skillTip = (c, n, stat, b, x2, id) => {
+    const [, vf, full] = STATS.find(s => s[0] === stat);
+    const ro = ROLES.filter(r => r.skills.includes(n)).map(r => r.name);
+    const notes = [b && 'compétence de base (niveau 2 minimum)', x2 && 'coûte double (×2)'].filter(Boolean);
+    return `<div class="cc-tip" id="${id}" role="tooltip">
+      <p class="cc-tip-h">${esc(n)} · ${esc(c)}</p>
+      <p>${esc(SKILL_INFO[n] || '')}</p>
+      <p class="cc-tip-l"><b>Caractéristique</b>${vf} (${full})${notes.length ? ' · ' + notes.join(' · ') : ''}</p>
+      ${ro.length ? `<p class="cc-tip-l"><b>Rôles clés</b>${ro.join(', ')}</p>` : ''}
+    </div>`;
+  };
 
   // Infobulle d'une caractéristique : résumé + compétences liées + rôles qui la privilégient
   const statTip = (k, vf, full) => {
@@ -409,7 +501,7 @@
       <div class="cc-stats">${STATS.map(([k, vf, full]) => {
         const v = st.stats[k], prio = r && r.stats.includes(k);
         return `<div class="cc-stat ${prio ? 'prio' : ''}">
-          <div class="cc-sl"><b tabindex="0" aria-describedby="tip-${k}">${vf}</b><span>${full}</span>${prio ? '<i title="Importante pour ce rôle">★</i>' : ''}${statTip(k, vf, full)}</div>
+          <div class="cc-sl"><b class="tip-t" tabindex="0" aria-describedby="tip-${k}">${vf}</b><span>${full}</span>${prio ? '<i title="Importante pour ce rôle">★</i>' : ''}${statTip(k, vf, full)}</div>
           <div class="cc-pips">${Array.from({ length: 10 }, (_, i) => `<button class="pip ${i < v ? 'f' : ''} ${i + 1 < STAT_MIN || i + 1 > STAT_MAX ? 'x' : ''}" data-stat="${k}" data-v="${i + 1}" aria-label="${full} ${i + 1}"></button>`).join('')}</div>
           <div class="cc-step"><button data-sd="${k}" aria-label="moins">−</button><output>${v}</output><button data-su="${k}" aria-label="plus">+</button></div>
         </div>`;
@@ -436,11 +528,11 @@
         ${[['all', 'Toutes'], ...(r ? [['role', '★ ' + r.name]] : []), ['used', 'Choisies'], ...cats.map(c => [c, c])].map(([k, l]) =>
           `<button class="chip-btn ${f === k ? 'on' : ''}" data-filt="${k}">${l}</button>`).join('')}
       </div>
-      <div class="cc-skills">${rows.map(([c, n, stat, b, x2]) => {
+      <div class="cc-skills">${rows.map(([c, n, stat, b, x2], i) => {
         const l = st.skills[n], star = r && r.skills.includes(n);
         const vf = STATS.find(s => s[0] === stat)[1];
         return `<div class="cc-sk ${l > 0 ? 'has' : ''} ${star ? 'prio' : ''}">
-          <div class="nm">${star ? '<i>★</i>' : ''}${esc(n)} ${b ? '<span class="tag cyan">base</span>' : ''}${x2 ? '<span class="tag amber">×2</span>' : ''}</div>
+          <div class="nm">${star ? '<i>★</i>' : ''}<span class="tip-t" tabindex="0" aria-describedby="sktip-${i}">${esc(n)}</span> ${b ? '<span class="tag cyan">base</span>' : ''}${x2 ? '<span class="tag amber">×2</span>' : ''}${skillTip(c, n, stat, b, x2, 'sktip-' + i)}</div>
           <div class="st">${vf} ${st.stats[stat]}</div>
           <div class="cc-step"><button data-kd="${esc(n)}" ${l <= (b ? 2 : 0) ? 'disabled' : ''}>−</button><output>${l}</output><button data-ku="${esc(n)}" ${l >= SKILL_MAX ? 'disabled' : ''}>+</button></div>
           <div class="tot" title="Caractéristique + compétence">${l > 0 ? '+' + (l + st.stats[stat]) : '—'}</div>
